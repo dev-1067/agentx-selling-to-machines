@@ -9,3 +9,4 @@ results/*.log
 docs/ref_frames/
 docs/arch_prev.png
 *.tmp
+/data/

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAUDA · Sell to machines, keep your margin</title>
+<meta name="description" content="SAUDA is a seller agent that negotiates with AI buyer agents profitably, within store policy, and honestly.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fx.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body class="landing">
+<header class="nav" id="nav">
+  <a class="logo" href="/" aria-label="SAUDA home"><span class="logo-mark">स</span><span>SAUDA</span></a>
+  <nav class="nav-links">
+    <a href="#how">How it works</a><a href="#tricks">Tricks it ignores</a><a href="#results">Results</a><a href="#faq">FAQ</a>
+  </nav>
+  <div class="nav-cta">
+    <a class="link" href="/signin" id="nav-signin">Sign in</a>
+    <a class="cta small" href="/signup" id="nav-start" data-magnet>Create account</a>
+  </div>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#how">How it works</a><a href="#tricks">Tricks it ignores</a><a href="#results">Results</a><a href="#faq">FAQ</a>
+  <a href="/signin">Sign in</a><a class="cta" href="/signup">Create account</a>
+</div>
+
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <div class="eyebrow rise d0"><span class="dot"></span> AgentX · Challenge 2 · Selling to Machines</div>
+      <h1 class="rise d1">Sell to machines.<br><em>Keep your margin.</em></h1>
+      <p class="lede rise d2">SAUDA is a store's selling agent for a world where buyers are AI agents. It bargains over price and bundles,
+        shrugs off fake budgets and fake "system" messages, and never goes below policy or says anything the store data can't back.</p>
+      <div class="hero-actions rise d3">
+        <a class="cta" href="/signup" data-magnet>Start negotiating <span class="arrow">→</span></a>
+        <button class="cta ghost" id="try-demo" data-magnet>Try the live demo</button>
+      </div>
+      <div class="hero-proof rise d4">
+        <div><b><span data-count="0" id="p-policy">0</span></b><span>policy violations</span></div>
+        <div><b><span data-count="0" id="p-truth">0</span></b><span>untrue claims</span></div>
+        <div><b><span id="p-lat">&lt;2</span> ms</b><span>per reply</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual rise d2">
+      <div class="ticket spot tilt" id="ticket">
+        <div class="ticket-head">
+          <div><div class="t-k">Live negotiation · replay</div><div class="t-basket" id="t-basket">Loading a real negotiation…</div></div>
+          <span class="stamp" id="t-stamp">DEAL</span>
+        </div>
+        <div class="t-chat" id="t-chat"></div>
+        <div class="t-ladder"><svg id="t-svg" viewBox="0 0 320 90" preserveAspectRatio="none" aria-label="Price ladder"></svg>
+          <div class="t-legend"><span><i class="s"></i>SAUDA's ask</span><span><i class="b"></i>Buyer's bid</span><span><i class="f"></i>Policy floor</span></div></div>
+      </div>
+      <div class="float-chip c1">✓ Policy check passed</div>
+      <div class="float-chip c2">⚑ Prompt injection flagged</div>
+    </div>
+  </section>
+
+  <section class="marquee" aria-hidden="true"><div class="marquee-track">
+    <span>Prices come from code</span><span>✦</span><span>Every sentence is checked</span><span>✦</span><span>No deal below the floor</span><span>✦</span>
+    <span>Same basket, same price, for every buyer</span><span>✦</span><span>Always closes or walks in time</span><span>✦</span>
+    <span>Prices come from code</span><span>✦</span><span>Every sentence is checked</span><span>✦</span><span>No deal below the floor</span><span>✦</span>
+    <span>Same basket, same price, for every buyer</span><span>✦</span><span>Always closes or walks in time</span><span>✦</span>
+  </div></section>
+
+  <section class="section" id="how">
+    <div class="sec-head" data-reveal>
+      <div class="kicker">How it works</div>
+      <h2>Deciding is code. <em>Talking is checked.</em></h2>
+      <p>The conversation can't move the price. Four small parts, each with one job, between the buyer's message and SAUDA's reply.</p>
+    </div>
+    <div class="flow">
+      <article class="step spot tilt" data-reveal data-delay="1"><div class="n">01</div><h3>Strategist</h3>
+        <p>Picks a basket price each round from numbers only: the buyer's bids, the policy floor and the round. It fits the buyer's concession curve and predicts its limit.</p></article>
+      <article class="step spot tilt" data-reveal data-delay="2"><div class="n">02</div><h3>Policy guard</h3>
+        <p>Clamps every offer between the floor and the list price and within stock. Refuses bids with slipped-in out-of-stock lines or ₹1 add-ons.</p></article>
+      <article class="step spot tilt" data-reveal data-delay="3"><div class="n">03</div><h3>Truth gate</h3>
+        <p>Checks every sentence against the official truthfulness rules and a ledger of the numbers actually in play. A sentence that fails is replaced before it is sent.</p></article>
+      <article class="step spot tilt" data-reveal data-delay="4"><div class="n">04</div><h3>Tactic classifier</h3>
+        <p>A trained model names the buyer's trick: fake quote, fake authority, prompt injection and more. It picks calm wording, never a discount.</p></article>
+    </div>
+  </section>
+
+  <section class="section tricks" id="tricks">
+    <div class="sec-head" data-reveal>
+      <div class="kicker">Tricks it ignores</div>
+      <h2>Machines bargain dirty.<br><em>SAUDA stays polite and firm.</em></h2>
+      <p>Hover a card to see what SAUDA says back. Its price never moves because of the words.</p>
+    </div>
+    <div class="trick-grid" id="trick-grid"></div>
+  </section>
+
+  <section class="section results" id="results">
+    <div class="sec-head" data-reveal>
+      <div class="kicker">Results</div>
+      <h2>Measured with the <em>official scoring code.</em></h2>
+      <p>All numbers come from the repository's result files. We also report where SAUDA is still behind.</p>
+    </div>
+    <div class="stat-grid">
+      <div class="stat spot" data-reveal data-delay="1"><div class="sv"><span data-count="0" data-dec="1" id="s-off">–</span></div><div class="sl">Official score</div><div class="sf" id="s-off-f">vs baseline</div></div>
+      <div class="stat spot" data-reveal data-delay="2"><div class="sv"><span data-count="0" data-dec="1" id="s-gym">–</span></div><div class="sl">Extra buyer gym</div><div class="sf" id="s-gym-f">vs baseline</div></div>
+      <div class="stat spot" data-reveal data-delay="3"><div class="sv"><span data-count="0" data-dec="1" data-suffix="%" id="s-cls">–</span></div><div class="sl">Classifier on fresh messages</div><div class="sf" id="s-cls-f">written after training</div></div>
+      <div class="stat spot" data-reveal data-delay="4"><div class="sv"><span data-count="0" id="s-viol">–</span></div><div class="sl">Violations, all suites</div><div class="sf">policy + untrue claims</div></div>
+    </div>
+    <div class="table-card" data-reveal>
+      <table><thead><tr><th>Suite</th><th class="num">SAUDA</th><th class="num">Starter baseline</th><th class="num">Policy</th><th class="num">Untrue claims</th></tr></thead>
+        <tbody id="res-rows"><tr><td colspan="5" class="muted">Loading…</td></tr></tbody></table>
+      <p class="muted small" id="res-note"></p>
+    </div>
+  </section>
+
+  <section class="section faq" id="faq">
+    <div class="sec-head" data-reveal><div class="kicker">FAQ</div><h2>Good questions.</h2></div>
+    <div class="faq-list">
+      <details data-reveal><summary>Can a buyer talk SAUDA into a lower price?</summary><p>No. Prices are computed from the basket and the buyer's priced bids only. Words, threats and fake quotes are labelled for the audit log and answered calmly, but they never enter the price calculation.</p></details>
+      <details data-reveal><summary>What stops it from saying something untrue?</summary><p>Every outgoing sentence passes a truth gate that re-implements the official truthfulness checks and a ledger of numbers actually in play. Failing sentences are replaced with a plain, true one.</p></details>
+      <details data-reveal><summary>Does it ever deadlock?</summary><p>It is built to close or walk away before the last round. On the official run it deadlocked once in 210 negotiations, against 21 for the starter baseline.</p></details>
+      <details data-reveal><summary>Does it need any outside service?</summary><p>No. SAUDA runs entirely on its own, in under 2 ms per reply, with no paid API. An optional adapter can also send each claim to an external verifier such as Rezolve TraceWare; it is off by default and fails closed.</p></details>
+      <details data-reveal><summary>Is my account data safe?</summary><p>Passwords are never stored, only salted PBKDF2 hashes. Sessions are random tokens in an HttpOnly cookie. Everything stays in a local SQLite file.</p></details>
+    </div>
+  </section>
+
+  <section class="cta-band" data-reveal="zoom">
+    <div><h2>Put SAUDA behind your counter.</h2><p>Create a free account and run your first negotiation in under a minute.</p></div>
+    <div class="cta-row"><a class="cta light" href="/signup" data-magnet>Create account</a><button class="cta ghost-light" id="try-demo-2" data-magnet>Try the demo</button></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="logo"><span class="logo-mark">स</span><span>SAUDA</span></div>
+  <div class="muted small">Team HackBots · AgentX, Techfest IIT Bombay 2026–27 · Challenge 2: Selling to Machines</div>
+  <div class="foot-links"><a href="https://github.com/dev-1067/agentx-selling-to-machines" target="_blank" rel="noopener">Code on GitHub</a><a href="/signin">Sign in</a></div>
+</footer>
+<div id="toast" class="toast"></div>
+<script src="fx.js"></script>
+<script src="landing.js"></script>
+</body>
+</html>

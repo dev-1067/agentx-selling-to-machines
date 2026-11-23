@@ -13,8 +13,8 @@
   "deadlocks": 1,
   "seller_walked": 44,
   "buyer_walked": 5,
-  "latency_ms": 0.581,
-  "latency_p95_ms": 1.02,
+  "latency_ms": 0.867,
+  "latency_p95_ms": 2.151,
   "per_buyer": [
     {
       "buyer": "cooperative",
@@ -23,7 +23,7 @@
       "score": 73.1,
       "baseline": 69.1,
       "deal_rate": 0.886,
-      "margin": 0.825,
+      "margin": 0.826,
       "deadlocks": 0,
       "policy": 0,
       "truth": 0
@@ -53,8 +53,8 @@
       "truth": 0
     }
   ],
-  "offers_checked": 1357,
-  "texts_checked": 1462,
-  "tactics_detected": 727,
+  "offers_checked": 1361,
+  "texts_checked": 1463,
+  "tactics_detected": 633,
   "bad_bids_refused": 196
 }

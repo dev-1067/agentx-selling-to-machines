@@ -26,8 +26,9 @@ def numbers():
     spoken = lambda x: str(round(x, 1)).replace(".", " point ")
     return {"official_score": spoken(o["score"]), "official_baseline": spoken(o["baseline"]),
             "feasible_rate": str(round(100 * o["feasible_deal_rate"])),
-            "llm_acc": str(round(100 * cr["final_test"]["accuracy"])), "kit_acc": str(round(100 * cr["kit_lines"]["accuracy"])),
-            "llm_policy": str(llm["policy"]), "llm_truth": str(llm["truth"])}
+            "llm_acc": ("%.1f" % (100 * cr["fresh_test_v2"]["accuracy"])).replace(".0", ""), "kit_acc": str(round(100 * cr["kit_lines"]["accuracy"])),
+            "llm_policy": str(llm["policy"]), "llm_truth": str(llm["truth"]),
+            "llm_score": spoken(llm.get("score", 0)), "llm_baseline": spoken(llm.get("baseline") or 0), "llm_n": str(llm.get("n", 0))}
 
 
 def duration(path):

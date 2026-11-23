@@ -49,8 +49,16 @@ DEFAULTS = {
     "hold_drop": 0.8,      # long haggle: how far the held ask may fall by the last round (share of list-floor)
     "hold_shape": 5.0,     # long haggle: how late the held ask falls
     "stall_eps": 0.004,    # a buyer that moved less than this over two rounds has stalled
+    "stall_n": 2,          # stopped buyer: this many latest bids within stall_tol of each other (0 = off)
+    "stall_tol": 0.003,    # ... as a share of list price
+    "stall_wait": 1,       # stopped buyer: extra repeats before we settle (accept or match its total)
+    "stall_probe": 0.35,   # first repeat: offer the bid plus this share of the gap to our last ask
+    "stall_match": 1,      # stopped buyer whose total covers our floor: offer exactly its total, compliant per line
+    "stall_floor": 0,      # stopped buyer bidding below our floor: make one final offer at the floor
     "glide_end": 8,        # a time-based glide to the floor: reaches it at this round (99 = off)
     "glide_pow": 1.0,      # shape of the glide (1 = straight line)
+    "bird": 0.0,           # take a good bid: by the last round, accept a compliant bid this far (share of
+                           # our ask above the floor) below our ask; 0 = only bids at our ask
     "d_safety": 1,         # finish conceding this many rounds before a fitted early buyer deadline
 }
 
@@ -131,6 +139,22 @@ class Seller:
             price = self.guard.clamp(sku, self.store[sku]["price"] * ratio)
             items.append({"sku": sku, "qty": qty, "unit_price": price})
         return items
+
+    def _items_for_total(self, target):
+        """Compliant lines (each within [floor, list]) whose total is as close to `target` as possible without
+        going over it; the floor basket if `target` is below the floor total."""
+        lo, hi = 0.0, 1.0
+        best = self._items_at(0.0)
+        if self._total(best) > target:
+            return best
+        for _ in range(40):
+            mid = (lo + hi) / 2
+            items = self._items_at(mid)
+            if self._total(items) <= target:
+                lo, best = mid, items
+            else:
+                hi = mid
+        return best
 
     @staticmethod
     def _total(items):
@@ -280,6 +304,21 @@ class Seller:
             plan = max(plan, self.bids[-1][1])                # never ask for less than they already bid
         return max(F, min(1.0, plan)), model, closing
 
+    def _stall_count(self):
+        """How many of the buyer's latest bids are (almost) the same: 1 = still moving, 2 = repeated once, ..."""
+        ys = [y for _, y in self.bids]
+        if not ys:
+            return 0
+        k = 1
+        while k < len(ys) and max(ys[-k - 1:]) - min(ys[-k - 1:]) <= self.p["stall_tol"]:
+            k += 1
+        return k
+
+    def _stalled(self):
+        """True when the buyer has stopped moving: its last stall_n bids are (almost) the same."""
+        n = int(self.p["stall_n"])
+        return n >= 2 and self._stall_count() >= n
+
     def _conceding(self):
         """True while the buyer keeps raising its bid (a patient haggler that is still moving)."""
         ys = [y for _, y in self.bids]
@@ -328,6 +367,30 @@ class Seller:
         #    at the floor if the buyer looks able to pay it, or walk away in time (no deadlock).
         bid_ok = self._bid_acceptable()
         bid_total = self._total(self.last_bid) if bid_ok else None
+
+        # 0) A buyer that keeps repeating the same bid (LLM buyers often do this). It may be a real limit or a
+        #    fake budget, so: on the first repeat, step most of the way toward it (a bluffer with room accepts);
+        #    if it repeats again, take its compliant bid, or offer exactly its total spread so that every line
+        #    stays at or above its own floor (buyers often cut every line by the same share).
+        if self._stalled():
+            last_offer = self.offers[-1] * listed if self.offers else None
+            bid_total_ours = self.bids[-1][1] * listed
+            floor_total = self._total(self._items_at(0.0))          # every line at exactly its own floor
+            settle = self._stall_count() >= int(self.p["stall_n"]) + int(self.p["stall_wait"]) or r >= self.R - 1
+            if not settle and last_offer is not None and bid_total_ours >= floor_total:
+                probe = self._items_for_total(bid_total_ours + self.p["stall_probe"] * (last_offer - bid_total_ours))
+                if floor_total <= self._total(probe) < last_offer - 0.5:
+                    return self._offer(probe, r, msg, "step toward a repeated bid: buyer stopped moving", plan, model)
+            if settle and bid_ok:
+                return self._finish({"type": "accept", "text": self._say_accept(bid_total)}, r,
+                                    "accept bid: buyer stopped moving", plan, model)
+            match = self._items_for_total(bid_total_ours)
+            if (settle and self.p["stall_match"] and self._total(match) >= floor_total
+                    and (last_offer is None or self._total(match) < last_offer - 0.5)):
+                return self._offer(match, r, msg, "offer the buyer's own total: buyer stopped moving", plan, model)
+            if self.p["stall_floor"] and r < self.R and (not self.offers or self.offers[-1] > F + 1e-9):
+                return self._offer(self._items_at(F), r, msg, "final offer at floor: buyer stopped moving", plan, model)
+
         if r >= self.R:
             reliable = model is not None and len(self.bids) >= self.p["greed_points"]
             if reliable:
@@ -347,7 +410,10 @@ class Seller:
                                 plan, model)
 
         # 2) Earlier rounds: accept a compliant bid that is at least what we would ask now.
-        if bid_ok and bid_total >= plan_total - self.p["accept_tol"] * listed:
+        bid_r = self._bid_ratio(self.last_bid) if bid_ok else None
+        take_line = F + (plan - F) * (1.0 - self.p["bird"] * (r - 1) / max(1, self.R - 1))
+        if bid_ok and (bid_total >= plan_total - self.p["accept_tol"] * listed
+                       or (bid_r is not None and bid_r >= take_line - 1e-9)):
             return self._finish({"type": "accept", "text": self._say_accept(bid_total)}, r, "accept bid", plan, model)
 
         # 3) Otherwise make (or repeat) our planned offer.

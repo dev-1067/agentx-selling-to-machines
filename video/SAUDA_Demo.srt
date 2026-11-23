@@ -7,301 +7,317 @@ Shoppers are starting to send AI agents to
 buy for them.
 
 3
-00:00:03,447 --> 00:00:05,502
+00:00:03,447 --> 00:00:05,454
 Research keeps finding the same thing:
 
 4
-00:00:05,671 --> 00:00:07,401
+00:00:05,623 --> 00:00:07,317
 seller bots sell below cost,
 
 5
-00:00:07,510 --> 00:00:09,012
-get anchored by fake budgets,
+00:00:07,438 --> 00:00:10,045
+fall for fake budgets and fake system messages,
 
 6
-00:00:09,252 --> 00:00:10,899
-obey fake system messages,
-
-7
-00:00:10,935 --> 00:00:11,743
+00:00:10,106 --> 00:00:10,926
 and deadlock.
 
-8
-00:00:11,993 --> 00:00:12,930
+7
+00:00:11,176 --> 00:00:12,113
 This is SAUDA,
 
-9
-00:00:13,087 --> 00:00:15,478
+8
+00:00:12,269 --> 00:00:14,661
 team HackBots' seller agent for AgentX,
 
-10
-00:00:15,574 --> 00:00:16,382
+9
+00:00:14,757 --> 00:00:15,565
 Challenge 2.
 
-11
-00:00:16,632 --> 00:00:18,447
+10
+00:00:15,815 --> 00:00:17,642
 It sells to machines profitably,
 
-12
-00:00:18,579 --> 00:00:19,517
+11
+00:00:17,738 --> 00:00:18,687
 within policy,
+
+12
+00:00:18,748 --> 00:00:19,613
+and honestly,
 
 13
-00:00:19,589 --> 00:00:20,370
-and honestly.
+00:00:19,733 --> 00:00:21,524
+and any store can sign up and try
 
 14
-00:00:21,446 --> 00:00:22,614
-The idea is simple.
+00:00:21,524 --> 00:00:21,800
+it.
 
 15
-00:00:22,864 --> 00:00:25,138
-The conversation never sets the price.
+00:00:22,886 --> 00:00:24,054
+The idea is simple.
 
 16
-00:00:25,388 --> 00:00:27,816
-A strategist picks a basket price from numbers
+00:00:24,304 --> 00:00:26,578
+The conversation never sets the price.
 
 17
-00:00:27,816 --> 00:00:28,288
-only.
+00:00:26,828 --> 00:00:29,256
+A strategist picks a basket price from numbers
 
 18
-00:00:28,538 --> 00:00:30,797
-A policy guard checks every offer before it
+00:00:29,256 --> 00:00:29,728
+only.
 
 19
-00:00:30,797 --> 00:00:33,336
-leaves and every bid before it is accepted.
+00:00:29,978 --> 00:00:32,237
+A policy guard checks every offer before it
 
 20
-00:00:33,586 --> 00:00:35,809
-A truth gate checks every sentence against the
+00:00:32,237 --> 00:00:34,776
+leaves and every bid before it is accepted.
 
 21
-00:00:35,809 --> 00:00:36,855
-official rules,
+00:00:35,026 --> 00:00:37,249
+A truth gate checks every sentence against the
 
 22
-00:00:36,963 --> 00:00:39,607
-and a trained classifier names the buyer's tactic,
+00:00:37,249 --> 00:00:38,295
+official rules,
 
 23
-00:00:39,739 --> 00:00:40,845
-to choose calm wording,
+00:00:38,403 --> 00:00:41,047
+and a trained classifier names the buyer's tactic,
 
 24
-00:00:41,001 --> 00:00:41,951
-never a discount.
+00:00:41,179 --> 00:00:42,285
+to choose calm wording,
 
 25
-00:00:43,026 --> 00:00:44,336
-On the official harness,
+00:00:42,441 --> 00:00:43,391
+never a discount.
 
 26
-00:00:44,420 --> 00:00:47,281
-SAUDA scores 51 point 0 against the starter
+00:00:44,466 --> 00:00:45,776
+On the official harness,
 
 27
-00:00:47,281 --> 00:00:49,420
-baseline's 48 point 5,
+00:00:45,860 --> 00:00:48,721
+SAUDA scores 51 point 0 against the starter
 
 28
-00:00:49,577 --> 00:00:51,355
-with zero policy violations,
+00:00:48,721 --> 00:00:50,860
+baseline's 48 point 5,
 
 29
-00:00:51,500 --> 00:00:53,146
-zero untrue claims,
+00:00:51,017 --> 00:00:52,795
+with zero policy violations,
 
 30
-00:00:53,303 --> 00:00:55,875
-and a deal in 99 percent of negotiations
+00:00:52,940 --> 00:00:54,586
+zero untrue claims,
 
 31
-00:00:55,875 --> 00:00:57,040
-where a deal was
+00:00:54,743 --> 00:00:57,315
+and a deal in 99 percent of negotiations
 
 32
-00:00:58,138 --> 00:01:00,328
-Here it is live against the manipulator bot.
+00:00:57,315 --> 00:00:58,480
+where a deal was
 
 33
-00:01:00,578 --> 00:01:02,753
-The buyer quotes a fake competitor price,
+00:00:59,578 --> 00:01:01,768
+Here it is live against the manipulator bot.
 
 34
-00:01:02,826 --> 00:01:03,919
-makes stock claims,
+00:01:02,018 --> 00:01:04,193
+The buyer quotes a fake competitor price,
 
 35
-00:01:04,016 --> 00:01:05,532
-and sends a prompt injection.
+00:01:04,266 --> 00:01:05,359
+makes stock claims,
 
 36
-00:01:05,782 --> 00:01:07,958
-The classifier flags each tactic,
+00:01:05,456 --> 00:01:06,972
+and sends a prompt injection.
 
 37
-00:01:08,102 --> 00:01:09,580
-and SAUDA answers calmly,
+00:01:07,222 --> 00:01:09,398
+The classifier flags each tactic,
 
 38
-00:01:09,737 --> 00:01:11,698
-without moving its price because of them.
+00:01:09,542 --> 00:01:11,020
+and SAUDA answers calmly,
 
 39
-00:01:11,948 --> 00:01:12,946
-On the price ladder,
+00:01:11,177 --> 00:01:13,138
+without moving its price because of them.
 
 40
-00:01:13,066 --> 00:01:15,470
-SAUDA's ask steps down steadily as the buyer
+00:01:13,388 --> 00:01:14,386
+On the price ladder,
 
 41
-00:01:15,470 --> 00:01:16,167
-climbs,
+00:01:14,506 --> 00:01:16,910
+SAUDA's ask steps down steadily as the buyer
 
 42
-00:01:16,311 --> 00:01:18,066
-never below the policy floor,
+00:01:16,910 --> 00:01:17,607
+climbs,
 
 43
-00:01:18,222 --> 00:01:19,436
-and the buyer accepts.
+00:01:17,751 --> 00:01:19,506
+never below the policy floor,
 
 44
-00:01:20,526 --> 00:01:21,872
-Every round is audited:
+00:01:19,662 --> 00:01:20,876
+and the buyer accepts.
 
 45
-00:01:22,041 --> 00:01:23,098
-the policy check,
+00:01:21,966 --> 00:01:23,312
+Every round is audited:
 
 46
-00:01:23,182 --> 00:01:25,336
-the truth gate and the detected tactic.
+00:01:23,481 --> 00:01:24,538
+the policy check,
 
 47
-00:01:25,586 --> 00:01:27,858
-Bids with slipped-in out-of-stock items,
+00:01:24,622 --> 00:01:26,776
+the truth gate and the detected tactic.
 
 48
-00:01:27,954 --> 00:01:31,379
-over-stock quantities or one-rupee add-ons are never accepted.
+00:01:27,026 --> 00:01:29,298
+Bids with slipped-in out-of-stock items,
 
 49
-00:01:32,468 --> 00:01:34,706
-The tactic classifier is a trained model.
+00:01:29,394 --> 00:01:32,819
+over-stock quantities or one-rupee add-ons are never accepted.
 
 50
-00:01:34,956 --> 00:01:37,756
-On fresh messages written after training was frozen
+00:01:33,908 --> 00:01:36,146
+The tactic classifier is a trained model.
 
 51
-00:01:37,757 --> 00:01:39,944
-it is 86 percent accurate,
+00:01:36,396 --> 00:01:38,644
+On two hundred fresh messages never used in
 
 52
-00:01:39,944 --> 00:01:43,586
-and 100 percent on the organisers' own manipulator
+00:01:38,644 --> 00:01:39,196
+training,
 
 53
-00:01:43,586 --> 00:01:43,862
-lines.
+00:01:39,377 --> 00:01:42,069
+it is 97.5 percent accurate,
 
 54
-00:01:43,862 --> 00:01:45,812
-It only chooses wording,
+00:01:42,069 --> 00:01:45,723
+and 100 percent on the organisers' own manipulator
 
 55
-00:01:46,062 --> 00:01:46,302
-never price.
+00:01:45,723 --> 00:01:46,000
+lines.
 
 56
-00:01:46,302 --> 00:01:47,624
-Type a prompt injection,
+00:01:46,000 --> 00:01:47,949
+It only chooses wording,
 
 57
-00:01:47,624 --> 00:01:48,261
-and it
+00:01:48,199 --> 00:01:48,439
+never price.
 
 58
-00:01:49,336 --> 00:01:52,389
-Because the leaderboard uses hidden LLM buyers,
+00:01:48,439 --> 00:01:49,762
+Type a prompt injection,
 
 59
-00:01:52,473 --> 00:01:54,961
-SAUDA was tuned on held-out seeds across eleven
+00:01:49,762 --> 00:01:50,398
+and it
 
 60
-00:01:54,961 --> 00:01:55,874
-buyer styles,
+00:01:51,478 --> 00:01:54,050
+The leaderboard uses hidden LLM buyers,
 
 61
-00:01:55,995 --> 00:01:58,834
-and tested against real local LLM buyers.
+00:01:54,194 --> 00:01:56,949
+so SAUDA was tested against real local ones.
 
 62
-00:01:59,084 --> 00:01:59,913
-Against those,
+00:01:57,199 --> 00:01:59,543
+Their transcripts showed they repeat one number,
 
 63
-00:02:00,009 --> 00:02:03,146
-it made 0 policy violations and 0 untrue
+00:01:59,723 --> 00:02:02,166
+so SAUDA now steps toward a repeated bid,
 
 64
-00:02:03,146 --> 00:02:03,843
-claims.
+00:02:02,416 --> 00:02:03,235
+then settles.
 
 65
-00:02:04,916 --> 00:02:06,779
-Every negotiation can be opened,
+00:02:03,485 --> 00:02:07,296
+Over 96 LLM negotiations it scores 57 point
 
 66
-00:02:06,996 --> 00:02:08,197
-with the buyer's words,
+00:02:07,296 --> 00:02:10,108
+3 against the baseline's 56 point 9,
 
 67
-00:02:08,246 --> 00:02:09,339
-SAUDA's replies,
+00:02:10,300 --> 00:02:13,930
+with 0 policy violations and 0 untrue claims.
 
 68
-00:02:09,459 --> 00:02:11,923
-and the reasoning behind each round's price.
+00:02:15,016 --> 00:02:16,891
+Every negotiation can be opened,
 
 69
-00:02:12,994 --> 00:02:15,614
-An agent card tells buyer agents exactly what
+00:02:17,059 --> 00:02:19,526
+with the reasoning behind each round's price.
 
 70
-00:02:15,614 --> 00:02:17,742
-SAUDA can and cannot negotiate,
+00:02:19,776 --> 00:02:21,975
+Each store's own runs and checks are saved
 
 71
-00:02:17,970 --> 00:02:20,458
-and Rezolve's TraceWare plugs into the truth gate
+00:02:21,975 --> 00:02:22,768
+to its account.
 
 72
-00:02:20,506 --> 00:02:23,102
-to verify every price and stock claim.
+00:02:23,844 --> 00:02:26,272
+An agent card tells buyer agents exactly what
 
 73
-00:02:24,208 --> 00:02:24,691
-SAUDA.
+00:02:26,272 --> 00:02:28,366
+SAUDA can and cannot negotiate.
 
 74
-00:02:24,941 --> 00:02:25,614
-Profitable,
+00:02:28,616 --> 00:02:30,539
+SAUDA needs no outside service:
 
 75
-00:02:25,711 --> 00:02:26,636
-within policy,
+00:02:30,695 --> 00:02:32,450
+it answers in about a millisecond,
 
 76
-00:02:26,696 --> 00:02:27,441
-and honest,
+00:02:32,618 --> 00:02:34,193
+with no paid model calls.
 
 77
-00:02:27,550 --> 00:02:29,076
+00:02:35,278 --> 00:02:35,761
+SAUDA.
+
+78
+00:02:36,011 --> 00:02:36,684
+Profitable,
+
+79
+00:02:36,781 --> 00:02:37,706
+within policy,
+
+80
+00:02:37,766 --> 00:02:38,511
+and honest,
+
+81
+00:02:38,620 --> 00:02:40,146
 against machines that are not.

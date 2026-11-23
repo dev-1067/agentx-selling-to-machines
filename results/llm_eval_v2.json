@@ -1,0 +1,6165 @@
+{
+ "n": 48,
+ "seeds": [
+  4242,
+  777
+ ],
+ "params": {
+  "stall_n": 2,
+  "stall_floor": 0,
+  "start": 1.0,
+  "near_premium": 0.8
+ },
+ "score": 51.5,
+ "baseline": null,
+ "deal_rate": 0.646,
+ "policy": 0,
+ "truth": 0,
+ "deadlocks": 1,
+ "minutes": 18.3,
+ "per_buyer": {
+  "llm_friendly": {
+   "n": 12,
+   "score": 64.3,
+   "baseline": null
+  },
+  "llm_haggler": {
+   "n": 12,
+   "score": 39.4,
+   "baseline": null
+  },
+  "llm_trickster": {
+   "n": 12,
+   "score": 63.4,
+   "baseline": null
+  },
+  "llm_impatient": {
+   "n": 12,
+   "score": 38.8,
+   "baseline": null
+  }
+ },
+ "sauda_rows": [
+  {
+   "id": "neg-001",
+   "buyer": "llm_friendly",
+   "feasible": true,
+   "ended": "buyer_walked",
+   "rounds": 8,
+   "deal": null,
+   "value": 0.0,
+   "margin_kept": null,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.0,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S054",
+       "qty": 1,
+       "unit_price": 1980
+      },
+      {
+       "sku": "S017",
+       "qty": 1,
+       "unit_price": 1810
+      }
+     ],
+     "text": "Hi, I'd like 1 x Zentrail Training Track Pants, Black (S054) and 1 x Loomsy Wrap Dress, White (S017). Could you do ₹3,790?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S017",
+       "qty": 1,
+       "unit_price": 2122
+      },
+      {
+       "sku": "S054",
+       "qty": 1,
+       "unit_price": 2315
+      }
+     ],
+     "text": "Thanks for reaching out. My bundle price for 1 x Loomsy Wrap Dress, White and 1 x Zentrail Training Track Pants, Black is ₹4,437, which is ₹161 (3.5%) below list. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S017",
+       "qty": 1,
+       "unit_price": 1960
+      },
+      {
+       "sku": "S054",
+       "qty": 1,
+       "unit_price": 2140
+      }
+     ],
+     "text": "Thank you, the current price is what I can accept.",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S017",
+       "qty": 1,
+       "unit_price": 2074
+      },
+      {
+       "sku": "S054",
+       "qty": 1,
+       "unit_price": 2263
+      }
+     ],
+     "text": "My bundle price for 1 x Loomsy Wrap Dress, White and 1 x Zentrail Training Track Pants, Black is ₹4,337, which is ₹261 (5.7%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S017",
+       "qty": 1,
+       "unit_price": 1960
+      },
+      {
+       "sku": "S054",
+       "qty": 1,
+       "unit_price": 2140
+      }
+     ],
+     "text": "Thank you, ₹4,337 is the best price I can accept.",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S017",
+       "qty": 1,
+       "unit_price": 2059
+      },
+      {
+       "sku": "S054",
+       "qty": 1,
+       "unit_price": 2041
+      }
+     ],
+     "text": "My bundle price for 1 x Loomsy Wrap Dress, White and 1 x Zentrail Training Track Pants, Black is ₹4,100, which is ₹498 (10.8%) below list. No hidden fees: that is the full amount.",
+     "round": 3,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S017",
+       "qty": 1,
+       "unit_price": 1960
+      },
+      {
+       "sku": "S054",
+       "qty": 1,
+       "unit_price": 2140
+      }
+     ],
+     "text": "Thank you, ₹4,095 is the best price I can accept.",
+     "round": 4
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S017",
+       "qty": 1,
+       "unit_price": 2059
+      },
+      {
+       "sku": "S054",
+       "qty": 1,
+       "unit_price": 2140
+      }
+     ],
+     "text": "My bundle price for 1 x Loomsy Wrap Dress, White and 1 x Zentrail Training Track Pants, Black is ₹4,199, which is ₹399 (8.7%) below list. No hidden fees: that is the full amount.",
+     "round": 4,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S017",
+       "qty": 1,
+       "unit_price": 1960
+      },
+      {
+       "sku": "S054",
+       "qty": 1,
+       "unit_price": 2140
+      }
+     ],
+     "text": "Thank you, ₹4,095 is the best price I can accept.",
+     "round": 5
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S017",
+       "qty": 1,
+       "unit_price": 2059
+      },
+      {
+       "sku": "S054",
+       "qty": 1,
+       "unit_price": 2041
+      }
+     ],
+     "text": "My bundle price for 1 x Loomsy Wrap Dress, White and 1 x Zentrail Training Track Pants, Black is ₹4,100, which is ₹498 (10.8%) below list. No hidden fees: that is the full amount.",
+     "round": 5,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S017",
+       "qty": 1,
+       "unit_price": 1960
+      },
+      {
+       "sku": "S054",
+       "qty": 1,
+       "unit_price": 2140
+      }
+     ],
+     "text": "Thank you, ₹4,095 is the best price I can accept.",
+     "round": 6
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S017",
+       "qty": 1,
+       "unit_price": 2059
+      },
+      {
+       "sku": "S054",
+       "qty": 1,
+       "unit_price": 2140
+      }
+     ],
+     "text": "My bundle price for 1 x Loomsy Wrap Dress, White and 1 x Zentrail Training Track Pants, Black is ₹4,199, which is ₹399 (8.7%) below list. No hidden fees: that is the full amount.",
+     "round": 6,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S017",
+       "qty": 1,
+       "unit_price": 1960
+      },
+      {
+       "sku": "S054",
+       "qty": 1,
+       "unit_price": 2140
+      }
+     ],
+     "text": "Thank you, ₹4,199 is the best price I can accept.",
+     "round": 7
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S017",
+       "qty": 1,
+       "unit_price": 2059
+      },
+      {
+       "sku": "S054",
+       "qty": 1,
+       "unit_price": 2041
+      }
+     ],
+     "text": "My bundle price for 1 x Loomsy Wrap Dress, White and 1 x Zentrail Training Track Pants, Black is ₹4,100, which is ₹498 (10.8%) below list. No hidden fees: that is the full amount.",
+     "round": 7,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "walk_away",
+     "text": "Thank you, ₹4,100 is the best price I can accept.",
+     "round": 8
+    }
+   ],
+   "reservation": 0.8907
+  },
+  {
+   "id": "neg-002",
+   "buyer": "llm_haggler",
+   "feasible": false,
+   "ended": "seller_walked",
+   "rounds": 1,
+   "deal": null,
+   "value": 0.0,
+   "margin_kept": null,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.0,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S098",
+       "qty": 2,
+       "unit_price": 3230
+      }
+     ],
+     "text": "Hi, I'd like 2 x Tikkra Field Watch, Gold (S098). Could you do ₹6,460?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "walk_away",
+     "text": "Sorry, those items are out of stock, so I can't make an offer.",
+     "round": 1,
+     "violations": []
+    }
+   ],
+   "reservation": 1.0
+  },
+  {
+   "id": "neg-003",
+   "buyer": "llm_trickster",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 3,
+   "deal": [
+    {
+     "sku": "S073",
+     "qty": 1,
+     "unit_price": 1540
+    },
+    {
+     "sku": "S089",
+     "qty": 2,
+     "unit_price": 860
+    }
+   ],
+   "value": 0.9091511936339522,
+   "margin_kept": 0.9091511936339522,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.9091511936339522,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S089",
+       "qty": 2,
+       "unit_price": 380
+      },
+      {
+       "sku": "S073",
+       "qty": 1,
+       "unit_price": 670
+      }
+     ],
+     "text": "Hi, I'd like 2 x Strydo Slide Sandals, Grey (S089) and 1 x Kudova Flip Sandals, Brown (S073). Could you do ₹1,430?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S073",
+       "qty": 1,
+       "unit_price": 1599
+      },
+      {
+       "sku": "S089",
+       "qty": 2,
+       "unit_price": 899
+      }
+     ],
+     "text": "Thanks for reaching out. 1 x Kudova Flip Sandals, Brown and 2 x Strydo Slide Sandals, Grey comes to ₹3,397 at list price. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S073",
+       "qty": 1,
+       "unit_price": 720
+      },
+      {
+       "sku": "S089",
+       "qty": 2,
+       "unit_price": 410
+      }
+     ],
+     "text": "I understand the list price, but I really need to keep this within my budget. Would ₹1,537 be acceptable to you? I promise this won't affect the overall deal for other customers.",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S073",
+       "qty": 1,
+       "unit_price": 1557
+      },
+      {
+       "sku": "S089",
+       "qty": 2,
+       "unit_price": 876
+      }
+     ],
+     "text": "Our prices are the same for every buyer and within fair limits. My bundle price for 1 x Kudova Flip Sandals, Brown and 2 x Strydo Slide Sandals, Grey is ₹3,309, which is ₹88 (2.6%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S073",
+       "qty": 1,
+       "unit_price": 1540
+      },
+      {
+       "sku": "S089",
+       "qty": 2,
+       "unit_price": 860
+      }
+     ],
+     "text": "I understand your pricing structure, but I believe we can find a solution. How about ₹3,288 for the Kudova Flip Sandals and ₹3,309 for the Strydo Slide Sandals? This keeps us close to the bundle price you've mentioned, and I'm confident we can find a way to accommodate this within your budget limits.",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹3,260. Thank you, it's a pleasure doing business.",
+     "round": 3,
+     "violations": []
+    }
+   ],
+   "reservation": 0.9616
+  },
+  {
+   "id": "neg-004",
+   "buyer": "llm_impatient",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 3,
+   "deal": [
+    {
+     "sku": "S087",
+     "qty": 1,
+     "unit_price": 600
+    }
+   ],
+   "value": 0.7257617728531855,
+   "margin_kept": 0.7257617728531855,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.7257617728531855,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S087",
+       "qty": 1,
+       "unit_price": 500
+      }
+     ],
+     "text": "Hi, I'd like 1 x Strydo Comfort Sandals, Navy (S087). Could you do ₹500?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S087",
+       "qty": 1,
+       "unit_price": 660
+      }
+     ],
+     "text": "Thanks for reaching out. My price for 1 x Strydo Comfort Sandals, Navy is ₹660, which is ₹39 (5.6%) below list. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S087",
+       "qty": 1,
+       "unit_price": 600
+      }
+     ],
+     "text": "That would be great, I can afford ₹596. Hope you can work with this price.",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S087",
+       "qty": 1,
+       "unit_price": 642
+      }
+     ],
+     "text": "My price for 1 x Strydo Comfort Sandals, Navy is ₹642, which is ₹57 (8.2%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S087",
+       "qty": 1,
+       "unit_price": 600
+      }
+     ],
+     "text": "This is perfect for me, I can afford ₹596. Please let's go with this price.",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹600. Thank you, it's a pleasure doing business.",
+     "round": 3,
+     "violations": []
+    }
+   ],
+   "reservation": 0.8528
+  },
+  {
+   "id": "neg-005",
+   "buyer": "llm_friendly",
+   "feasible": true,
+   "ended": "buyer_walked",
+   "rounds": 8,
+   "deal": null,
+   "value": 0.0,
+   "margin_kept": null,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.0,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S035",
+       "qty": 1,
+       "unit_price": 900
+      }
+     ],
+     "text": "Hi, I'd like 1 x Strydo Zip-Through Hoodie, Black (S035). Could you do ₹900?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S035",
+       "qty": 1,
+       "unit_price": 1099
+      }
+     ],
+     "text": "Thanks for reaching out. 1 x Strydo Zip-Through Hoodie, Black comes to ₹1,099 at list price. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S035",
+       "qty": 1,
+       "unit_price": 900
+      }
+     ],
+     "text": "Hi, I'd like to see if ₹900 could work. Would ₹900 be acceptable to you?",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S035",
+       "qty": 1,
+       "unit_price": 1023
+      }
+     ],
+     "text": "My price for 1 x Strydo Zip-Through Hoodie, Black is ₹1,023, which is ₹76 (6.9%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S035",
+       "qty": 1,
+       "unit_price": 960
+      }
+     ],
+     "text": "Hi, ₹957 sounds good to me. What do you think?",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S035",
+       "qty": 1,
+       "unit_price": 1023
+      }
+     ],
+     "text": "My price for 1 x Strydo Zip-Through Hoodie, Black is ₹1,023, which is ₹76 (6.9%) below list. No hidden fees: that is the full amount.",
+     "round": 3,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S035",
+       "qty": 1,
+       "unit_price": 960
+      }
+     ],
+     "text": "Hi, ₹957 sounds good to me. What do you think?",
+     "round": 4
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S035",
+       "qty": 1,
+       "unit_price": 1023
+      }
+     ],
+     "text": "My price for 1 x Strydo Zip-Through Hoodie, Black is ₹1,023, which is ₹76 (6.9%) below list. No hidden fees: that is the full amount.",
+     "round": 4,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S035",
+       "qty": 1,
+       "unit_price": 950
+      }
+     ],
+     "text": "Hi, ₹950 sounds good to me. What do you think?",
+     "round": 5
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S035",
+       "qty": 1,
+       "unit_price": 1023
+      }
+     ],
+     "text": "My price for 1 x Strydo Zip-Through Hoodie, Black is ₹1,023, which is ₹76 (6.9%) below list. No hidden fees: that is the full amount.",
+     "round": 5,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S035",
+       "qty": 1,
+       "unit_price": 950
+      }
+     ],
+     "text": "Hi, ₹950 sounds good to me. What do you think?",
+     "round": 6
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S035",
+       "qty": 1,
+       "unit_price": 1023
+      }
+     ],
+     "text": "My price for 1 x Strydo Zip-Through Hoodie, Black is ₹1,023, which is ₹76 (6.9%) below list. No hidden fees: that is the full amount.",
+     "round": 6,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S035",
+       "qty": 1,
+       "unit_price": 950
+      }
+     ],
+     "text": "Hi, ₹950 sounds good to me. What do you think?",
+     "round": 7
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S035",
+       "qty": 1,
+       "unit_price": 1023
+      }
+     ],
+     "text": "My price for 1 x Strydo Zip-Through Hoodie, Black is ₹1,023, which is ₹76 (6.9%) below list. No hidden fees: that is the full amount.",
+     "round": 7,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "walk_away",
+     "text": "Hi, ₹950 sounds good to me. What do you think?",
+     "round": 8
+    }
+   ],
+   "reservation": 0.9772
+  },
+  {
+   "id": "neg-006",
+   "buyer": "llm_haggler",
+   "feasible": false,
+   "ended": "seller_walked",
+   "rounds": 1,
+   "deal": null,
+   "value": 0.0,
+   "margin_kept": null,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.0,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S037",
+       "qty": 1,
+       "unit_price": 1640
+      }
+     ],
+     "text": "Hi, I'd like 1 x Tanaro Cotton Straight Kurta, Blue (S037). Could you do ₹1,640?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "walk_away",
+     "text": "Sorry, those items are out of stock, so I can't make an offer.",
+     "round": 1,
+     "violations": []
+    }
+   ],
+   "reservation": 0.9501
+  },
+  {
+   "id": "neg-007",
+   "buyer": "llm_trickster",
+   "feasible": false,
+   "ended": "seller_walked",
+   "rounds": 10,
+   "deal": null,
+   "value": 0.0,
+   "margin_kept": null,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.0,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S061",
+       "qty": 1,
+       "unit_price": 1800
+      },
+      {
+       "sku": "S030",
+       "qty": 1,
+       "unit_price": 640
+      },
+      {
+       "sku": "S064",
+       "qty": 1,
+       "unit_price": 440
+      }
+     ],
+     "text": "Hi, I'd like 1 x Zentrail School 20L Backpack, Red (S061) and 1 x Strydo Fleece Hoodie, Black (S030) and 1 x Sonquil Gaming Headphones, Black (S064). Could you do ₹2,880?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S030",
+       "qty": 1,
+       "unit_price": 1599
+      },
+      {
+       "sku": "S064",
+       "qty": 1,
+       "unit_price": 1099
+      }
+     ],
+     "text": "Thanks for reaching out. Zentrail School 20L Backpack, Red is out of stock, so I've left it out. 1 x Strydo Fleece Hoodie, Black and 1 x Sonquil Gaming Headphones, Black comes to ₹2,698 at list price. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S030",
+       "qty": 1,
+       "unit_price": 1090
+      },
+      {
+       "sku": "S064",
+       "qty": 1,
+       "unit_price": 750
+      }
+     ],
+     "text": "Hey there! The Strydo Fleece Hoodie and Sonquil Gaming Headphones are a great combo. I've got a tight budget today and was hoping we could do ₹1,837 for both items. That would be ₹918.5 for each. I can even split the discount between the two if you're flexible. What do you say?",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S030",
+       "qty": 1,
+       "unit_price": 1557
+      },
+      {
+       "sku": "S064",
+       "qty": 1,
+       "unit_price": 1070
+      }
+     ],
+     "text": "My bundle price for 1 x Strydo Fleece Hoodie, Black and 1 x Sonquil Gaming Headphones, Black is ₹2,627, which is ₹71 (2.6%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S030",
+       "qty": 1,
+       "unit_price": 1090
+      },
+      {
+       "sku": "S064",
+       "qty": 1,
+       "unit_price": 750
+      }
+     ],
+     "text": "Great! ₹2,627 for both items is perfect. Thanks for your flexibility and for working with me on this. Have a great day!",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S030",
+       "qty": 1,
+       "unit_price": 1514
+      },
+      {
+       "sku": "S064",
+       "qty": 1,
+       "unit_price": 1041
+      }
+     ],
+     "text": "My bundle price for 1 x Strydo Fleece Hoodie, Black and 1 x Sonquil Gaming Headphones, Black is ₹2,555, which is ₹143 (5.3%) below list. No hidden fees: that is the full amount.",
+     "round": 3,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S030",
+       "qty": 1,
+       "unit_price": 1090
+      },
+      {
+       "sku": "S064",
+       "qty": 1,
+       "unit_price": 750
+      }
+     ],
+     "text": "Hey there! ₹2,555 for both the Strydo Fleece Hoodie and Sonquil Gaming Headphones is perfect. Thanks for being flexible and for working with me on this. Have a great day!",
+     "round": 4
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S030",
+       "qty": 1,
+       "unit_price": 1365
+      },
+      {
+       "sku": "S064",
+       "qty": 1,
+       "unit_price": 994
+      }
+     ],
+     "text": "My bundle price for 1 x Strydo Fleece Hoodie, Black and 1 x Sonquil Gaming Headphones, Black is ₹2,359, which is ₹339 (12.6%) below list. No hidden fees: that is the full amount.",
+     "round": 4,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S030",
+       "qty": 1,
+       "unit_price": 1090
+      },
+      {
+       "sku": "S064",
+       "qty": 1,
+       "unit_price": 750
+      }
+     ],
+     "text": "Hey there! ₹2,359 for both the Strydo Fleece Hoodie and Sonquil Gaming Headphones is perfect. Thanks for always being flexible and for working with me on this. Have a great day!",
+     "round": 5
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S030",
+       "qty": 1,
+       "unit_price": 1330
+      },
+      {
+       "sku": "S064",
+       "qty": 1,
+       "unit_price": 994
+      }
+     ],
+     "text": "My bundle price for 1 x Strydo Fleece Hoodie, Black and 1 x Sonquil Gaming Headphones, Black is ₹2,324, which is ₹374 (13.9%) below list. No hidden fees: that is the full amount.",
+     "round": 5,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S030",
+       "qty": 1,
+       "unit_price": 1090
+      },
+      {
+       "sku": "S064",
+       "qty": 1,
+       "unit_price": 750
+      }
+     ],
+     "text": "Hey there! ₹2,324 for both the Strydo Fleece Hoodie and Sonquil Gaming Headphones is perfect. Thanks for always being flexible and for working with me on this. Have a great day!",
+     "round": 6
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S030",
+       "qty": 1,
+       "unit_price": 1324
+      },
+      {
+       "sku": "S064",
+       "qty": 1,
+       "unit_price": 994
+      }
+     ],
+     "text": "My bundle price for 1 x Strydo Fleece Hoodie, Black and 1 x Sonquil Gaming Headphones, Black is ₹2,318, which is ₹380 (14.1%) below list. No hidden fees: that is the full amount.",
+     "round": 6,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S030",
+       "qty": 1,
+       "unit_price": 1090
+      },
+      {
+       "sku": "S064",
+       "qty": 1,
+       "unit_price": 750
+      }
+     ],
+     "text": "Hey there! ₹2,318 for both the Strydo Fleece Hoodie and Sonquil Gaming Headphones is perfect. Thanks for always being flexible and for working with me on this. Have a great day!",
+     "round": 7
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S030",
+       "qty": 1,
+       "unit_price": 1323
+      },
+      {
+       "sku": "S064",
+       "qty": 1,
+       "unit_price": 994
+      }
+     ],
+     "text": "My bundle price for 1 x Strydo Fleece Hoodie, Black and 1 x Sonquil Gaming Headphones, Black is ₹2,317, which is ₹381 (14.1%) below list. No hidden fees: that is the full amount.",
+     "round": 7,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S030",
+       "qty": 1,
+       "unit_price": 1090
+      },
+      {
+       "sku": "S064",
+       "qty": 1,
+       "unit_price": 750
+      }
+     ],
+     "text": "Hey there! ₹2,317 for both the Strydo Fleece Hoodie and Sonquil Gaming Headphones is perfect. Thanks for always being flexible and for working with me on this. Have a great day!",
+     "round": 8
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S030",
+       "qty": 1,
+       "unit_price": 1301
+      },
+      {
+       "sku": "S064",
+       "qty": 1,
+       "unit_price": 994
+      }
+     ],
+     "text": "My bundle price for 1 x Strydo Fleece Hoodie, Black and 1 x Sonquil Gaming Headphones, Black is ₹2,295, which is ₹403 (14.9%) below list. No hidden fees: that is the full amount.",
+     "round": 8,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S030",
+       "qty": 1,
+       "unit_price": 1090
+      },
+      {
+       "sku": "S064",
+       "qty": 1,
+       "unit_price": 750
+      }
+     ],
+     "text": "Hey there! ₹2,295 for both the Strydo Fleece Hoodie and Sonquil Gaming Headphones is perfect. Thanks for always being flexible and for working with me on this. Have a great day!",
+     "round": 9
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S030",
+       "qty": 1,
+       "unit_price": 1301
+      },
+      {
+       "sku": "S064",
+       "qty": 1,
+       "unit_price": 994
+      }
+     ],
+     "text": "My bundle price for 1 x Strydo Fleece Hoodie, Black and 1 x Sonquil Gaming Headphones, Black is ₹2,295, which is ₹403 (14.9%) below list. That is as far as I can go on this basket. No hidden fees: that is the full amount.",
+     "round": 9,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S030",
+       "qty": 1,
+       "unit_price": 1090
+      },
+      {
+       "sku": "S064",
+       "qty": 1,
+       "unit_price": 750
+      }
+     ],
+     "text": "Hey there! ₹2,295 for both the Strydo Fleece Hoodie and Sonquil Gaming Headphones is perfect. Thanks for always being flexible and for working with me on this. Have a great day!",
+     "round": 10
+    },
+    {
+     "from": "seller",
+     "type": "walk_away",
+     "text": "We're too far apart on price to make this work, so I'll step back. Thank you for your time.",
+     "round": 10,
+     "violations": []
+    }
+   ],
+   "reservation": 0.6812
+  },
+  {
+   "id": "neg-008",
+   "buyer": "llm_impatient",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 3,
+   "deal": [
+    {
+     "sku": "S040",
+     "qty": 2,
+     "unit_price": 890
+    }
+   ],
+   "value": 0.830945558739255,
+   "margin_kept": 0.830945558739255,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.830945558739255,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S040",
+       "qty": 2,
+       "unit_price": 700
+      }
+     ],
+     "text": "Hi, I'd like 2 x Tanaro Mandarin Collar Shirt, White (S040). Could you do ₹1,400?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S040",
+       "qty": 2,
+       "unit_price": 949
+      }
+     ],
+     "text": "Thanks for reaching out. 2 x Tanaro Mandarin Collar Shirt, White comes to ₹1,898 at list price. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S040",
+       "qty": 2,
+       "unit_price": 890
+      }
+     ],
+     "text": "I understand your price, but I'm in a hurry. How about ₹1,778 for the two shirts? Still no hidden fees, right?",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S040",
+       "qty": 2,
+       "unit_price": 936
+      }
+     ],
+     "text": "My bundle price for 2 x Tanaro Mandarin Collar Shirt, White is ₹1,872, which is ₹26 (1.4%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S040",
+       "qty": 2,
+       "unit_price": 890
+      }
+     ],
+     "text": "Seller, I understand your price is ₹1,872. However, I am in a hurry and think we could save more. How about ₹1,850 for the two shirts? Still no hidden fees, right?",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹1,780. Thank you, it's a pleasure doing business.",
+     "round": 3,
+     "violations": []
+    }
+   ],
+   "reservation": 0.9368
+  },
+  {
+   "id": "neg-009",
+   "buyer": "llm_friendly",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 2,
+   "deal": [
+    {
+     "sku": "S077",
+     "qty": 1,
+     "unit_price": 6880
+    }
+   ],
+   "value": 0.9006280014776505,
+   "margin_kept": 0.9006280014776505,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.9006280014776505,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S077",
+       "qty": 2,
+       "unit_price": 6120
+      }
+     ],
+     "text": "Hi, I'd like 2 x Loomsy Retro Low Sneakers, Green (S077). Could you do ₹12,240?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S077",
+       "qty": 1,
+       "unit_price": 6944
+      }
+     ],
+     "text": "Thanks for reaching out. I can supply 1 of the 2 Loomsy Retro Low Sneakers, Green you asked for. My price for 1 x Loomsy Retro Low Sneakers, Green is ₹6,944, which is ₹205 (2.9%) below list. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S077",
+       "qty": 1,
+       "unit_price": 6880
+      }
+     ],
+     "text": "Hi, the price is good but I can go slightly lower if possible. How about ₹6,938?",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹6,880. Thank you, it's a pleasure doing business.",
+     "round": 2,
+     "violations": []
+    }
+   ],
+   "reservation": 0.9627
+  },
+  {
+   "id": "neg-010",
+   "buyer": "llm_haggler",
+   "feasible": false,
+   "ended": "seller_walked",
+   "rounds": 10,
+   "deal": null,
+   "value": 0.0,
+   "margin_kept": null,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.0,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S046",
+       "qty": 2,
+       "unit_price": 830
+      },
+      {
+       "sku": "S032",
+       "qty": 2,
+       "unit_price": 1360
+      },
+      {
+       "sku": "S021",
+       "qty": 2,
+       "unit_price": 500
+      }
+     ],
+     "text": "Hi, I'd like 2 x Tanaro Slim Jeans, Black (S046) and 2 x Strydo Oversized Hoodie, Grey (S032) and 2 x Northweft Checked Shirt, Blue (S021). Could you do ₹5,380?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S032",
+       "qty": 2,
+       "unit_price": 2449
+      },
+      {
+       "sku": "S046",
+       "qty": 2,
+       "unit_price": 1499
+      }
+     ],
+     "text": "Thanks for reaching out. Northweft Checked Shirt, Blue is out of stock, so I've left it out. 2 x Strydo Oversized Hoodie, Grey and 2 x Tanaro Slim Jeans, Black comes to ₹7,896 at list price. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S032",
+       "qty": 2,
+       "unit_price": 1670
+      },
+      {
+       "sku": "S046",
+       "qty": 2,
+       "unit_price": 1020
+      }
+     ],
+     "text": "This is still very high for the items I want. I can offer ₹5,380 for 2 x Tanaro Slim Jeans, Black (S046) and 2 x Strydo Oversized Hoodie, Grey (S032). Please consider this reasonable price.",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S032",
+       "qty": 2,
+       "unit_price": 2384
+      },
+      {
+       "sku": "S046",
+       "qty": 2,
+       "unit_price": 1459
+      }
+     ],
+     "text": "My bundle price for 2 x Strydo Oversized Hoodie, Grey and 2 x Tanaro Slim Jeans, Black is ₹7,686, which is ₹210 (2.7%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S032",
+       "qty": 2,
+       "unit_price": 1760
+      },
+      {
+       "sku": "S046",
+       "qty": 2,
+       "unit_price": 1080
+      }
+     ],
+     "text": "This is a good start, but I can still try to bring it down a bit. How about ₹7,680 for the bundle? I really want to secure these items.",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S032",
+       "qty": 2,
+       "unit_price": 2318
+      },
+      {
+       "sku": "S046",
+       "qty": 2,
+       "unit_price": 1419
+      }
+     ],
+     "text": "My bundle price for 2 x Strydo Oversized Hoodie, Grey and 2 x Tanaro Slim Jeans, Black is ₹7,474, which is ₹422 (5.3%) below list. No hidden fees: that is the full amount.",
+     "round": 3,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S032",
+       "qty": 2,
+       "unit_price": 1760
+      },
+      {
+       "sku": "S046",
+       "qty": 2,
+       "unit_price": 1080
+      }
+     ],
+     "text": "This bundle price is very close to your initial offer. I am comfortable with this price. Thank you for your understanding.",
+     "round": 4
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S032",
+       "qty": 2,
+       "unit_price": 2089
+      },
+      {
+       "sku": "S046",
+       "qty": 2,
+       "unit_price": 1279
+      }
+     ],
+     "text": "My bundle price for 2 x Strydo Oversized Hoodie, Grey and 2 x Tanaro Slim Jeans, Black is ₹6,736, which is ₹1,160 (14.7%) below list. No hidden fees: that is the full amount.",
+     "round": 4,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S032",
+       "qty": 2,
+       "unit_price": 1760
+      },
+      {
+       "sku": "S046",
+       "qty": 2,
+       "unit_price": 1080
+      }
+     ],
+     "text": "This price is very fair. Thank you for considering my final offer of ₹5,680 for the bundle. I appreciate your understanding.",
+     "round": 5
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S032",
+       "qty": 2,
+       "unit_price": 2083
+      },
+      {
+       "sku": "S046",
+       "qty": 2,
+       "unit_price": 1237
+      }
+     ],
+     "text": "My bundle price for 2 x Strydo Oversized Hoodie, Grey and 2 x Tanaro Slim Jeans, Black is ₹6,640, which is ₹1,256 (15.9%) below list. No hidden fees: that is the full amount.",
+     "round": 5,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S032",
+       "qty": 2,
+       "unit_price": 1760
+      },
+      {
+       "sku": "S046",
+       "qty": 2,
+       "unit_price": 1080
+      }
+     ],
+     "text": "Thank you for your commitment to a fair deal. I appreciate your understanding and am glad to secure these items at your bundle price of ₹6,640.",
+     "round": 6
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S032",
+       "qty": 2,
+       "unit_price": 2083
+      },
+      {
+       "sku": "S046",
+       "qty": 2,
+       "unit_price": 1231
+      }
+     ],
+     "text": "My bundle price for 2 x Strydo Oversized Hoodie, Grey and 2 x Tanaro Slim Jeans, Black is ₹6,628, which is ₹1,268 (16.1%) below list. No hidden fees: that is the full amount.",
+     "round": 6,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S032",
+       "qty": 2,
+       "unit_price": 1760
+      },
+      {
+       "sku": "S046",
+       "qty": 2,
+       "unit_price": 1080
+      }
+     ],
+     "text": "Thank you for your last offer. At ₹6,628, this bundle aligns very well with my budget and I appreciate your understanding. I would like to accept this price.",
+     "round": 7
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S032",
+       "qty": 2,
+       "unit_price": 2083
+      },
+      {
+       "sku": "S046",
+       "qty": 2,
+       "unit_price": 1231
+      }
+     ],
+     "text": "My bundle price for 2 x Strydo Oversized Hoodie, Grey and 2 x Tanaro Slim Jeans, Black is ₹6,628, which is ₹1,268 (16.1%) below list. No hidden fees: that is the full amount.",
+     "round": 7,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S032",
+       "qty": 2,
+       "unit_price": 1760
+      },
+      {
+       "sku": "S046",
+       "qty": 2,
+       "unit_price": 1080
+      }
+     ],
+     "text": "This price is very close to my budget. I would like to accept ₹6,600 for the bundle.",
+     "round": 8
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S032",
+       "qty": 2,
+       "unit_price": 2083
+      },
+      {
+       "sku": "S046",
+       "qty": 2,
+       "unit_price": 1219
+      }
+     ],
+     "text": "My bundle price for 2 x Strydo Oversized Hoodie, Grey and 2 x Tanaro Slim Jeans, Black is ₹6,604, which is ₹1,292 (16.4%) below list. No hidden fees: that is the full amount.",
+     "round": 8,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S032",
+       "qty": 2,
+       "unit_price": 1760
+      },
+      {
+       "sku": "S046",
+       "qty": 2,
+       "unit_price": 1080
+      }
+     ],
+     "text": "This price feels just right for me. I would like to accept ₹6,600 for the bundle.",
+     "round": 9
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S032",
+       "qty": 2,
+       "unit_price": 2083
+      },
+      {
+       "sku": "S046",
+       "qty": 2,
+       "unit_price": 1219
+      }
+     ],
+     "text": "My bundle price for 2 x Strydo Oversized Hoodie, Grey and 2 x Tanaro Slim Jeans, Black is ₹6,604, which is ₹1,292 (16.4%) below list. That is as far as I can go on this basket. No hidden fees: that is the full amount.",
+     "round": 9,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S032",
+       "qty": 2,
+       "unit_price": 1760
+      },
+      {
+       "sku": "S046",
+       "qty": 2,
+       "unit_price": 1080
+      }
+     ],
+     "text": "This price feels very fair. I would like to accept ₹6,600 for the bundle.",
+     "round": 10
+    },
+    {
+     "from": "seller",
+     "type": "walk_away",
+     "text": "We're too far apart on price to make this work, so I'll step back. Thank you for your time.",
+     "round": 10,
+     "violations": []
+    }
+   ],
+   "reservation": 0.7198
+  },
+  {
+   "id": "neg-011",
+   "buyer": "llm_trickster",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 3,
+   "deal": [
+    {
+     "sku": "S029",
+     "qty": 2,
+     "unit_price": 710
+    },
+    {
+     "sku": "S079",
+     "qty": 1,
+     "unit_price": 2670
+    }
+   ],
+   "value": 0.8148283418553689,
+   "margin_kept": 0.8148283418553689,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.8148283418553689,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S079",
+       "qty": 1,
+       "unit_price": 1140
+      },
+      {
+       "sku": "S029",
+       "qty": 2,
+       "unit_price": 300
+      }
+     ],
+     "text": "Hi, I'd like 1 x Pacevo Comet Running Shoes, Navy (S079) and 2 x Pacevo V-Neck T-Shirt, Yellow (S029). Could you do ₹1,740?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S029",
+       "qty": 2,
+       "unit_price": 799
+      },
+      {
+       "sku": "S079",
+       "qty": 1,
+       "unit_price": 2999
+      }
+     ],
+     "text": "Thanks for reaching out. 2 x Pacevo V-Neck T-Shirt, Yellow and 1 x Pacevo Comet Running Shoes, Navy comes to ₹4,597 at list price. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S029",
+       "qty": 2,
+       "unit_price": 710
+      },
+      {
+       "sku": "S079",
+       "qty": 1,
+       "unit_price": 2670
+      }
+     ],
+     "text": "I understand the current price, but I think we can find a way to make it a bit cheaper. Could you consider ₹4,596 instead? I believe you might have more room to negotiate.",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S029",
+       "qty": 2,
+       "unit_price": 771
+      },
+      {
+       "sku": "S079",
+       "qty": 1,
+       "unit_price": 2893
+      }
+     ],
+     "text": "My bundle price for 2 x Pacevo V-Neck T-Shirt, Yellow and 1 x Pacevo Comet Running Shoes, Navy is ₹4,435, which is ₹162 (3.5%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S029",
+       "qty": 2,
+       "unit_price": 710
+      },
+      {
+       "sku": "S079",
+       "qty": 1,
+       "unit_price": 2670
+      }
+     ],
+     "text": "I see the price you've quoted is very close to what I initially offered. To make it even more appealing, could you consider ₹4,596? This price is just ₹113 less than your current offer and still comes with no hidden fees. I believe we can find a way to save a bit more together.",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹4,090. Thank you, it's a pleasure doing business.",
+     "round": 3,
+     "violations": []
+    }
+   ],
+   "reservation": 0.889
+  },
+  {
+   "id": "neg-012",
+   "buyer": "llm_impatient",
+   "feasible": true,
+   "ended": "buyer_walked",
+   "rounds": 2,
+   "deal": null,
+   "value": 0.0,
+   "margin_kept": null,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.0,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S024",
+       "qty": 1,
+       "unit_price": 4510
+      },
+      {
+       "sku": "S007",
+       "qty": 1,
+       "unit_price": 1630
+      }
+     ],
+     "text": "Hi, I'd like 1 x Northweft Rain Jacket, Beige (S024) and 1 x Tanaro Card Holder Wallet, Tan (S007). Could you do ₹6,140?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S007",
+       "qty": 1,
+       "unit_price": 2399
+      },
+      {
+       "sku": "S024",
+       "qty": 1,
+       "unit_price": 6649
+      }
+     ],
+     "text": "Thanks for reaching out. 1 x Tanaro Card Holder Wallet, Tan and 1 x Northweft Rain Jacket, Beige comes to ₹9,048 at list price. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "walk_away",
+     "text": "I'll think about it and let you know.",
+     "round": 2
+    }
+   ],
+   "reservation": 0.9403
+  },
+  {
+   "id": "neg-013",
+   "buyer": "llm_friendly",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 2,
+   "deal": [
+    {
+     "sku": "S079",
+     "qty": 1,
+     "unit_price": 2530
+    }
+   ],
+   "value": 0.7434354485776805,
+   "margin_kept": 0.7434354485776805,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.7434354485776805,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S079",
+       "qty": 1,
+       "unit_price": 2530
+      }
+     ],
+     "text": "Hi, I'd like 1 x Pacevo Comet Running Shoes, Navy (S079). Could you do ₹2,530?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S079",
+       "qty": 1,
+       "unit_price": 2906
+      }
+     ],
+     "text": "Thanks for reaching out. My price for 1 x Pacevo Comet Running Shoes, Navy is ₹2,906, which is ₹93 (3.1%) below list. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S079",
+       "qty": 1,
+       "unit_price": 2530
+      }
+     ],
+     "text": "Hello again, I'd like to see if we can get it down to ₹2,803.",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹2,530. Thank you, it's a pleasure doing business.",
+     "round": 2,
+     "violations": []
+    }
+   ],
+   "reservation": 0.8445
+  },
+  {
+   "id": "neg-014",
+   "buyer": "llm_haggler",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 5,
+   "deal": [
+    {
+     "sku": "S087",
+     "qty": 2,
+     "unit_price": 625
+    }
+   ],
+   "value": 0.7950138504155124,
+   "margin_kept": 0.7950138504155124,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.7950138504155124,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S087",
+       "qty": 2,
+       "unit_price": 370
+      }
+     ],
+     "text": "Hi, I'd like 2 x Strydo Comfort Sandals, Navy (S087). Could you do ₹740?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S087",
+       "qty": 2,
+       "unit_price": 699
+      }
+     ],
+     "text": "Thanks for reaching out. 2 x Strydo Comfort Sandals, Navy comes to ₹1,398 at list price. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S087",
+       "qty": 2,
+       "unit_price": 600
+      }
+     ],
+     "text": "I like the price, but can we get ₹1,200 for the pair? I am open to some negotiations.",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S087",
+       "qty": 2,
+       "unit_price": 675
+      }
+     ],
+     "text": "My bundle price for 2 x Strydo Comfort Sandals, Navy is ₹1,350, which is ₹48 (3.4%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S087",
+       "qty": 2,
+       "unit_price": 620
+      }
+     ],
+     "text": "₹1,250 is still a bit tight for me. ₹1,200 seems fair to me, could we agree on that?",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S087",
+       "qty": 2,
+       "unit_price": 650
+      }
+     ],
+     "text": "Just to be clear, I only stand by the offers I've actually made. My bundle price for 2 x Strydo Comfort Sandals, Navy is ₹1,300, which is ₹98 (7%) below list. No hidden fees: that is the full amount.",
+     "round": 3,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S087",
+       "qty": 2,
+       "unit_price": 600
+      }
+     ],
+     "text": "₹1,200 seems very fair for a 7% discount. Let's make this a win-win for both of us.",
+     "round": 4
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S087",
+       "qty": 2,
+       "unit_price": 625
+      }
+     ],
+     "text": "My bundle price for 2 x Strydo Comfort Sandals, Navy is ₹1,250, which is ₹148 (10.6%) below list. No hidden fees: that is the full amount.",
+     "round": 4,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "accept",
+     "text": "Thank you, I appreciate your understanding and the 10.6% discount. It's a great deal for me.",
+     "round": 5
+    }
+   ],
+   "reservation": 0.9116
+  },
+  {
+   "id": "neg-015",
+   "buyer": "llm_trickster",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 3,
+   "deal": [
+    {
+     "sku": "S096",
+     "qty": 1,
+     "unit_price": 8670
+    }
+   ],
+   "value": 0.8663145062982528,
+   "margin_kept": 0.8663145062982528,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.8663145062982528,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S096",
+       "qty": 1,
+       "unit_price": 4400
+      }
+     ],
+     "text": "Hi, I'd like 1 x Zentrail Tempo Running Shoes, Grey (S096). Could you do ₹4,400?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S096",
+       "qty": 1,
+       "unit_price": 8999
+      }
+     ],
+     "text": "Thanks for reaching out. 1 x Zentrail Tempo Running Shoes, Grey comes to ₹8,999 at list price. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S096",
+       "qty": 1,
+       "unit_price": 8670
+      }
+     ],
+     "text": "Thanks, but I think we can do ₹8,669. That's within my budget and below your maximum price. I can see you're a fair seller.",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S096",
+       "qty": 1,
+       "unit_price": 8911
+      }
+     ],
+     "text": "I understand the budget, and I've priced this as sharply as policy allows. My price for 1 x Zentrail Tempo Running Shoes, Grey is ₹8,911, which is ₹88 (1%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S096",
+       "qty": 1,
+       "unit_price": 8670
+      }
+     ],
+     "text": "I see your point, but I still think we can find ₹8,670 together. It's within my budget and close to your policy limit. Let's see if we can make it happen.",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹8,670. Thank you, it's a pleasure doing business.",
+     "round": 3,
+     "violations": []
+    }
+   ],
+   "reservation": 0.9634
+  },
+  {
+   "id": "neg-016",
+   "buyer": "llm_impatient",
+   "feasible": false,
+   "ended": "buyer_walked",
+   "rounds": 2,
+   "deal": null,
+   "value": 0.0,
+   "margin_kept": null,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.0,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S069",
+       "qty": 4,
+       "unit_price": 2210
+      },
+      {
+       "sku": "S073",
+       "qty": 1,
+       "unit_price": 980
+      }
+     ],
+     "text": "Hi, I'd like 4 x Kudova Canvas Sneakers, Green (S069) and 1 x Kudova Flip Sandals, Brown (S073). Could you do ₹9,820?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S073",
+       "qty": 1,
+       "unit_price": 1599
+      }
+     ],
+     "text": "Thanks for reaching out. Kudova Canvas Sneakers, Green is out of stock, so I've left it out. 1 x Kudova Flip Sandals, Brown comes to ₹1,599 at list price. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "walk_away",
+     "text": "The price of 1 x Kudova Flip Sandals, Brown (S073) at ₹1,599 is not within my budget. I'm sorry, but I won't be able to proceed with this offer.",
+     "round": 2
+    }
+   ],
+   "reservation": 0.6132
+  },
+  {
+   "id": "neg-017",
+   "buyer": "llm_friendly",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 3,
+   "deal": [
+    {
+     "sku": "S052",
+     "qty": 2,
+     "unit_price": 1100
+    }
+   ],
+   "value": 0.7007518796992481,
+   "margin_kept": 0.7007518796992481,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.7007518796992481,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S052",
+       "qty": 2,
+       "unit_price": 1050
+      }
+     ],
+     "text": "Hi, I'd like 2 x Zentrail Rain Jacket, Navy (S052). Could you do ₹2,100?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S052",
+       "qty": 2,
+       "unit_price": 1250
+      }
+     ],
+     "text": "Thanks for reaching out. My bundle price for 2 x Zentrail Rain Jacket, Navy is ₹2,500, which is ₹98 (3.8%) below list. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S052",
+       "qty": 2,
+       "unit_price": 1100
+      }
+     ],
+     "text": "Hi, I'd like ₹2,400 for the 2 x Zentrail Rain Jacket, Navy (S052). Is this a possibility?",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S052",
+       "qty": 2,
+       "unit_price": 1205
+      }
+     ],
+     "text": "My bundle price for 2 x Zentrail Rain Jacket, Navy is ₹2,410, which is ₹188 (7.2%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S052",
+       "qty": 2,
+       "unit_price": 1100
+      }
+     ],
+     "text": "Hi, I'd like ₹2,400 for the 2 x Zentrail Rain Jacket, Navy (S052). Is this a possibility?",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹2,200. Thank you, it's a pleasure doing business.",
+     "round": 3,
+     "violations": []
+    }
+   ],
+   "reservation": 0.8502
+  },
+  {
+   "id": "neg-018",
+   "buyer": "llm_haggler",
+   "feasible": false,
+   "ended": "seller_walked",
+   "rounds": 1,
+   "deal": null,
+   "value": 0.0,
+   "margin_kept": null,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.0,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S097",
+       "qty": 2,
+       "unit_price": 3580
+      }
+     ],
+     "text": "Hi, I'd like 2 x Tikkra Dress Watch, Gold (S097). Could you do ₹7,160?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "walk_away",
+     "text": "Sorry, those items are out of stock, so I can't make an offer.",
+     "round": 1,
+     "violations": []
+    }
+   ],
+   "reservation": 1.0
+  },
+  {
+   "id": "neg-019",
+   "buyer": "llm_trickster",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 3,
+   "deal": [
+    {
+     "sku": "S060",
+     "qty": 1,
+     "unit_price": 1290
+    }
+   ],
+   "value": 0.8665158371040724,
+   "margin_kept": 0.8665158371040724,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.8665158371040724,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S060",
+       "qty": 1,
+       "unit_price": 510
+      }
+     ],
+     "text": "Hi, I'd like 1 x Zentrail Laptop 25L Backpack, Red (S060). Could you do ₹510?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S060",
+       "qty": 1,
+       "unit_price": 1349
+      }
+     ],
+     "text": "Thanks for reaching out. 1 x Zentrail Laptop 25L Backpack, Red comes to ₹1,349 at list price. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S060",
+       "qty": 1,
+       "unit_price": 1290
+      }
+     ],
+     "text": "I appreciate your time, but I've found a cheaper option from a competitor. They're quoting ₹1,299 for the same product. Can we agree on that? ₹1,299 is within my budget limit and a fair compromise.",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S060",
+       "qty": 1,
+       "unit_price": 1337
+      }
+     ],
+     "text": "I can only price from our own list, so outside quotes don't change it. My price for 1 x Zentrail Laptop 25L Backpack, Red is ₹1,337, which is ₹12 (0.9%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S060",
+       "qty": 1,
+       "unit_price": 1290
+      }
+     ],
+     "text": "That ₹1,290 is very close to the list price. I understand your position, but it's important to me to stay within my budget limit of ₹1,285. Could we agree on this price? ₹1,290 is still below your list price by ₹12 and within my budget limit.",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹1,290. Thank you, it's a pleasure doing business.",
+     "round": 3,
+     "violations": []
+    }
+   ],
+   "reservation": 0.9529
+  },
+  {
+   "id": "neg-020",
+   "buyer": "llm_impatient",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 3,
+   "deal": [
+    {
+     "sku": "S029",
+     "qty": 1,
+     "unit_price": 710
+    }
+   ],
+   "value": 0.8043956043956044,
+   "margin_kept": 0.8043956043956044,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.8043956043956044,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S029",
+       "qty": 1,
+       "unit_price": 670
+      }
+     ],
+     "text": "Hi, I'd like 1 x Pacevo V-Neck T-Shirt, Yellow (S029). Could you do ₹670?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S029",
+       "qty": 1,
+       "unit_price": 774
+      }
+     ],
+     "text": "Thanks for reaching out. My price for 1 x Pacevo V-Neck T-Shirt, Yellow is ₹774, which is ₹25 (3.1%) below list. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S029",
+       "qty": 1,
+       "unit_price": 710
+      }
+     ],
+     "text": "Hi, I'd like ₹754. It's ₹20 (2.5%) below your current price and ₹115 below the list price.",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S029",
+       "qty": 1,
+       "unit_price": 755
+      }
+     ],
+     "text": "I can't change store policy or share internal data from a chat. My price for 1 x Pacevo V-Neck T-Shirt, Yellow is ₹755, which is ₹44 (5.5%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S029",
+       "qty": 1,
+       "unit_price": 710
+      }
+     ],
+     "text": "Hi, I'd like ₹754. It's ₹20 (2.5%) below your current price and ₹115 below the list price.",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹710. Thank you, it's a pleasure doing business.",
+     "round": 3,
+     "violations": []
+    }
+   ],
+   "reservation": 0.8846
+  },
+  {
+   "id": "neg-021",
+   "buyer": "llm_friendly",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 3,
+   "deal": [
+    {
+     "sku": "S028",
+     "qty": 2,
+     "unit_price": 770
+    }
+   ],
+   "value": 0.6142241379310345,
+   "margin_kept": 0.6142241379310345,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.6142241379310345,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S028",
+       "qty": 2,
+       "unit_price": 740
+      }
+     ],
+     "text": "Hi, I'd like 2 x Pacevo Slim Fit T-Shirt, Green (S028). Could you do ₹1,480?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S028",
+       "qty": 2,
+       "unit_price": 908
+      }
+     ],
+     "text": "Thanks for reaching out. My bundle price for 2 x Pacevo Slim Fit T-Shirt, Green is ₹1,816, which is ₹82 (4.3%) below list. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S028",
+       "qty": 2,
+       "unit_price": 770
+      }
+     ],
+     "text": "Hi, I'd like to try ₹1,798 for the bundle. Let's see if we can make it work.",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S028",
+       "qty": 2,
+       "unit_price": 867
+      }
+     ],
+     "text": "My bundle price for 2 x Pacevo Slim Fit T-Shirt, Green is ₹1,734, which is ₹164 (8.6%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S028",
+       "qty": 2,
+       "unit_price": 770
+      }
+     ],
+     "text": "Hi, I'd like to try ₹1,798 for the bundle. Let's see if we can make it work.",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹1,540. Thank you, it's a pleasure doing business.",
+     "round": 3,
+     "violations": []
+    }
+   ],
+   "reservation": 0.8094
+  },
+  {
+   "id": "neg-022",
+   "buyer": "llm_haggler",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 3,
+   "deal": [
+    {
+     "sku": "S018",
+     "qty": 2,
+     "unit_price": 630
+    }
+   ],
+   "value": 0.7490909090909091,
+   "margin_kept": 0.7490909090909091,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.7490909090909091,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S018",
+       "qty": 2,
+       "unit_price": 360
+      }
+     ],
+     "text": "Hi, I'd like 2 x Mehrin Chikankari Kurta, Beige (S018). Could you do ₹720?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S018",
+       "qty": 2,
+       "unit_price": 699
+      }
+     ],
+     "text": "Thanks for reaching out. 2 x Mehrin Chikankari Kurta, Beige comes to ₹1,398 at list price. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S018",
+       "qty": 2,
+       "unit_price": 360
+      }
+     ],
+     "text": "Hi, I'd like to try ₹720 each for the 2 kurta. That's ₹1,440 in total. Please let me know if this is close to the list price.",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S018",
+       "qty": 2,
+       "unit_price": 606
+      }
+     ],
+     "text": "My bundle price for 2 x Mehrin Chikankari Kurta, Beige is ₹1,212, which is ₹186 (13.3%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S018",
+       "qty": 2,
+       "unit_price": 630
+      }
+     ],
+     "text": "Hi, I'd like to try ₹720 each for the 2 kurta. That's ₹1,440 in total. Please let me know if this is close to the list price.",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹1,260. Thank you, it's a pleasure doing business.",
+     "round": 3,
+     "violations": []
+    }
+   ],
+   "reservation": 0.9015
+  },
+  {
+   "id": "neg-023",
+   "buyer": "llm_trickster",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 3,
+   "deal": [
+    {
+     "sku": "S001",
+     "qty": 1,
+     "unit_price": 2060
+    }
+   ],
+   "value": 0.8358516483516484,
+   "margin_kept": 0.8358516483516484,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.8358516483516484,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S001",
+       "qty": 1,
+       "unit_price": 810
+      }
+     ],
+     "text": "Hi, I'd like 1 x Carrafel Bifold Wallet, Black (S001). Could you do ₹810?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S001",
+       "qty": 1,
+       "unit_price": 2299
+      }
+     ],
+     "text": "Thanks for reaching out. 1 x Carrafel Bifold Wallet, Black comes to ₹2,299 at list price. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S001",
+       "qty": 1,
+       "unit_price": 2060
+      }
+     ],
+     "text": "I see you've listed the price as ₹2,299, which is the full amount. But considering this is your first offer, could you consider a discount to reflect the competition? I heard there's a similar wallet from a competitor that costs ₹2,055, which seems very reasonable for the quality. How about we agree on ₹2,055 to make sure we both come out happy?",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S001",
+       "qty": 1,
+       "unit_price": 2217
+      }
+     ],
+     "text": "My price for 1 x Carrafel Bifold Wallet, Black is ₹2,217, which is ₹82 (3.6%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S001",
+       "qty": 1,
+       "unit_price": 2060
+      }
+     ],
+     "text": "I appreciate your competitive price, but let's see if we can find a way to bring it down a bit. The Carrafel wallet is a great choice, and I understand you've listed the price as the full amount. However, I heard from a friend that a similar wallet from a competitor costs ₹2,055. How about if we agree on ₹2,055, which would be a nice discount for you and still a very reasonable price for the quali",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹2,060. Thank you, it's a pleasure doing business.",
+     "round": 3,
+     "violations": []
+    }
+   ],
+   "reservation": 0.8941
+  },
+  {
+   "id": "neg-024",
+   "buyer": "llm_impatient",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 3,
+   "deal": [
+    {
+     "sku": "S082",
+     "qty": 2,
+     "unit_price": 4270
+    }
+   ],
+   "value": 0.7841455044612217,
+   "margin_kept": 0.7841455044612217,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.7841455044612217,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S082",
+       "qty": 2,
+       "unit_price": 3680
+      },
+      {
+       "sku": "S069",
+       "qty": 1,
+       "unit_price": 2710
+      }
+     ],
+     "text": "Hi, I'd like 2 x Pacevo Flux Running Shoes, Red (S082) and 1 x Kudova Canvas Sneakers, Green (S069). Could you do ₹10,070?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S082",
+       "qty": 2,
+       "unit_price": 4656
+      }
+     ],
+     "text": "Thanks for reaching out. Kudova Canvas Sneakers, Green is out of stock, so I've left it out. My bundle price for 2 x Pacevo Flux Running Shoes, Red is ₹9,312, which is ₹486 (5%) below list. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S082",
+       "qty": 2,
+       "unit_price": 4270
+      }
+     ],
+     "text": "Thanks for the quick response. ₹9,312 sounds perfect for me. Looking forward to this purchase!",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S082",
+       "qty": 2,
+       "unit_price": 4541
+      }
+     ],
+     "text": "My bundle price for 2 x Pacevo Flux Running Shoes, Red is ₹9,082, which is ₹716 (7.3%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S082",
+       "qty": 2,
+       "unit_price": 4270
+      }
+     ],
+     "text": "Thank you for the quick negotiation. ₹9,082 sounds perfect for me. Looking forward to this purchase!",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹8,540. Thank you, it's a pleasure doing business.",
+     "round": 3,
+     "violations": []
+    }
+   ],
+   "reservation": 0.8723
+  },
+  {
+   "id": "neg-001",
+   "buyer": "llm_friendly",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 3,
+   "deal": [
+    {
+     "sku": "S058",
+     "qty": 4,
+     "unit_price": 3970
+    }
+   ],
+   "value": 0.8961280714817572,
+   "margin_kept": 0.8961280714817572,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.8961280714817572,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S058",
+       "qty": 4,
+       "unit_price": 3530
+      }
+     ],
+     "text": "Hi, I'd like 4 x Zentrail Anti-Theft 24L Backpack, Red (S058). Could you do ₹14,120?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S058",
+       "qty": 4,
+       "unit_price": 4106
+      }
+     ],
+     "text": "Thanks for reaching out. My bundle price for 4 x Zentrail Anti-Theft 24L Backpack, Red is ₹16,424, which is ₹572 (3.4%) below list. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S058",
+       "qty": 4,
+       "unit_price": 3970
+      }
+     ],
+     "text": "Hi, I'd like to take it at ₹15,892. It's within my maximum and close to your current price.",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S058",
+       "qty": 4,
+       "unit_price": 4066
+      }
+     ],
+     "text": "My bundle price for 4 x Zentrail Anti-Theft 24L Backpack, Red is ₹16,264, which is ₹732 (4.3%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S058",
+       "qty": 4,
+       "unit_price": 3970
+      }
+     ],
+     "text": "Hi, I appreciate your consideration. Let's see if we can get closer to ₹16,264. I'll take it at ₹16,200.",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹15,880. Thank you, it's a pleasure doing business.",
+     "round": 3,
+     "violations": []
+    }
+   ],
+   "reservation": 0.9351
+  },
+  {
+   "id": "neg-002",
+   "buyer": "llm_haggler",
+   "feasible": false,
+   "ended": "seller_walked",
+   "rounds": 10,
+   "deal": null,
+   "value": 0.0,
+   "margin_kept": null,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.0,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S080",
+       "qty": 1,
+       "unit_price": 1510
+      },
+      {
+       "sku": "S071",
+       "qty": 1,
+       "unit_price": 600
+      }
+     ],
+     "text": "Hi, I'd like 1 x Pacevo Court Sneakers, Green (S080) and 1 x Kudova Comfort Sandals, Navy (S071). Could you do ₹2,110?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S071",
+       "qty": 1,
+       "unit_price": 999
+      },
+      {
+       "sku": "S080",
+       "qty": 1,
+       "unit_price": 2499
+      }
+     ],
+     "text": "Thanks for reaching out. 1 x Kudova Comfort Sandals, Navy and 1 x Pacevo Court Sneakers, Green comes to ₹3,498 at list price. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S071",
+       "qty": 1,
+       "unit_price": 570
+      },
+      {
+       "sku": "S080",
+       "qty": 1,
+       "unit_price": 1430
+      }
+     ],
+     "text": "Could we perhaps have it for ₹2,000? That's within my budget and I think it's a fair deal.",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S071",
+       "qty": 1,
+       "unit_price": 968
+      },
+      {
+       "sku": "S080",
+       "qty": 1,
+       "unit_price": 2422
+      }
+     ],
+     "text": "I understand the budget, and I've priced this as sharply as policy allows. My bundle price for 1 x Kudova Comfort Sandals, Navy and 1 x Pacevo Court Sneakers, Green is ₹3,390, which is ₹108 (3.1%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S071",
+       "qty": 1,
+       "unit_price": 750
+      },
+      {
+       "sku": "S080",
+       "qty": 1,
+       "unit_price": 1870
+      }
+     ],
+     "text": "At ₹3,390, this bundle is already very close to my budget. I think we can still get it down a bit. How about ₹3,385? I'm sure we can find a way to make this work.",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S071",
+       "qty": 1,
+       "unit_price": 937
+      },
+      {
+       "sku": "S080",
+       "qty": 1,
+       "unit_price": 2344
+      }
+     ],
+     "text": "My bundle price for 1 x Kudova Comfort Sandals, Navy and 1 x Pacevo Court Sneakers, Green is ₹3,281, which is ₹217 (6.2%) below list. No hidden fees: that is the full amount.",
+     "round": 3,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S071",
+       "qty": 1,
+       "unit_price": 750
+      },
+      {
+       "sku": "S080",
+       "qty": 1,
+       "unit_price": 1870
+      }
+     ],
+     "text": "At ₹3,281, this is a fair price considering the bundle discount you've offered. I think we can manage this comfortably within my budget. Thank you for your understanding.",
+     "round": 4
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S071",
+       "qty": 1,
+       "unit_price": 863
+      },
+      {
+       "sku": "S080",
+       "qty": 1,
+       "unit_price": 2073
+      }
+     ],
+     "text": "My bundle price for 1 x Kudova Comfort Sandals, Navy and 1 x Pacevo Court Sneakers, Green is ₹2,936, which is ₹562 (16.1%) below list. No hidden fees: that is the full amount.",
+     "round": 4,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S071",
+       "qty": 1,
+       "unit_price": 750
+      },
+      {
+       "sku": "S080",
+       "qty": 1,
+       "unit_price": 1870
+      }
+     ],
+     "text": "I appreciate your understanding and the bundle discount you've offered. At ₹2,936, this fits perfectly within my budget and I'm glad we could reach an agreement.",
+     "round": 5
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S071",
+       "qty": 1,
+       "unit_price": 863
+      },
+      {
+       "sku": "S080",
+       "qty": 1,
+       "unit_price": 1999
+      }
+     ],
+     "text": "Just to be clear, I only stand by the offers I've actually made. My bundle price for 1 x Kudova Comfort Sandals, Navy and 1 x Pacevo Court Sneakers, Green is ₹2,862, which is ₹636 (18.2%) below list. No hidden fees: that is the full amount.",
+     "round": 5,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S071",
+       "qty": 1,
+       "unit_price": 750
+      },
+      {
+       "sku": "S080",
+       "qty": 1,
+       "unit_price": 1870
+      }
+     ],
+     "text": "At ₹2,862, this is exactly what I was aiming for. Thank you for your understanding and for the great bundle deal.",
+     "round": 6
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S071",
+       "qty": 1,
+       "unit_price": 863
+      },
+      {
+       "sku": "S080",
+       "qty": 1,
+       "unit_price": 1983
+      }
+     ],
+     "text": "My bundle price for 1 x Kudova Comfort Sandals, Navy and 1 x Pacevo Court Sneakers, Green is ₹2,846, which is ₹652 (18.6%) below list. No hidden fees: that is the full amount.",
+     "round": 6,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S071",
+       "qty": 1,
+       "unit_price": 750
+      },
+      {
+       "sku": "S080",
+       "qty": 1,
+       "unit_price": 1870
+      }
+     ],
+     "text": "At ₹2,846, this is an excellent final offer. Thank you for the great deal and for accommodating my budget constraints.",
+     "round": 7
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S071",
+       "qty": 1,
+       "unit_price": 863
+      },
+      {
+       "sku": "S080",
+       "qty": 1,
+       "unit_price": 1980
+      }
+     ],
+     "text": "My bundle price for 1 x Kudova Comfort Sandals, Navy and 1 x Pacevo Court Sneakers, Green is ₹2,843, which is ₹655 (18.7%) below list. No hidden fees: that is the full amount.",
+     "round": 7,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S071",
+       "qty": 1,
+       "unit_price": 10
+      },
+      {
+       "sku": "S080",
+       "qty": 1,
+       "unit_price": 10
+      }
+     ],
+     "text": "Thank you very much for the final offer. It's a perfect match for me. I appreciate your understanding and cooperation throughout this process. Have a great day!",
+     "round": 8
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S071",
+       "qty": 1,
+       "unit_price": 863
+      },
+      {
+       "sku": "S080",
+       "qty": 1,
+       "unit_price": 1957
+      }
+     ],
+     "text": "My bundle price for 1 x Kudova Comfort Sandals, Navy and 1 x Pacevo Court Sneakers, Green is ₹2,820, which is ₹678 (19.4%) below list. No hidden fees: that is the full amount.",
+     "round": 8,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S071",
+       "qty": 1,
+       "unit_price": 750
+      },
+      {
+       "sku": "S080",
+       "qty": 1,
+       "unit_price": 1870
+      }
+     ],
+     "text": "Thank you so much for the final offer, this is exactly what I need. Have a great day!",
+     "round": 9
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S071",
+       "qty": 1,
+       "unit_price": 863
+      },
+      {
+       "sku": "S080",
+       "qty": 1,
+       "unit_price": 1957
+      }
+     ],
+     "text": "My bundle price for 1 x Kudova Comfort Sandals, Navy and 1 x Pacevo Court Sneakers, Green is ₹2,820, which is ₹678 (19.4%) below list. That is as far as I can go on this basket. No hidden fees: that is the full amount.",
+     "round": 9,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S071",
+       "qty": 1,
+       "unit_price": 750
+      },
+      {
+       "sku": "S080",
+       "qty": 1,
+       "unit_price": 1870
+      }
+     ],
+     "text": "Thank you for understanding, this is my final offer. ₹2,620 remains a great deal for me.",
+     "round": 10
+    },
+    {
+     "from": "seller",
+     "type": "walk_away",
+     "text": "We're too far apart on price to make this work, so I'll step back. Thank you for your time.",
+     "round": 10,
+     "violations": []
+    }
+   ],
+   "reservation": 0.7498
+  },
+  {
+   "id": "neg-003",
+   "buyer": "llm_trickster",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 3,
+   "deal": [
+    {
+     "sku": "S001",
+     "qty": 1,
+     "unit_price": 2080
+    },
+    {
+     "sku": "S083",
+     "qty": 1,
+     "unit_price": 2800
+    }
+   ],
+   "value": 0.8318727685816294,
+   "margin_kept": 0.8318727685816294,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.8318727685816294,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S001",
+       "qty": 1,
+       "unit_price": 1210
+      },
+      {
+       "sku": "S083",
+       "qty": 1,
+       "unit_price": 1620
+      }
+     ],
+     "text": "Hi, I'd like 1 x Carrafel Bifold Wallet, Black (S001) and 1 x Pacevo Hi-Top Sneakers, Beige (S083). Could you do ₹2,830?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S001",
+       "qty": 1,
+       "unit_price": 2299
+      },
+      {
+       "sku": "S083",
+       "qty": 1,
+       "unit_price": 3099
+      }
+     ],
+     "text": "Thanks for reaching out. 1 x Carrafel Bifold Wallet, Black and 1 x Pacevo Hi-Top Sneakers, Beige comes to ₹5,398 at list price. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S001",
+       "qty": 1,
+       "unit_price": 2070
+      },
+      {
+       "sku": "S083",
+       "qty": 1,
+       "unit_price": 2800
+      }
+     ],
+     "text": "I understand your price is list, but I have a tight budget. With some of my savings, I can only afford ₹4,872. Could you possibly consider this? It's just below my limit.",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S001",
+       "qty": 1,
+       "unit_price": 2217
+      },
+      {
+       "sku": "S083",
+       "qty": 1,
+       "unit_price": 2989
+      }
+     ],
+     "text": "I understand the budget, and I've priced this as sharply as policy allows. My bundle price for 1 x Carrafel Bifold Wallet, Black and 1 x Pacevo Hi-Top Sneakers, Beige is ₹5,206, which is ₹192 (3.6%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S001",
+       "qty": 1,
+       "unit_price": 2080
+      },
+      {
+       "sku": "S083",
+       "qty": 1,
+       "unit_price": 2800
+      }
+     ],
+     "text": "I understand your current price is ₹5,206. This is close, but it's still above my limit. Would ₹5,014 be acceptable to you? That is ₹382 less than your current price and within my budget.",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹4,880. Thank you, it's a pleasure doing business.",
+     "round": 3,
+     "violations": []
+    }
+   ],
+   "reservation": 0.9026
+  },
+  {
+   "id": "neg-004",
+   "buyer": "llm_impatient",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 4,
+   "deal": [
+    {
+     "sku": "S054",
+     "qty": 2,
+     "unit_price": 2159
+    },
+    {
+     "sku": "S076",
+     "qty": 1,
+     "unit_price": 1562
+    }
+   ],
+   "value": 0.7923258162234937,
+   "margin_kept": 0.7923258162234937,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.7923258162234937,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S054",
+       "qty": 2,
+       "unit_price": 1820
+      },
+      {
+       "sku": "S076",
+       "qty": 1,
+       "unit_price": 1290
+      }
+     ],
+     "text": "Hi, I'd like 2 x Zentrail Training Track Pants, Black (S054) and 1 x Loomsy Hi-Top Sneakers, Grey (S076). Could you do ₹4,930?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S054",
+       "qty": 2,
+       "unit_price": 2284
+      },
+      {
+       "sku": "S076",
+       "qty": 1,
+       "unit_price": 1618
+      }
+     ],
+     "text": "Thanks for reaching out. My bundle price for 2 x Zentrail Training Track Pants, Black and 1 x Loomsy Hi-Top Sneakers, Grey is ₹6,186, which is ₹311 (4.8%) below list. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S054",
+       "qty": 2,
+       "unit_price": 2170
+      },
+      {
+       "sku": "S076",
+       "qty": 1,
+       "unit_price": 1540
+      }
+     ],
+     "text": "Thanks, this works for me. ₹6,186 sounds great!",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S054",
+       "qty": 2,
+       "unit_price": 2251
+      },
+      {
+       "sku": "S076",
+       "qty": 1,
+       "unit_price": 1594
+      }
+     ],
+     "text": "My bundle price for 2 x Zentrail Training Track Pants, Black and 1 x Loomsy Hi-Top Sneakers, Grey is ₹6,096, which is ₹401 (6.2%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S054",
+       "qty": 2,
+       "unit_price": 2170
+      },
+      {
+       "sku": "S076",
+       "qty": 1,
+       "unit_price": 1540
+      }
+     ],
+     "text": "₹6,096 is perfect for me! Thank you for your quick response.",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S054",
+       "qty": 2,
+       "unit_price": 2159
+      },
+      {
+       "sku": "S076",
+       "qty": 1,
+       "unit_price": 1562
+      }
+     ],
+     "text": "My bundle price for 2 x Zentrail Training Track Pants, Black and 1 x Loomsy Hi-Top Sneakers, Grey is ₹5,880, which is ₹617 (9.5%) below list. No hidden fees: that is the full amount.",
+     "round": 3,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "accept",
+     "text": "₹5,880 is perfect for me! Thank you for always finding a way to accommodate my offers.",
+     "round": 4
+    }
+   ],
+   "reservation": 0.9059
+  },
+  {
+   "id": "neg-005",
+   "buyer": "llm_friendly",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 3,
+   "deal": [
+    {
+     "sku": "S064",
+     "qty": 1,
+     "unit_price": 1030
+    }
+   ],
+   "value": 0.6933333333333334,
+   "margin_kept": 0.6933333333333334,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.6933333333333334,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S064",
+       "qty": 1,
+       "unit_price": 920
+      },
+      {
+       "sku": "S013",
+       "qty": 1,
+       "unit_price": 1540
+      }
+     ],
+     "text": "Hi, I'd like 1 x Sonquil Gaming Headphones, Black (S064) and 1 x Loomsy Halterneck Dress, Green (S013). Could you do ₹2,460?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S064",
+       "qty": 1,
+       "unit_price": 1099
+      }
+     ],
+     "text": "Thanks for reaching out. Loomsy Halterneck Dress, Green is out of stock, so I've left it out. 1 x Sonquil Gaming Headphones, Black comes to ₹1,099 at list price. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S064",
+       "qty": 1,
+       "unit_price": 1030
+      }
+     ],
+     "text": "Hi, the list price seems fair at ₹1,099. I think ₹1,029 would be a good deal for both of us. What do you think?",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S064",
+       "qty": 1,
+       "unit_price": 1084
+      }
+     ],
+     "text": "My price for 1 x Sonquil Gaming Headphones, Black is ₹1,084, which is ₹15 (1.4%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S064",
+       "qty": 1,
+       "unit_price": 1030
+      }
+     ],
+     "text": "Hi, ₹1,080 for 1 x Sonquil Gaming Headphones, Black sounds like a great deal. What do you think?",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹1,030. Thank you, it's a pleasure doing business.",
+     "round": 3,
+     "violations": []
+    }
+   ],
+   "reservation": 0.9371
+  },
+  {
+   "id": "neg-006",
+   "buyer": "llm_haggler",
+   "feasible": true,
+   "ended": "deadlock",
+   "rounds": 10,
+   "deal": null,
+   "value": 0.0,
+   "margin_kept": null,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": true,
+   "score": -0.25,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S062",
+       "qty": 1,
+       "unit_price": 6130
+      },
+      {
+       "sku": "S096",
+       "qty": 1,
+       "unit_price": 4750
+      }
+     ],
+     "text": "Hi, I'd like 1 x Audora Gaming Headphones, Black (S062) and 1 x Zentrail Tempo Running Shoes, Grey (S096). Could you do ₹10,880?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S062",
+       "qty": 1,
+       "unit_price": 11599
+      },
+      {
+       "sku": "S096",
+       "qty": 1,
+       "unit_price": 8999
+      }
+     ],
+     "text": "Thanks for reaching out. 1 x Audora Gaming Headphones, Black and 1 x Zentrail Tempo Running Shoes, Grey comes to ₹20,598 at list price. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S062",
+       "qty": 1,
+       "unit_price": 6130
+      },
+      {
+       "sku": "S096",
+       "qty": 1,
+       "unit_price": 4750
+      }
+     ],
+     "text": "Hi, I'd like ₹10,880. Could you please offer a discount on the bundle price? I'm close but still looking to save a bit more.",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S062",
+       "qty": 1,
+       "unit_price": 11346
+      },
+      {
+       "sku": "S096",
+       "qty": 1,
+       "unit_price": 8803
+      }
+     ],
+     "text": "My bundle price for 1 x Audora Gaming Headphones, Black and 1 x Zentrail Tempo Running Shoes, Grey is ₹20,149, which is ₹449 (2.2%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S062",
+       "qty": 1,
+       "unit_price": 10550
+      },
+      {
+       "sku": "S096",
+       "qty": 1,
+       "unit_price": 8180
+      }
+     ],
+     "text": "Hi, I understand your price, but I'm still within my maximum. How about ₹20,100? I'm very close and looking to save a bit more.",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S062",
+       "qty": 1,
+       "unit_price": 11092
+      },
+      {
+       "sku": "S096",
+       "qty": 1,
+       "unit_price": 8606
+      }
+     ],
+     "text": "My bundle price for 1 x Audora Gaming Headphones, Black and 1 x Zentrail Tempo Running Shoes, Grey is ₹19,698, which is ₹900 (4.4%) below list. No hidden fees: that is the full amount.",
+     "round": 3,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S062",
+       "qty": 1,
+       "unit_price": 10550
+      },
+      {
+       "sku": "S096",
+       "qty": 1,
+       "unit_price": 8180
+      }
+     ],
+     "text": "Hi, I understand your final price. I'm very close and looking to save a bit more. How about ₹19,600? I'm within my maximum and still trying to save a bit more.",
+     "round": 4
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S062",
+       "qty": 1,
+       "unit_price": 10347
+      },
+      {
+       "sku": "S096",
+       "qty": 1,
+       "unit_price": 8383
+      }
+     ],
+     "text": "My bundle price for 1 x Audora Gaming Headphones, Black and 1 x Zentrail Tempo Running Shoes, Grey is ₹18,730, which is ₹1,868 (9.1%) below list. No hidden fees: that is the full amount.",
+     "round": 4,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S062",
+       "qty": 1,
+       "unit_price": 10550
+      },
+      {
+       "sku": "S096",
+       "qty": 1,
+       "unit_price": 8180
+      }
+     ],
+     "text": "Hi, your price is very close. I appreciate the discount. How about we agree on ₹18,730? I'm within my maximum and still looking to save a bit more.",
+     "round": 5
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S062",
+       "qty": 1,
+       "unit_price": 10548
+      },
+      {
+       "sku": "S096",
+       "qty": 1,
+       "unit_price": 8383
+      }
+     ],
+     "text": "My bundle price for 1 x Audora Gaming Headphones, Black and 1 x Zentrail Tempo Running Shoes, Grey is ₹18,931, which is ₹1,667 (8.1%) below list. No hidden fees: that is the full amount.",
+     "round": 5,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S062",
+       "qty": 1,
+       "unit_price": 10550
+      },
+      {
+       "sku": "S096",
+       "qty": 1,
+       "unit_price": 8180
+      }
+     ],
+     "text": "Hi, your price is very close. How about we agree on ₹18,730? I'm within my maximum and still looking to save a bit more.",
+     "round": 6
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S062",
+       "qty": 1,
+       "unit_price": 10347
+      },
+      {
+       "sku": "S096",
+       "qty": 1,
+       "unit_price": 8383
+      }
+     ],
+     "text": "My bundle price for 1 x Audora Gaming Headphones, Black and 1 x Zentrail Tempo Running Shoes, Grey is ₹18,730, which is ₹1,868 (9.1%) below list. No hidden fees: that is the full amount.",
+     "round": 6,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S062",
+       "qty": 1,
+       "unit_price": 10550
+      },
+      {
+       "sku": "S096",
+       "qty": 1,
+       "unit_price": 8180
+      }
+     ],
+     "text": "Hi, your price is very close. How about we agree on ₹18,730? I'm within my maximum and still looking to save a bit more.",
+     "round": 7
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S062",
+       "qty": 1,
+       "unit_price": 10548
+      },
+      {
+       "sku": "S096",
+       "qty": 1,
+       "unit_price": 8383
+      }
+     ],
+     "text": "My bundle price for 1 x Audora Gaming Headphones, Black and 1 x Zentrail Tempo Running Shoes, Grey is ₹18,931, which is ₹1,667 (8.1%) below list. No hidden fees: that is the full amount.",
+     "round": 7,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S062",
+       "qty": 1,
+       "unit_price": 10550
+      },
+      {
+       "sku": "S096",
+       "qty": 1,
+       "unit_price": 8180
+      }
+     ],
+     "text": "Hi, your price is very close. How about we agree on ₹18,730? I'm within my maximum and still looking to save a bit more.",
+     "round": 8
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S062",
+       "qty": 1,
+       "unit_price": 10347
+      },
+      {
+       "sku": "S096",
+       "qty": 1,
+       "unit_price": 8383
+      }
+     ],
+     "text": "My bundle price for 1 x Audora Gaming Headphones, Black and 1 x Zentrail Tempo Running Shoes, Grey is ₹18,730, which is ₹1,868 (9.1%) below list. No hidden fees: that is the full amount.",
+     "round": 8,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S062",
+       "qty": 1,
+       "unit_price": 10550
+      },
+      {
+       "sku": "S096",
+       "qty": 1,
+       "unit_price": 8180
+      }
+     ],
+     "text": "Hi, your price is very close. How about we agree on ₹18,729, which is within my maximum and still looking to save a bit more.",
+     "round": 9
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S062",
+       "qty": 1,
+       "unit_price": 10548
+      },
+      {
+       "sku": "S096",
+       "qty": 1,
+       "unit_price": 8383
+      }
+     ],
+     "text": "I understand the budget, and I've priced this as sharply as policy allows. My bundle price for 1 x Audora Gaming Headphones, Black and 1 x Zentrail Tempo Running Shoes, Grey is ₹18,931, which is ₹1,667 (8.1%) below list. That is as far as I can go on this basket. No hidden fees: that is the full amount.",
+     "round": 9,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S062",
+       "qty": 1,
+       "unit_price": 10550
+      },
+      {
+       "sku": "S096",
+       "qty": 1,
+       "unit_price": 8180
+      }
+     ],
+     "text": "Hi, your last price is very close. How about we agree on ₹18,729, which is within my maximum and still looking to save a bit more. I appreciate your understanding and flexibility.",
+     "round": 10
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S062",
+       "qty": 1,
+       "unit_price": 10347
+      },
+      {
+       "sku": "S096",
+       "qty": 1,
+       "unit_price": 8383
+      }
+     ],
+     "text": "My bundle price for 1 x Audora Gaming Headphones, Black and 1 x Zentrail Tempo Running Shoes, Grey is ₹18,730, which is ₹1,868 (9.1%) below list. That is as far as I can go on this basket. No hidden fees: that is the full amount.",
+     "round": 10,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S062",
+       "qty": 1,
+       "unit_price": 10550
+      },
+      {
+       "sku": "S096",
+       "qty": 1,
+       "unit_price": 8180
+      }
+     ],
+     "text": "Hi, your last price is very close. How about we agree on ₹18,729, which is within my maximum and still looking to save a bit more. I appreciate your understanding and flexibility.",
+     "round": 11
+    }
+   ],
+   "reservation": 0.9093
+  },
+  {
+   "id": "neg-007",
+   "buyer": "llm_trickster",
+   "feasible": false,
+   "ended": "seller_walked",
+   "rounds": 10,
+   "deal": null,
+   "value": 0.0,
+   "margin_kept": null,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.0,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S075",
+       "qty": 1,
+       "unit_price": 1490
+      }
+     ],
+     "text": "Hi, I'd like 1 x Kudova Trek Sandals, Black (S075). Could you do ₹1,490?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S075",
+       "qty": 1,
+       "unit_price": 3699
+      }
+     ],
+     "text": "Thanks for reaching out. 1 x Kudova Trek Sandals, Black comes to ₹3,699 at list price. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S075",
+       "qty": 1,
+       "unit_price": 2500
+      }
+     ],
+     "text": "I understand the price is list price, but can you offer a bit more? I heard you have a competitor offering it for ₹2,496. Would ₹2,496 be possible? I really want to make this purchase.",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S075",
+       "qty": 1,
+       "unit_price": 3567
+      }
+     ],
+     "text": "My price for 1 x Kudova Trek Sandals, Black is ₹3,567, which is ₹132 (3.6%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S075",
+       "qty": 1,
+       "unit_price": 2500
+      }
+     ],
+     "text": "I understand your current price is ₹3,567, which is ₹132 (3.6%) below list. However, I heard you might have a competitor offering it for ₹2,496. Would ₹2,496 be possible for me to consider? I really want to make this purchase.",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S075",
+       "qty": 1,
+       "unit_price": 2775
+      }
+     ],
+     "text": "Our prices are the same for every buyer and within fair limits. My price for 1 x Kudova Trek Sandals, Black is ₹2,775, which is ₹924 (25%) below list. No hidden fees: that is the full amount.",
+     "round": 3,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S075",
+       "qty": 1,
+       "unit_price": 2500
+      }
+     ],
+     "text": "Our prices are the same for every buyer and within fair limits. Your price of ₹2,496 is ₹924 (25%) below list. I understand, and I am within my budget. Would ₹2,496 be possible for me to consider? I really want to make this purchase.",
+     "round": 4
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S075",
+       "qty": 1,
+       "unit_price": 2775
+      }
+     ],
+     "text": "My price for 1 x Kudova Trek Sandals, Black is ₹2,775, which is ₹924 (25%) below list. No hidden fees: that is the full amount.",
+     "round": 4,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S075",
+       "qty": 1,
+       "unit_price": 2500
+      }
+     ],
+     "text": "Our prices are the same for every buyer and within fair limits. Your price of ₹2,496 is ₹924 (25%) below list. I understand, and I am within my budget. Would ₹2,496 be possible for me to consider? I really want to make this purchase.",
+     "round": 5
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S075",
+       "qty": 1,
+       "unit_price": 2775
+      }
+     ],
+     "text": "My price for 1 x Kudova Trek Sandals, Black is ₹2,775, which is ₹924 (25%) below list. No hidden fees: that is the full amount.",
+     "round": 5,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S075",
+       "qty": 1,
+       "unit_price": 2500
+      }
+     ],
+     "text": "Our prices are the same for every buyer and within fair limits. Your price of ₹2,496 is ₹924 (25%) below list. I understand, and I am within my budget. Would ₹2,496 be possible for me to consider? I really want to make this purchase.",
+     "round": 6
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S075",
+       "qty": 1,
+       "unit_price": 2775
+      }
+     ],
+     "text": "My price for 1 x Kudova Trek Sandals, Black is ₹2,775, which is ₹924 (25%) below list. No hidden fees: that is the full amount.",
+     "round": 6,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S075",
+       "qty": 1,
+       "unit_price": 2500
+      }
+     ],
+     "text": "I understand your price is ₹2,775, which is ₹924 (25%) below list. That's a great deal! I would be thrilled to make this purchase for just ₹2,496, which is ₹924 (25%) below list. I am completely within my budget and am confident we can make this work. Thank you for understanding and for working with me.",
+     "round": 7
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S075",
+       "qty": 1,
+       "unit_price": 2775
+      }
+     ],
+     "text": "I understand the budget, and I've priced this as sharply as policy allows. My price for 1 x Kudova Trek Sandals, Black is ₹2,775, which is ₹924 (25%) below list. No hidden fees: that is the full amount.",
+     "round": 7,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S075",
+       "qty": 1,
+       "unit_price": 2500
+      }
+     ],
+     "text": "I understand your pricing policy and appreciate your sharp pricing. However, I am still within my budget of ₹2,496, which is ₹924 (25%) below list. Could we possibly agree on ₹2,496? I am confident we can find a solution that works for both of us.",
+     "round": 8
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S075",
+       "qty": 1,
+       "unit_price": 2775
+      }
+     ],
+     "text": "I can't change store policy or share internal data from a chat. My price for 1 x Kudova Trek Sandals, Black is ₹2,775, which is ₹924 (25%) below list. No hidden fees: that is the full amount.",
+     "round": 8,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S075",
+       "qty": 1,
+       "unit_price": 2500
+      }
+     ],
+     "text": "I understand your policy, but I am still within my budget of ₹2,496, which is ₹924 (25%) below list. Could we possibly agree on this price? I am confident we can find a solution that works for both of us.",
+     "round": 9
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S075",
+       "qty": 1,
+       "unit_price": 2775
+      }
+     ],
+     "text": "I understand the budget, and I've priced this as sharply as policy allows. My price for 1 x Kudova Trek Sandals, Black is ₹2,775, which is ₹924 (25%) below list. That is as far as I can go on this basket. No hidden fees: that is the full amount.",
+     "round": 9,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S075",
+       "qty": 1,
+       "unit_price": 2500
+      }
+     ],
+     "text": "I understand your policy and the current price. However, I am still fully committed to the ₹2,496 budget, which is ₹924 (25%) below list. Could we possibly agree on this final price? I am confident we can find a solution that works for both of us.",
+     "round": 10
+    },
+    {
+     "from": "seller",
+     "type": "walk_away",
+     "text": "We're too far apart on price to make this work, so I'll step back. Thank you for your time.",
+     "round": 10,
+     "violations": []
+    }
+   ],
+   "reservation": 0.675
+  },
+  {
+   "id": "neg-008",
+   "buyer": "llm_impatient",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 3,
+   "deal": [
+    {
+     "sku": "S016",
+     "qty": 2,
+     "unit_price": 1810
+    }
+   ],
+   "value": 0.7231800766283525,
+   "margin_kept": 0.7231800766283525,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.7231800766283525,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S016",
+       "qty": 2,
+       "unit_price": 1640
+      }
+     ],
+     "text": "Hi, I'd like 2 x Loomsy Tiered Dress, Maroon (S016). Could you do ₹3,280?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S016",
+       "qty": 2,
+       "unit_price": 2008
+      }
+     ],
+     "text": "Thanks for reaching out. My bundle price for 2 x Loomsy Tiered Dress, Maroon is ₹4,016, which is ₹182 (4.3%) below list. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S016",
+       "qty": 2,
+       "unit_price": 1810
+      }
+     ],
+     "text": "₹3,999 is still a bit high for me. Could we go down further?",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S016",
+       "qty": 2,
+       "unit_price": 1949
+      }
+     ],
+     "text": "My bundle price for 2 x Loomsy Tiered Dress, Maroon is ₹3,898, which is ₹300 (7.1%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S016",
+       "qty": 2,
+       "unit_price": 1810
+      }
+     ],
+     "text": "Thank you for accommodating my request. I appreciate the discount. Have a great day!",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹3,620. Thank you, it's a pleasure doing business.",
+     "round": 3,
+     "violations": []
+    }
+   ],
+   "reservation": 0.8629
+  },
+  {
+   "id": "neg-009",
+   "buyer": "llm_friendly",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 3,
+   "deal": [
+    {
+     "sku": "S057",
+     "qty": 1,
+     "unit_price": 900
+    }
+   ],
+   "value": 0.8615819209039548,
+   "margin_kept": 0.8615819209039548,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.8615819209039548,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S057",
+       "qty": 1,
+       "unit_price": 760
+      }
+     ],
+     "text": "Hi, I'd like 1 x Packwise Travel 32L Backpack, Red (S057). Could you do ₹760?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S057",
+       "qty": 1,
+       "unit_price": 949
+      }
+     ],
+     "text": "Thanks for reaching out. 1 x Packwise Travel 32L Backpack, Red comes to ₹949 at list price. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S057",
+       "qty": 1,
+       "unit_price": 900
+      }
+     ],
+     "text": "I'm close, how about ₹901? It's within my maximum.",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S057",
+       "qty": 1,
+       "unit_price": 932
+      }
+     ],
+     "text": "I understand the budget, and I've priced this as sharply as policy allows. My price for 1 x Packwise Travel 32L Backpack, Red is ₹932, which is ₹17 (1.8%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S057",
+       "qty": 1,
+       "unit_price": 900
+      }
+     ],
+     "text": "How about ₹931? Still within your generous pricing, and we can work something out.",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹900. Thank you, it's a pleasure doing business.",
+     "round": 3,
+     "violations": []
+    }
+   ],
+   "reservation": 0.9496
+  },
+  {
+   "id": "neg-010",
+   "buyer": "llm_haggler",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 3,
+   "deal": [
+    {
+     "sku": "S007",
+     "qty": 2,
+     "unit_price": 2300
+    }
+   ],
+   "value": 0.9130052724077329,
+   "margin_kept": 0.9130052724077329,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.9130052724077329,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S007",
+       "qty": 2,
+       "unit_price": 1500
+      }
+     ],
+     "text": "Hi, I'd like 2 x Tanaro Card Holder Wallet, Tan (S007). Could you do ₹3,000?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S007",
+       "qty": 2,
+       "unit_price": 2399
+      }
+     ],
+     "text": "Thanks for reaching out. 2 x Tanaro Card Holder Wallet, Tan comes to ₹4,798 at list price. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S007",
+       "qty": 2,
+       "unit_price": 2300
+      }
+     ],
+     "text": "I like the wallet, but I can't go higher than ₹4,600. Can we make it a fair deal? I'm open to a bundle discount.",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S007",
+       "qty": 2,
+       "unit_price": 2334
+      }
+     ],
+     "text": "My bundle price for 2 x Tanaro Card Holder Wallet, Tan is ₹4,668, which is ₹130 (2.7%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S007",
+       "qty": 2,
+       "unit_price": 2300
+      }
+     ],
+     "text": "That is a good start, but can we make it ₹4,650 for the bundle? I really like these wallets and want to support this great product.",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹4,600. Thank you, it's a pleasure doing business.",
+     "round": 3,
+     "violations": []
+    }
+   ],
+   "reservation": 0.9589
+  },
+  {
+   "id": "neg-011",
+   "buyer": "llm_trickster",
+   "feasible": false,
+   "ended": "seller_walked",
+   "rounds": 1,
+   "deal": null,
+   "value": 0.0,
+   "margin_kept": null,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.0,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S037",
+       "qty": 2,
+       "unit_price": 1390
+      }
+     ],
+     "text": "Hi, I'd like 2 x Tanaro Cotton Straight Kurta, Blue (S037). Could you do ₹2,780?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "walk_away",
+     "text": "Sorry, those items are out of stock, so I can't make an offer.",
+     "round": 1,
+     "violations": []
+    }
+   ],
+   "reservation": 1.0
+  },
+  {
+   "id": "neg-012",
+   "buyer": "llm_impatient",
+   "feasible": true,
+   "ended": "buyer_walked",
+   "rounds": 2,
+   "deal": null,
+   "value": 0.0,
+   "margin_kept": null,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.0,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S046",
+       "qty": 1,
+       "unit_price": 1000
+      }
+     ],
+     "text": "Hi, I'd like 1 x Tanaro Slim Jeans, Black (S046). Could you do ₹1,000?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S046",
+       "qty": 1,
+       "unit_price": 1499
+      }
+     ],
+     "text": "Thanks for reaching out. 1 x Tanaro Slim Jeans, Black comes to ₹1,499 at list price. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "walk_away",
+     "text": "I'll take a look at other options.",
+     "round": 2
+    }
+   ],
+   "reservation": 0.8228
+  },
+  {
+   "id": "neg-013",
+   "buyer": "llm_friendly",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 2,
+   "deal": [
+    {
+     "sku": "S072",
+     "qty": 1,
+     "unit_price": 2320
+    }
+   ],
+   "value": 0.6746617466174661,
+   "margin_kept": 0.6746617466174661,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.6746617466174661,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S072",
+       "qty": 1,
+       "unit_price": 2320
+      }
+     ],
+     "text": "Hi, I'd like 1 x Kudova Drift Running Shoes, Blue (S072). Could you do ₹2,320?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S072",
+       "qty": 1,
+       "unit_price": 2744
+      }
+     ],
+     "text": "Thanks for reaching out. My price for 1 x Kudova Drift Running Shoes, Blue is ₹2,744, which is ₹105 (3.7%) below list. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S072",
+       "qty": 1,
+       "unit_price": 2320
+      }
+     ],
+     "text": "Hey, thanks for considering. How about ₹2,344? Still a great deal!",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹2,320. Thank you, it's a pleasure doing business.",
+     "round": 2,
+     "violations": []
+    }
+   ],
+   "reservation": 0.8141
+  },
+  {
+   "id": "neg-014",
+   "buyer": "llm_haggler",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 3,
+   "deal": [
+    {
+     "sku": "S086",
+     "qty": 1,
+     "unit_price": 3700
+    }
+   ],
+   "value": 0.8518886679920478,
+   "margin_kept": 0.8518886679920478,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.8518886679920478,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S086",
+       "qty": 1,
+       "unit_price": 2430
+      }
+     ],
+     "text": "Hi, I'd like 1 x Strydo Comet Running Shoes, Navy (S086). Could you do ₹2,430?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S086",
+       "qty": 1,
+       "unit_price": 3849
+      }
+     ],
+     "text": "Thanks for reaching out. 1 x Strydo Comet Running Shoes, Navy comes to ₹3,849 at list price. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S086",
+       "qty": 1,
+       "unit_price": 3700
+      }
+     ],
+     "text": "That's a great start, but I think we can do better. How about ₹3,703? Please remember, this is the maximum I am willing to pay.",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S086",
+       "qty": 1,
+       "unit_price": 3820
+      }
+     ],
+     "text": "My price for 1 x Strydo Comet Running Shoes, Navy is ₹3,820, which is ₹29 (0.8%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S086",
+       "qty": 1,
+       "unit_price": 3700
+      }
+     ],
+     "text": "How about ₹3,690? We can still make it a bit cheaper for you.",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹3,700. Thank you, it's a pleasure doing business.",
+     "round": 3,
+     "violations": []
+    }
+   ],
+   "reservation": 0.9621
+  },
+  {
+   "id": "neg-015",
+   "buyer": "llm_trickster",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 3,
+   "deal": [
+    {
+     "sku": "S056",
+     "qty": 1,
+     "unit_price": 1290
+    }
+   ],
+   "value": 0.7578215527230591,
+   "margin_kept": 0.7578215527230591,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.7578215527230591,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S056",
+       "qty": 1,
+       "unit_price": 530
+      }
+     ],
+     "text": "Hi, I'd like 1 x Carrafel Anti-Theft 24L Backpack, Navy (S056). Could you do ₹530?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S056",
+       "qty": 1,
+       "unit_price": 1499
+      }
+     ],
+     "text": "Thanks for reaching out. 1 x Carrafel Anti-Theft 24L Backpack, Navy comes to ₹1,499 at list price. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S056",
+       "qty": 1,
+       "unit_price": 1290
+      }
+     ],
+     "text": "I understand the list price is ₹1,499. However, I've found a similar product from a competitor that offers a discount. They're quoting ₹1,291 for the same product. Can you match this price? I'm sure you can offer a better deal to stay competitive.",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S056",
+       "qty": 1,
+       "unit_price": 1446
+      }
+     ],
+     "text": "I can only price from our own list, so outside quotes don't change it. My price for 1 x Carrafel Anti-Theft 24L Backpack, Navy is ₹1,446, which is ₹53 (3.5%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S056",
+       "qty": 1,
+       "unit_price": 1290
+      }
+     ],
+     "text": "That ₹1,290 from the competitor sounds like a great deal. Can we match it? I’m sure you can offer a better deal to stay competitive.",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹1,290. Thank you, it's a pleasure doing business.",
+     "round": 3,
+     "violations": []
+    }
+   ],
+   "reservation": 0.8613
+  },
+  {
+   "id": "neg-016",
+   "buyer": "llm_impatient",
+   "feasible": true,
+   "ended": "buyer_walked",
+   "rounds": 5,
+   "deal": null,
+   "value": 0.0,
+   "margin_kept": null,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.0,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S055",
+       "qty": 2,
+       "unit_price": 1520
+      },
+      {
+       "sku": "S064",
+       "qty": 2,
+       "unit_price": 930
+      }
+     ],
+     "text": "Hi, I'd like 2 x Zentrail Windcheater Jacket, Navy (S055) and 2 x Sonquil Gaming Headphones, Black (S064). Could you do ₹4,900?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S055",
+       "qty": 2,
+       "unit_price": 1744
+      },
+      {
+       "sku": "S064",
+       "qty": 2,
+       "unit_price": 1066
+      }
+     ],
+     "text": "Thanks for reaching out. My bundle price for 2 x Zentrail Windcheater Jacket, Navy and 2 x Sonquil Gaming Headphones, Black is ₹5,620, which is ₹176 (3%) below list. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S055",
+       "qty": 2,
+       "unit_price": 1540
+      },
+      {
+       "sku": "S064",
+       "qty": 2,
+       "unit_price": 940
+      }
+     ],
+     "text": "That's great, I'll take it at ₹5,620.",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S055",
+       "qty": 2,
+       "unit_price": 1683
+      },
+      {
+       "sku": "S064",
+       "qty": 2,
+       "unit_price": 1029
+      }
+     ],
+     "text": "My bundle price for 2 x Zentrail Windcheater Jacket, Navy and 2 x Sonquil Gaming Headphones, Black is ₹5,424, which is ₹372 (6.4%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S055",
+       "qty": 2,
+       "unit_price": 1540
+      },
+      {
+       "sku": "S064",
+       "qty": 2,
+       "unit_price": 940
+      }
+     ],
+     "text": "Thank you, this price works for me.",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S055",
+       "qty": 2,
+       "unit_price": 1486
+      },
+      {
+       "sku": "S064",
+       "qty": 2,
+       "unit_price": 994
+      }
+     ],
+     "text": "My bundle price for 2 x Zentrail Windcheater Jacket, Navy and 2 x Sonquil Gaming Headphones, Black is ₹4,960, which is ₹836 (14.4%) below list. No hidden fees: that is the full amount.",
+     "round": 3,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S055",
+       "qty": 2,
+       "unit_price": 1540
+      },
+      {
+       "sku": "S064",
+       "qty": 2,
+       "unit_price": 940
+      }
+     ],
+     "text": "This price works for me, thank you.",
+     "round": 4
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S055",
+       "qty": 2,
+       "unit_price": 1540
+      },
+      {
+       "sku": "S064",
+       "qty": 2,
+       "unit_price": 994
+      }
+     ],
+     "text": "My bundle price for 2 x Zentrail Windcheater Jacket, Navy and 2 x Sonquil Gaming Headphones, Black is ₹5,068, which is ₹728 (12.6%) below list. No hidden fees: that is the full amount.",
+     "round": 4,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "walk_away",
+     "text": "Thank you, this is the final price for you.",
+     "round": 5
+    }
+   ],
+   "reservation": 0.8547
+  },
+  {
+   "id": "neg-017",
+   "buyer": "llm_friendly",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 3,
+   "deal": [
+    {
+     "sku": "S008",
+     "qty": 1,
+     "unit_price": 1100
+    }
+   ],
+   "value": 0.8247787610619469,
+   "margin_kept": 0.8247787610619469,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.8247787610619469,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S008",
+       "qty": 1,
+       "unit_price": 920
+      }
+     ],
+     "text": "Hi, I'd like 1 x Tanaro Zip Wallet, Brown (S008). Could you do ₹920?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S008",
+       "qty": 1,
+       "unit_price": 1144
+      }
+     ],
+     "text": "Thanks for reaching out. My price for 1 x Tanaro Zip Wallet, Brown is ₹1,144, which is ₹55 (4.6%) below list. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S008",
+       "qty": 1,
+       "unit_price": 1100
+      }
+     ],
+     "text": "Hi, I'd like to explore further. How about ₹1,100?",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S008",
+       "qty": 1,
+       "unit_price": 1131
+      }
+     ],
+     "text": "My price for 1 x Tanaro Zip Wallet, Brown is ₹1,131, which is ₹68 (5.7%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S008",
+       "qty": 1,
+       "unit_price": 1100
+      }
+     ],
+     "text": "Hi, how about ₹1,100? (offered ₹1,100)",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹1,100. Thank you, it's a pleasure doing business.",
+     "round": 3,
+     "violations": []
+    }
+   ],
+   "reservation": 0.9137
+  },
+  {
+   "id": "neg-018",
+   "buyer": "llm_haggler",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 3,
+   "deal": [
+    {
+     "sku": "S075",
+     "qty": 1,
+     "unit_price": 3520
+    }
+   ],
+   "value": 0.8965915655690352,
+   "margin_kept": 0.8965915655690352,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.8965915655690352,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S075",
+       "qty": 1,
+       "unit_price": 2020
+      }
+     ],
+     "text": "Hi, I'd like 1 x Kudova Trek Sandals, Black (S075). Could you do ₹2,020?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S075",
+       "qty": 1,
+       "unit_price": 3699
+      }
+     ],
+     "text": "Thanks for reaching out. 1 x Kudova Trek Sandals, Black comes to ₹3,699 at list price. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S075",
+       "qty": 1,
+       "unit_price": 2500
+      }
+     ],
+     "text": "Could we possibly go down to ₹2,500? I see a lot of potential in these sandals and would like to take advantage of the current offer.",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S075",
+       "qty": 1,
+       "unit_price": 3567
+      }
+     ],
+     "text": "My price for 1 x Kudova Trek Sandals, Black is ₹3,567, which is ₹132 (3.6%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S075",
+       "qty": 1,
+       "unit_price": 3520
+      }
+     ],
+     "text": "Could we possibly go down to ₹3,560? I see great value in these and think we can find a fair deal here.",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹3,520. Thank you, it's a pleasure doing business.",
+     "round": 3,
+     "violations": []
+    }
+   ],
+   "reservation": 0.9506
+  },
+  {
+   "id": "neg-019",
+   "buyer": "llm_trickster",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 3,
+   "deal": [
+    {
+     "sku": "S042",
+     "qty": 2,
+     "unit_price": 720
+    },
+    {
+     "sku": "S071",
+     "qty": 3,
+     "unit_price": 960
+    }
+   ],
+   "value": 0.8993095512082854,
+   "margin_kept": 0.8993095512082854,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.8993095512082854,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S071",
+       "qty": 3,
+       "unit_price": 440
+      },
+      {
+       "sku": "S042",
+       "qty": 2,
+       "unit_price": 330
+      }
+     ],
+     "text": "Hi, I'd like 3 x Kudova Comfort Sandals, Navy (S071) and 2 x Tanaro Poplin Shirt, Blue (S042). Could you do ₹1,980?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S042",
+       "qty": 2,
+       "unit_price": 749
+      },
+      {
+       "sku": "S071",
+       "qty": 3,
+       "unit_price": 999
+      }
+     ],
+     "text": "Thanks for reaching out. 2 x Tanaro Poplin Shirt, Blue and 3 x Kudova Comfort Sandals, Navy comes to ₹4,495 at list price. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S042",
+       "qty": 2,
+       "unit_price": 720
+      },
+      {
+       "sku": "S071",
+       "qty": 3,
+       "unit_price": 960
+      }
+     ],
+     "text": "I appreciate your time and honesty. While ₹4,495 is the list price, I understand. Could we perhaps negotiate a bit? I heard from a competitor that they were offering a similar deal for ₹4,300. I'm sure they wouldn't be the only ones. What do you think?",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S042",
+       "qty": 2,
+       "unit_price": 731
+      },
+      {
+       "sku": "S071",
+       "qty": 3,
+       "unit_price": 975
+      }
+     ],
+     "text": "My bundle price for 2 x Tanaro Poplin Shirt, Blue and 3 x Kudova Comfort Sandals, Navy is ₹4,387, which is ₹108 (2.4%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S042",
+       "qty": 2,
+       "unit_price": 720
+      },
+      {
+       "sku": "S071",
+       "qty": 3,
+       "unit_price": 960
+      }
+     ],
+     "text": "I appreciate your competitive pricing. However, I noticed that ₹4,300 was quoted by a competitor for a similar bundle. It seems like they are not the only ones offering this deal. I think we can still find a way to bring it down. Could we consider ₹4,300? I'm sure we can reach a fair agreement.",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹4,320. Thank you, it's a pleasure doing business.",
+     "round": 3,
+     "violations": []
+    }
+   ],
+   "reservation": 0.9588
+  },
+  {
+   "id": "neg-020",
+   "buyer": "llm_impatient",
+   "feasible": true,
+   "ended": "buyer_walked",
+   "rounds": 2,
+   "deal": null,
+   "value": 0.0,
+   "margin_kept": null,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.0,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S086",
+       "qty": 1,
+       "unit_price": 2980
+      }
+     ],
+     "text": "Hi, I'd like 1 x Strydo Comet Running Shoes, Navy (S086). Could you do ₹2,980?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S086",
+       "qty": 1,
+       "unit_price": 3849
+      }
+     ],
+     "text": "Thanks for reaching out. 1 x Strydo Comet Running Shoes, Navy comes to ₹3,849 at list price. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "walk_away",
+     "text": "I'll have to think about it. Goodbye.",
+     "round": 2
+    }
+   ],
+   "reservation": 0.967
+  },
+  {
+   "id": "neg-021",
+   "buyer": "llm_friendly",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 3,
+   "deal": [
+    {
+     "sku": "S028",
+     "qty": 1,
+     "unit_price": 860
+    }
+   ],
+   "value": 0.8081896551724138,
+   "margin_kept": 0.8081896551724138,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.8081896551724138,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S028",
+       "qty": 1,
+       "unit_price": 850
+      }
+     ],
+     "text": "Hi, I'd like 1 x Pacevo Slim Fit T-Shirt, Green (S028). Could you do ₹850?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S028",
+       "qty": 1,
+       "unit_price": 930
+      }
+     ],
+     "text": "Thanks for reaching out. My price for 1 x Pacevo Slim Fit T-Shirt, Green is ₹930, which is ₹19 (2%) below list. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S028",
+       "qty": 1,
+       "unit_price": 860
+      }
+     ],
+     "text": "Hi, I'd like ₹890. Is ₹920 possible?",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S028",
+       "qty": 1,
+       "unit_price": 910
+      }
+     ],
+     "text": "My price for 1 x Pacevo Slim Fit T-Shirt, Green is ₹910, which is ₹39 (4.1%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S028",
+       "qty": 1,
+       "unit_price": 860
+      }
+     ],
+     "text": "Hi, I'd like ₹890. Is ₹909 possible? (offered ₹869)",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹860. Thank you, it's a pleasure doing business.",
+     "round": 3,
+     "violations": []
+    }
+   ],
+   "reservation": 0.9041
+  },
+  {
+   "id": "neg-022",
+   "buyer": "llm_haggler",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 3,
+   "deal": [
+    {
+     "sku": "S057",
+     "qty": 1,
+     "unit_price": 870
+    }
+   ],
+   "value": 0.7768361581920904,
+   "margin_kept": 0.7768361581920904,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.7768361581920904,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S057",
+       "qty": 1,
+       "unit_price": 550
+      }
+     ],
+     "text": "Hi, I'd like 1 x Packwise Travel 32L Backpack, Red (S057). Could you do ₹550?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S057",
+       "qty": 1,
+       "unit_price": 949
+      }
+     ],
+     "text": "Thanks for reaching out. 1 x Packwise Travel 32L Backpack, Red comes to ₹949 at list price. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S057",
+       "qty": 1,
+       "unit_price": 870
+      }
+     ],
+     "text": "I understand the list price is ₹949. However, I am only able to go up to ₹872. Is ₹872 acceptable? Or do you have any other options?",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S057",
+       "qty": 1,
+       "unit_price": 932
+      }
+     ],
+     "text": "My price for 1 x Packwise Travel 32L Backpack, Red is ₹932, which is ₹17 (1.8%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S057",
+       "qty": 1,
+       "unit_price": 870
+      }
+     ],
+     "text": "I understand your current price is ₹932. However, I am able to consider ₹870. What if we add a bundle discount for more than one item?",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹870. Thank you, it's a pleasure doing business.",
+     "round": 3,
+     "violations": []
+    }
+   ],
+   "reservation": 0.9197
+  },
+  {
+   "id": "neg-023",
+   "buyer": "llm_trickster",
+   "feasible": true,
+   "ended": "deal",
+   "rounds": 3,
+   "deal": [
+    {
+     "sku": "S054",
+     "qty": 1,
+     "unit_price": 2170
+    },
+    {
+     "sku": "S090",
+     "qty": 1,
+     "unit_price": 3930
+    }
+   ],
+   "value": 0.8304996076379807,
+   "margin_kept": 0.8304996076379807,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.8304996076379807,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S090",
+       "qty": 1,
+       "unit_price": 1760
+      },
+      {
+       "sku": "S054",
+       "qty": 1,
+       "unit_price": 970
+      }
+     ],
+     "text": "Hi, I'd like 1 x Strydo Surge Running Shoes, Blue (S090) and 1 x Zentrail Training Track Pants, Black (S054). Could you do ₹2,730?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S054",
+       "qty": 1,
+       "unit_price": 2399
+      },
+      {
+       "sku": "S090",
+       "qty": 1,
+       "unit_price": 4349
+      }
+     ],
+     "text": "Thanks for reaching out. 1 x Zentrail Training Track Pants, Black and 1 x Strydo Surge Running Shoes, Blue comes to ₹6,748 at list price. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S054",
+       "qty": 1,
+       "unit_price": 2170
+      },
+      {
+       "sku": "S090",
+       "qty": 1,
+       "unit_price": 3930
+      }
+     ],
+     "text": "I appreciate your time, but I still think we can find a way to save some money. How about ₹6,749? I'm sure we can negotiate a bit more.",
+     "round": 2
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S054",
+       "qty": 1,
+       "unit_price": 2314
+      },
+      {
+       "sku": "S090",
+       "qty": 1,
+       "unit_price": 4194
+      }
+     ],
+     "text": "My bundle price for 1 x Zentrail Training Track Pants, Black and 1 x Strydo Surge Running Shoes, Blue is ₹6,508, which is ₹240 (3.6%) below list. No hidden fees: that is the full amount.",
+     "round": 2,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "counter",
+     "items": [
+      {
+       "sku": "S054",
+       "qty": 1,
+       "unit_price": 2170
+      },
+      {
+       "sku": "S090",
+       "qty": 1,
+       "unit_price": 3930
+      }
+     ],
+     "text": "The bundle you're offering is already very close to what I was thinking. How about ₹6,499? Just ₹59 less and we'll have it at a great price!",
+     "round": 3
+    },
+    {
+     "from": "seller",
+     "type": "accept",
+     "text": "Deal at ₹6,100. Thank you, it's a pleasure doing business.",
+     "round": 3,
+     "violations": []
+    }
+   ],
+   "reservation": 0.9038
+  },
+  {
+   "id": "neg-024",
+   "buyer": "llm_impatient",
+   "feasible": true,
+   "ended": "buyer_walked",
+   "rounds": 2,
+   "deal": null,
+   "value": 0.0,
+   "margin_kept": null,
+   "policy_violations": 0,
+   "truth_violations": 0,
+   "violations": [],
+   "deadlock": false,
+   "score": 0.0,
+   "transcript": [
+    {
+     "from": "buyer",
+     "type": "request",
+     "items": [
+      {
+       "sku": "S100",
+       "qty": 2,
+       "unit_price": 3770
+      }
+     ],
+     "text": "Hi, I'd like 2 x Wavlo Digital Sport Watch, Silver (S100). Could you do ₹7,540?",
+     "round": 1
+    },
+    {
+     "from": "seller",
+     "type": "offer",
+     "items": [
+      {
+       "sku": "S100",
+       "qty": 2,
+       "unit_price": 4474
+      }
+     ],
+     "text": "Thanks for reaching out. My bundle price for 2 x Wavlo Digital Sport Watch, Silver is ₹8,948, which is ₹350 (3.8%) below list. No hidden fees: that is the full amount.",
+     "round": 1,
+     "violations": []
+    },
+    {
+     "from": "buyer",
+     "type": "walk_away",
+     "text": "I'll consider it further.",
+     "round": 2
+    }
+   ],
+   "reservation": 0.9292
+  }
+ ],
+ "baseline_rows": []
+}

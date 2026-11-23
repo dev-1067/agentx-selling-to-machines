@@ -55,7 +55,12 @@ def main():
     Xva, yva = load("val")
     Xllm_tr, yllm_tr = load("llm_train")
     Xdiv, ydiv = load("train_diverse")
-    Xtr, ytr = Xtr + Xllm_tr + Xdiv, ytr + yllm_tr + ydiv
+    Xv2, yv2 = load("train_v2")
+    Xtr, ytr = Xtr + Xllm_tr + Xdiv + Xv2, ytr + yllm_tr + ydiv + yv2
+    # Model selection uses ONLY the two hand-written dev sets; fresh_test_v2 is never looked at here.
+    Xh, yh = load("handwritten_test")
+    Xf, yf = load("final_test")
+    Xdev, ydev = Xh + Xf, yh + yf
     classes = sorted(set(ytr))
     feats = FeatureUnion([
         ("char", TfidfVectorizer(analyzer="char_wb", ngram_range=(2, 5), min_df=2, sublinear_tf=True,
@@ -65,23 +70,34 @@ def main():
     ])
     Ttr = feats.fit_transform(Xtr)
     Tva = feats.transform(Xva)
-    clf = SGDClassifier(loss="log_loss", alpha=2e-5, learning_rate="optimal", random_state=0)
-    rng = np.random.RandomState(0)
-    history, best = [], None
-    for epoch in range(1, 41):
-        order = rng.permutation(Ttr.shape[0])
-        clf.partial_fit(Ttr[order], np.array(ytr)[order], classes=classes)
-        tr_acc = accuracy_score(ytr, clf.predict(Ttr))
-        va_acc = accuracy_score(yva, clf.predict(Tva))
-        history.append({"epoch": epoch, "train_acc": round(tr_acc, 4), "val_acc": round(va_acc, 4)})
-        print(f"epoch {epoch:2d}  train {tr_acc:.4f}  val {va_acc:.4f}")
-        if best is None or va_acc > best[0] + 1e-9:
-            best = (va_acc, epoch, clf.coef_.copy(), clf.intercept_.copy())
-    clf.coef_, clf.intercept_ = best[2], best[3]
-    print(f"best epoch {best[1]}  val {best[0]:.4f}")
+    Tdev = feats.transform(Xdev)
+    yarr = np.array(ytr)
+    overall = None
+    for alpha in (1e-5, 2e-5, 5e-5, 1e-4):
+        clf = SGDClassifier(loss="log_loss", alpha=alpha, learning_rate="optimal", random_state=0)
+        rng = np.random.RandomState(0)
+        history, best = [], None
+        for epoch in range(1, 31):
+            order = rng.permutation(Ttr.shape[0])
+            clf.partial_fit(Ttr[order], yarr[order], classes=classes)
+            tr_acc = accuracy_score(ytr, clf.predict(Ttr))
+            va_acc = accuracy_score(yva, clf.predict(Tva))
+            dev_acc = accuracy_score(ydev, clf.predict(Tdev))
+            history.append({"epoch": epoch, "train_acc": round(tr_acc, 4), "val_acc": round(va_acc, 4),
+                            "dev_acc": round(dev_acc, 4)})
+            if best is None or dev_acc > best[0] + 1e-9:
+                best = (dev_acc, epoch, clf.coef_.copy(), clf.intercept_.copy())
+        print(f"alpha {alpha:g}: best epoch {best[1]}  dev {best[0]:.4f}")
+        if overall is None or best[0] > overall[0] + 1e-9:
+            overall = (best[0], best[1], best[2], best[3], alpha, history)
+    clf.coef_, clf.intercept_ = overall[2], overall[3]
+    history = overall[5]
+    print(f"chosen alpha {overall[4]:g} epoch {overall[1]}  dev {overall[0]:.4f}")
 
-    report = {"classes": classes, "train_size": len(Xtr), "history": history, "best_epoch": best[1]}
+    report = {"classes": classes, "train_size": len(Xtr), "history": history, "best_epoch": overall[1],
+              "alpha": overall[4], "selection": "dev = handwritten_test + final_test; fresh_test_v2 never used"}
     for name, (X, y) in {"val": (Xva, yva), "handwritten_dev": load("handwritten_test"), "final_test": load("final_test"), "llm_test": load("llm_test"),
+                         "fresh_test_v2": load("fresh_test_v2"),
                          "kit_lines": kit_lines()}.items():
         if not X:
             continue

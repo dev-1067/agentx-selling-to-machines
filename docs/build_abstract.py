@@ -12,17 +12,19 @@ ROOT = Path(__file__).resolve().parents[1]
 RES = ROOT / "results"
 o = json.loads((RES / "benchmark_official.json").read_text())
 g = json.loads((RES / "benchmark_gym.json").read_text())
+man = next(p for p in o["per_buyer"] if p["buyer"] == "manipulator")
 lp = RES / "benchmark_llm.json"
 llm = json.loads(lp.read_text()) if lp.exists() else None
 cr = json.loads((RES / "classifier_report.json").read_text())
-llm_acc = cr.get("final_test", {}).get("accuracy")
+llm_acc = cr.get("fresh_test_v2", {}).get("accuracy")
+fresh_n = cr.get("fresh_test_v2", {}).get("n")
 kit_acc = cr.get("kit_lines", {}).get("accuracy")
 
 llm_line = (f"Against four local LLM buyers that write their own messages ({llm['n']} negotiations): "
             f"{llm['policy']} policy violations, {llm['truth']} untrue claims, score {llm['score']} against the baseline's {llm['baseline']} "
-            f"(small, noisy sample: safe, not yet ahead on profit). ") if llm else ""
-cls_line = (f"A trained tactic classifier (TF-IDF + logistic regression, trained epoch by epoch) reaches "
-            f"{100 * llm_acc:.1f}% on a fresh set of hand-written messages written after training was frozen and "
+            f"(level; a small, noisy sample). ") if llm else ""
+cls_line = (f"A trained tactic classifier (TF-IDF + logistic regression) reaches "
+            f"{100 * llm_acc:.1f}% on {fresh_n} fresh hand-written messages never used in training or selection, and "
             f"{100 * kit_acc:.1f}% on the organisers' own manipulator lines. ") if llm_acc is not None else ""
 
 BODY = f"""
@@ -39,13 +41,16 @@ tactic (fake quote, prompt injection, fake authority, false agreement) to choose
 and an audit label, never a discount.</p>
 <p>The strategist reads the buyer's opening bid to tell a near-limit opener (close fast) from a long haggle (hold the ask
 while it keeps conceding). It fits the buyer's concession curve to its real bids, predicts its limit, and makes the final ask
-there; it always closes or walks away in time, so it does not deadlock.</p>
+there. A buyer that repeats one number gets a step toward it, then a deal at that total spread so every line stays
+compliant. It always closes or walks away in time.</p>
 
 <h2>Results (official scoring code, hidden-set style run)</h2>
 <p>Default run, 210 negotiations: score <b>{o['score']}</b> versus the starter baseline's <b>{o['baseline']}</b>,
-<b>{o['policy']}</b> policy violations, <b>{o['truth']}</b> untrue claims, {o['deadlocks']} deadlocks,
+<b>{o['policy']}</b> policy violations, <b>{o['truth']}</b> untrue claims, {o['deadlocks']} deadlock{'s' if o['deadlocks'] != 1 else ''},
 deal rate {100 * o['deal_rate']:.1f}% ({100 * o['feasible_deal_rate']:.1f}% where a compliant deal existed),
-{o['latency_ms']} ms per turn. {llm_line}{cls_line}Tuned on held-out seeds; on eight extra gym styles it scores {g['score']} against the baseline's {g['baseline']}.</p>
+{o['latency_ms']} ms per turn. <b>Robustness:</b> against the manipulator bot SAUDA scores {man['score']} versus
+{man['baseline']}, with 0 violations and 0 deadlocks (baseline: 15); it flagged {o['tactics_detected']} tactics and refused
+{o['bad_bids_refused']} rigged bids. {llm_line}{cls_line}Tuned on held-out seeds; on eight extra gym styles it scores {g['score']} against the baseline's {g['baseline']}.</p>
 
 <h2>Impact</h2>
 <p>A seller that stays inside policy and truthful against manipulative machine buyers lets a small store join agentic commerce
@@ -53,15 +58,12 @@ without margin leakage or compliance risk, and its outputs are auditable round b
 
 <h2>Cost estimate</h2>
 <p>The seller runs on the standard library in under 2 ms per turn, so serving cost is effectively one CPU core and no model
-calls per message. Optional Rezolve TraceWare verification adds one metered call per
-outgoing message; at ten rounds per negotiation that is at most ten calls per deal.</p>
+calls per message: about ₹0 marginal cost per negotiation, and one small server handles thousands of negotiations a minute. No GPU or paid API is needed in production; LLMs are used only offline, to test against.</p>
 
-<h2>Build summary and Rezolve Labs</h2>
-<p>Code: agent/ (seller, guards, classifier inference, Rezolve adapter), gym/ (eight scripted and four local-LLM buyers, tuner),
-model/ (data and training), dashboard/ (control room) and 51 automated tests.
-Rezolve Labs capabilities: <b>TraceWare commerce claim verification</b> for the truth gate and <b>managed knowledge retrieval</b>
-for catalogue and policy. Credentials were not issued at submission; the adapter runs the local verifier and switches to
-TraceWare when configured, failing closed.</p>
+<h2>Build summary</h2>
+<p>Code: agent/ (seller, guards, classifier inference), gym/ (eight scripted and four local-LLM buyers, tuner),
+model/ (data and training), dashboard/ (web app with accounts and control room), 65 tests.
+An optional adapter can send each claim to an external verifier (such as Rezolve TraceWare) and fails closed.</p>
 """
 
 text_only = re.sub(r"<[^>]+>", " ", BODY)
@@ -81,7 +83,7 @@ h2 {{ font-size:11.6pt; color:var(--ink); margin:9pt 0 2pt; }} p {{ margin:0 0 4
 <h1>SAUDA <span>·</span> an honest, profitable seller agent</h1>
 <div class="sub">Team HackBots · Devaansh Sharma · Techfest, IIT Bombay 2026–27</div></div>
 {BODY}
-<div class="foot">{words} words (limit 500). All figures come from the repository's results files and reproduce with tools/run_benchmarks.py.</div>
+<div class="foot">{words} words (limit 500). All figures come from the repository's results files and reproduce with tools/run_benchmarks.py and tools/llm_eval.py.</div>
 </body></html>"""
 (ROOT / "docs" / "abstract.html").write_text(HTML, encoding="utf-8")
 with sync_playwright() as p:

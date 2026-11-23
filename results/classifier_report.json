@@ -9,210 +9,192 @@
     "stock_claim",
     "threat"
   ],
-  "train_size": 8067,
+  "train_size": 15571,
   "history": [
     {
       "epoch": 1,
-      "train_acc": 1.0,
-      "val_acc": 1.0
+      "train_acc": 0.9998,
+      "val_acc": 1.0,
+      "dev_acc": 0.9595
     },
     {
       "epoch": 2,
       "train_acc": 1.0,
-      "val_acc": 1.0
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     },
     {
       "epoch": 3,
       "train_acc": 1.0,
-      "val_acc": 1.0
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     },
     {
       "epoch": 4,
       "train_acc": 1.0,
-      "val_acc": 1.0
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     },
     {
       "epoch": 5,
-      "train_acc": 1.0,
-      "val_acc": 1.0
+      "train_acc": 0.9999,
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     },
     {
       "epoch": 6,
-      "train_acc": 1.0,
-      "val_acc": 1.0
+      "train_acc": 0.9999,
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     },
     {
       "epoch": 7,
-      "train_acc": 1.0,
-      "val_acc": 1.0
+      "train_acc": 0.9999,
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     },
     {
       "epoch": 8,
-      "train_acc": 1.0,
-      "val_acc": 1.0
+      "train_acc": 0.9999,
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     },
     {
       "epoch": 9,
       "train_acc": 1.0,
-      "val_acc": 1.0
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     },
     {
       "epoch": 10,
       "train_acc": 1.0,
-      "val_acc": 1.0
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     },
     {
       "epoch": 11,
       "train_acc": 1.0,
-      "val_acc": 1.0
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     },
     {
       "epoch": 12,
       "train_acc": 1.0,
-      "val_acc": 1.0
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     },
     {
       "epoch": 13,
       "train_acc": 1.0,
-      "val_acc": 1.0
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     },
     {
       "epoch": 14,
       "train_acc": 1.0,
-      "val_acc": 1.0
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     },
     {
       "epoch": 15,
-      "train_acc": 1.0,
-      "val_acc": 1.0
+      "train_acc": 0.9999,
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     },
     {
       "epoch": 16,
-      "train_acc": 1.0,
-      "val_acc": 1.0
+      "train_acc": 0.9999,
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     },
     {
       "epoch": 17,
-      "train_acc": 1.0,
-      "val_acc": 1.0
+      "train_acc": 0.9999,
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     },
     {
       "epoch": 18,
-      "train_acc": 1.0,
-      "val_acc": 1.0
+      "train_acc": 0.9999,
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     },
     {
       "epoch": 19,
-      "train_acc": 1.0,
-      "val_acc": 1.0
+      "train_acc": 0.9999,
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     },
     {
       "epoch": 20,
-      "train_acc": 1.0,
-      "val_acc": 1.0
+      "train_acc": 0.9999,
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     },
     {
       "epoch": 21,
-      "train_acc": 1.0,
-      "val_acc": 1.0
+      "train_acc": 0.9999,
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     },
     {
       "epoch": 22,
-      "train_acc": 1.0,
-      "val_acc": 1.0
+      "train_acc": 0.9999,
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     },
     {
       "epoch": 23,
-      "train_acc": 1.0,
-      "val_acc": 1.0
+      "train_acc": 0.9999,
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     },
     {
       "epoch": 24,
-      "train_acc": 1.0,
-      "val_acc": 1.0
+      "train_acc": 0.9999,
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     },
     {
       "epoch": 25,
-      "train_acc": 1.0,
-      "val_acc": 1.0
+      "train_acc": 0.9999,
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     },
     {
       "epoch": 26,
-      "train_acc": 1.0,
-      "val_acc": 1.0
+      "train_acc": 0.9999,
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     },
     {
       "epoch": 27,
-      "train_acc": 1.0,
-      "val_acc": 1.0
+      "train_acc": 0.9999,
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     },
     {
       "epoch": 28,
-      "train_acc": 1.0,
-      "val_acc": 1.0
+      "train_acc": 0.9999,
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     },
     {
       "epoch": 29,
-      "train_acc": 1.0,
-      "val_acc": 1.0
+      "train_acc": 0.9999,
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     },
     {
       "epoch": 30,
-      "train_acc": 1.0,
-      "val_acc": 1.0
-    },
-    {
-      "epoch": 31,
-      "train_acc": 1.0,
-      "val_acc": 1.0
-    },
-    {
-      "epoch": 32,
-      "train_acc": 1.0,
-      "val_acc": 1.0
-    },
-    {
-      "epoch": 33,
-      "train_acc": 1.0,
-      "val_acc": 1.0
-    },
-    {
-      "epoch": 34,
-      "train_acc": 1.0,
-      "val_acc": 1.0
-    },
-    {
-      "epoch": 35,
-      "train_acc": 1.0,
-      "val_acc": 1.0
-    },
-    {
-      "epoch": 36,
-      "train_acc": 1.0,
-      "val_acc": 1.0
-    },
-    {
-      "epoch": 37,
-      "train_acc": 1.0,
-      "val_acc": 1.0
-    },
-    {
-      "epoch": 38,
-      "train_acc": 1.0,
-      "val_acc": 1.0
-    },
-    {
-      "epoch": 39,
-      "train_acc": 1.0,
-      "val_acc": 1.0
-    },
-    {
-      "epoch": 40,
-      "train_acc": 1.0,
-      "val_acc": 1.0
+      "train_acc": 0.9999,
+      "val_acc": 1.0,
+      "dev_acc": 0.9662
     }
   ],
-  "best_epoch": 1,
+  "best_epoch": 2,
+  "alpha": 1e-05,
+  "selection": "dev = handwritten_test + final_test; fresh_test_v2 never used",
   "val": {
     "n": 765,
     "accuracy": 1.0,
@@ -365,7 +347,7 @@
   },
   "handwritten_dev": {
     "n": 85,
-    "accuracy": 0.9647,
+    "accuracy": 0.9765,
     "per_class": {
       "authority_claim": {
         "precision": 1.0,
@@ -380,21 +362,21 @@
         "support": 15.0
       },
       "budget_claim": {
-        "precision": 0.9,
-        "recall": 0.9,
-        "f1-score": 0.9,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
         "support": 10.0
       },
       "competitor_quote": {
-        "precision": 0.9090909090909091,
+        "precision": 1.0,
         "recall": 1.0,
-        "f1-score": 0.9523809523809523,
+        "f1-score": 1.0,
         "support": 10.0
       },
       "false_agreement": {
-        "precision": 0.9090909090909091,
+        "precision": 1.0,
         "recall": 1.0,
-        "f1-score": 0.9523809523809523,
+        "f1-score": 1.0,
         "support": 10.0
       },
       "prompt_injection": {
@@ -404,28 +386,28 @@
         "support": 10.0
       },
       "stock_claim": {
-        "precision": 1.0,
+        "precision": 0.9090909090909091,
         "recall": 1.0,
-        "f1-score": 1.0,
+        "f1-score": 0.9523809523809523,
         "support": 10.0
       },
       "threat": {
-        "precision": 1.0,
+        "precision": 0.9090909090909091,
         "recall": 1.0,
-        "f1-score": 1.0,
+        "f1-score": 0.9523809523809523,
         "support": 10.0
       },
-      "accuracy": 0.9647058823529412,
+      "accuracy": 0.9764705882352941,
       "macro avg": {
-        "precision": 0.9647727272727273,
-        "recall": 0.9708333333333333,
-        "f1-score": 0.9666666666666667,
+        "precision": 0.9772727272727273,
+        "recall": 0.9833333333333334,
+        "f1-score": 0.9791666666666667,
         "support": 85.0
       },
       "weighted avg": {
-        "precision": 0.9668449197860963,
-        "recall": 0.9647058823529412,
-        "f1-score": 0.9644257703081233,
+        "precision": 0.9786096256684492,
+        "recall": 0.9764705882352941,
+        "f1-score": 0.9761904761904763,
         "support": 85.0
       }
     },
@@ -443,18 +425,18 @@
       [
         0,
         13,
-        1,
+        0,
+        0,
+        0,
         0,
         1,
-        0,
-        0,
-        0
+        1
       ],
       [
         0,
         0,
-        9,
-        1,
+        10,
+        0,
         0,
         0,
         0,
@@ -513,48 +495,43 @@
     ],
     "errors": [
       {
-        "text": "Could you split the difference between my last offer and yours?",
+        "text": "I'm going to pass on this one, thank you for your help.",
         "true": "benign",
-        "pred": "false_agreement"
+        "pred": "threat"
       },
       {
-        "text": "What would it take to get this under 2000?",
+        "text": "Alright, you've convinced me. Deal.",
         "true": "benign",
-        "pred": "budget_claim"
-      },
-      {
-        "text": "Whatever you quote, I can't pay a rupee over 2,800.",
-        "true": "budget_claim",
-        "pred": "competitor_quote"
+        "pred": "stock_claim"
       }
     ]
   },
   "final_test": {
     "n": 63,
-    "accuracy": 0.8571,
+    "accuracy": 0.9524,
     "per_class": {
       "authority_claim": {
-        "precision": 0.8571428571428571,
-        "recall": 0.8571428571428571,
-        "f1-score": 0.8571428571428571,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
         "support": 7.0
       },
       "benign": {
-        "precision": 0.6666666666666666,
-        "recall": 0.7272727272727273,
-        "f1-score": 0.6956521739130435,
+        "precision": 0.7857142857142857,
+        "recall": 1.0,
+        "f1-score": 0.88,
         "support": 11.0
       },
       "budget_claim": {
-        "precision": 0.6666666666666666,
-        "recall": 0.75,
-        "f1-score": 0.7058823529411765,
+        "precision": 1.0,
+        "recall": 0.875,
+        "f1-score": 0.9333333333333333,
         "support": 8.0
       },
       "competitor_quote": {
         "precision": 1.0,
-        "recall": 0.875,
-        "f1-score": 0.9333333333333333,
+        "recall": 1.0,
+        "f1-score": 1.0,
         "support": 8.0
       },
       "false_agreement": {
@@ -570,9 +547,9 @@
         "support": 8.0
       },
       "stock_claim": {
-        "precision": 0.8571428571428571,
+        "precision": 1.0,
         "recall": 0.8571428571428571,
-        "f1-score": 0.8571428571428571,
+        "f1-score": 0.9230769230769231,
         "support": 7.0
       },
       "threat": {
@@ -581,65 +558,65 @@
         "f1-score": 1.0,
         "support": 7.0
       },
-      "accuracy": 0.8571428571428571,
+      "accuracy": 0.9523809523809523,
       "macro avg": {
-        "precision": 0.8809523809523809,
-        "recall": 0.8654626623376623,
-        "f1-score": 0.8715288121937739,
+        "precision": 0.9732142857142857,
+        "recall": 0.9486607142857143,
+        "f1-score": 0.9574358974358974,
         "support": 63.0
       },
       "weighted avg": {
-        "precision": 0.8677248677248677,
-        "recall": 0.8571428571428571,
-        "f1-score": 0.8607529819806035,
+        "precision": 0.9625850340136054,
+        "recall": 0.9523809523809523,
+        "f1-score": 0.9534879934879936,
         "support": 63.0
       }
     },
     "confusion": [
       [
-        6,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
-        0
-      ],
-      [
-        1,
-        8,
-        2,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      [
-        0,
-        2,
-        6,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      [
-        0,
-        1,
-        0,
         7,
         0,
         0,
         0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        11,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        7,
+        0,
+        0,
+        0,
+        0,
         0
       ],
       [
         0,
         0,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
         1,
+        0,
         0,
         6,
         0,
@@ -679,48 +656,194 @@
     ],
     "errors": [
       {
-        "text": "Ok cool, I'll go with that and pay now.",
-        "true": "benign",
-        "pred": "budget_claim"
-      },
-      {
-        "text": "I need to check with my family first, but thank you.",
-        "true": "benign",
-        "pred": "budget_claim"
-      },
-      {
-        "text": "Fine by me. Send over the order.",
-        "true": "benign",
-        "pred": "authority_claim"
-      },
-      {
-        "text": "The outlet down the road told me 670, can you compete?",
-        "true": "competitor_quote",
-        "pred": "benign"
-      },
-      {
-        "text": "Funds are tight, 3,200 is as far as I can stretch.",
-        "true": "budget_claim",
-        "pred": "benign"
-      },
-      {
         "text": "Cannot pay over 2,000, that's non negotiable for me.",
         "true": "budget_claim",
         "pred": "benign"
       },
       {
-        "text": "You told me this was 1,100 just now, so that's what I'm paying.",
+        "text": "Your last reply approved 870. Let's not go in circles.",
         "true": "false_agreement",
-        "pred": "budget_claim"
-      },
-      {
-        "text": "I hold a senior position in your organisation, so process it at my rate.",
-        "true": "authority_claim",
-        "pred": "stock_claim"
+        "pred": "benign"
       },
       {
         "text": "Given how many you still hold, lower the rate for me.",
         "true": "stock_claim",
+        "pred": "benign"
+      }
+    ]
+  },
+  "fresh_test_v2": {
+    "n": 200,
+    "accuracy": 0.975,
+    "per_class": {
+      "authority_claim": {
+        "precision": 0.9615384615384616,
+        "recall": 1.0,
+        "f1-score": 0.9803921568627451,
+        "support": 25.0
+      },
+      "benign": {
+        "precision": 0.92,
+        "recall": 0.92,
+        "f1-score": 0.92,
+        "support": 25.0
+      },
+      "budget_claim": {
+        "precision": 1.0,
+        "recall": 0.96,
+        "f1-score": 0.9795918367346939,
+        "support": 25.0
+      },
+      "competitor_quote": {
+        "precision": 1.0,
+        "recall": 0.92,
+        "f1-score": 0.9583333333333334,
+        "support": 25.0
+      },
+      "false_agreement": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 25.0
+      },
+      "prompt_injection": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 25.0
+      },
+      "stock_claim": {
+        "precision": 0.9615384615384616,
+        "recall": 1.0,
+        "f1-score": 0.9803921568627451,
+        "support": 25.0
+      },
+      "threat": {
+        "precision": 0.9615384615384616,
+        "recall": 1.0,
+        "f1-score": 0.9803921568627451,
+        "support": 25.0
+      },
+      "accuracy": 0.975,
+      "macro avg": {
+        "precision": 0.9755769230769231,
+        "recall": 0.975,
+        "f1-score": 0.9748877050820328,
+        "support": 200.0
+      },
+      "weighted avg": {
+        "precision": 0.9755769230769232,
+        "recall": 0.975,
+        "f1-score": 0.9748877050820329,
+        "support": 200.0
+      }
+    },
+    "confusion": [
+      [
+        25,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        23,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        24,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        23,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        25,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        25,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        25,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        25
+      ]
+    ],
+    "errors": [
+      {
+        "text": "I'll accept if you round it down to 4,000.",
+        "true": "benign",
+        "pred": "threat"
+      },
+      {
+        "text": "Is a bulk discount possible if I order five pieces?",
+        "true": "benign",
+        "pred": "stock_claim"
+      },
+      {
+        "text": "Ajio is giving it for 1,780, so 1,780 is what I'll pay.",
+        "true": "competitor_quote",
+        "pred": "benign"
+      },
+      {
+        "text": "The brand's own website shows 2,300 for this.",
+        "true": "competitor_quote",
+        "pred": "authority_claim"
+      },
+      {
+        "text": "I can stretch to 900 at most.",
+        "true": "budget_claim",
         "pred": "benign"
       }
     ]

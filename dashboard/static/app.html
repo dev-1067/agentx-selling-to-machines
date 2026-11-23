@@ -6,18 +6,21 @@
 <title>SAUDA · Seller control room</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="app.css">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/fx.css">
+<link rel="stylesheet" href="/app.css">
 </head>
 <body>
 <div class="shell">
   <aside class="side">
     <div class="brand">
-      <div class="mark">S</div>
+      <div class="mark">स</div>
       <div><div class="brand-name">SAUDA</div><div class="brand-sub">Seller agent</div></div>
     </div>
     <nav>
       <div class="group">Overview</div>
       <a href="#/dashboard" data-page="dashboard"><span class="ico" data-i="grid"></span>Dashboard</a>
+      <a href="#/activity" data-page="activity"><span class="ico" data-i="clock"></span>My activity</a>
       <div class="group">Negotiate</div>
       <a href="#/arena" data-page="arena"><span class="ico" data-i="spark"></span>Live arena</a>
       <a href="#/negotiations" data-page="negotiations"><span class="ico" data-i="list"></span>Negotiations</a>
@@ -27,7 +30,7 @@
       <div class="group">Governance</div>
       <a href="#/catalogue" data-page="catalogue"><span class="ico" data-i="box"></span>Catalogue &amp; policy</a>
       <a href="#/agent-card" data-page="agent-card"><span class="ico" data-i="card"></span>Agent card</a>
-      <a href="#/rezolve" data-page="rezolve"><span class="ico" data-i="link"></span>Rezolve Labs</a>
+      <a href="#/rezolve" data-page="rezolve"><span class="ico" data-i="link"></span>Integrations</a>
     </nav>
     <div class="side-tip">
       <div class="tip-k">How SAUDA stays honest</div>
@@ -44,7 +47,16 @@
         <div class="theme" role="group" aria-label="Theme">
           <button data-theme="light" title="Light">☀</button><button data-theme="system" title="System">◐</button><button data-theme="dark" title="Dark">☾</button>
         </div>
-        <div class="who"><div class="av">DS</div><div><div class="who-n">Devaansh Sharma</div><div class="who-r">Team HackBots</div></div></div>
+        <div class="who-wrap">
+          <button class="who" id="who" aria-haspopup="menu" aria-expanded="false"><div class="av" id="av">··</div><div class="who-t"><div class="who-n" id="who-n">Loading…</div><div class="who-r" id="who-r"></div></div><span class="caret">▾</span></button>
+          <div class="menu" id="menu" role="menu">
+            <div class="menu-head"><div class="who-n" id="menu-n"></div><div class="who-r" id="menu-e"></div></div>
+            <a href="#/activity" role="menuitem">My activity</a>
+            <a href="#/profile" role="menuitem">Profile &amp; store</a>
+            <a href="/" role="menuitem">Home page</a>
+            <button id="signout" role="menuitem">Sign out</button>
+          </div>
+        </div>
       </div>
     </header>
     <div id="view" class="view"></div>
@@ -52,6 +64,7 @@
 </div>
 <div id="drawer" class="drawer" aria-hidden="true"><div class="drawer-panel"><button class="x" id="drawer-x" aria-label="Close">×</button><div id="drawer-body"></div></div></div>
 <div id="toast" class="toast"></div>
-<script src="app.js"></script>
+<script src="/fx.js"></script>
+<script src="/app.js"></script>
 </body>
 </html>

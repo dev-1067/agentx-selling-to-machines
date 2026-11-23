@@ -34,8 +34,8 @@ b { color:var(--ink); } .mono { font-family:Consolas,monospace; font-size:8.4pt;
 <path d="M627 150 V178" class="l" marker-end="url(#a)"/>
 <rect x="0" y="182" width="490" height="150" rx="12" class="c"/><text x="18" y="210" class="t">Strategist (numbers only)</text>
 <text x="18" y="236" class="s">• Near-limit opener: ask a little above its bid, close fast</text>
-<text x="18" y="258" class="s">• Long haggle: hold the ask while the buyer keeps conceding</text>
-<text x="18" y="280" class="s">• Fit w(r) = a + (limit − a)(r/D)^e to the buyer's real bids</text>
+<text x="18" y="258" class="s">• Long haggle: hold while it concedes; glide to floor by R8</text>
+<text x="18" y="280" class="s">• Fit w(r) = a + (limit − a)(r/D)^e; repeated bid → step, then settle</text>
 <text x="18" y="302" class="s">• Last round: ask the predicted limit (never above last ask),</text>
 <text x="18" y="322" class="s">   else take a compliant bid, offer the floor, or walk: no deadlock</text>
 <rect x="510" y="182" width="490" height="150" rx="12" class="c"/><text x="528" y="210" class="t">PolicyGuard (cannot be overridden)</text>
@@ -45,7 +45,7 @@ b { color:var(--ink); } .mono { font-family:Consolas,monospace; font-size:8.4pt;
 <text x="528" y="302" class="s">   out-of-stock, over-stock, unknown SKU, ₹1 add-ons → refused</text>
 <text x="528" y="322" class="s">• same check as the evaluator (tested on random lines)</text>
 <path d="M490 257 H508" class="l" marker-end="url(#a)"/><path d="M755 332 V360" class="l" marker-end="url(#a)"/>
-<rect x="0" y="364" width="610" height="88" rx="12" class="r"/><text x="18" y="392" class="t">Truth gate · Rezolve TraceWare claim verification</text>
+<rect x="0" y="364" width="610" height="88" rx="12" class="r"/><text x="18" y="392" class="t">Truth gate · claim verification (local, fail-closed)</text>
 <text x="18" y="416" class="s">Every sentence + the catalogue lookups and quote behind it is verified before sending;</text>
 <text x="18" y="438" class="s">a failing sentence is replaced by a plain one. Local rules first, fail closed.</text>
 <path d="M610 408 H628" class="l" marker-end="url(#a)"/>
@@ -54,14 +54,15 @@ b { color:var(--ink); } .mono { font-family:Consolas,monospace; font-size:8.4pt;
 </svg>
 
 <div class="cols">
-<div class="box tint"><h2>Rezolve Labs capabilities</h2><ul>
-<li><b>TraceWare commerce claim verification</b>: verifies every outgoing price and stock claim against the recorded tool actions (catalogue lookups, the quote) before the message is sent. Directly targets the <i>truthfulness</i> metric. <span class="mono">agent/rezolve_adapter.py</span></li>
-<li><b>Managed knowledge retrieval</b>: holds the catalogue and policy the seller quotes from, so every number the seller can say comes from one source.</li>
-<li>Status: credentials (credit coupon) not yet issued at submission. The adapter runs the local verifier, which re-implements the official rules, and switches to TraceWare when <span class="mono">REZOLVE_API_KEY</span> and <span class="mono">REZOLVE_TRACEWARE_URL</span> are set.</li></ul></div>
+<div class="box tint"><h2>Robustness against the manipulator</h2><ul>
+<li><b>Result:</b> score 38.8 vs the baseline's 35.5 on the official manipulator bot, with <b>0 policy violations, 0 untrue claims and 0 deadlocks</b> (baseline: 15 deadlocks).</li>
+<li><b>Why:</b> words never reach the price. Fake quotes, fake budgets, fake authority and injected "system" text are labelled by the classifier (633 flagged on the official run) and answered calmly; rigged bids (out-of-stock lines, over-stock quantities, ₹1 add-ons) are refused by PolicyGuard (196 refused).</li>
+<li><b>Optional integration:</b> the truth gate can also send each claim, with its catalogue lookups as evidence, to an external verifier such as Rezolve TraceWare (<span class="mono">agent/rezolve_adapter.py</span>). It is off by default and fails closed.</li></ul></div>
 <div class="box"><h2>How it was built and tested</h2><ul>
 <li><b>Buyer gym:</b> 3 starter bots + 8 scripted styles (impatient, meet-in-the-middle, fixed budget, quick acceptor, noisy, messy JSON, late surge, smooth manipulator) + 4 local-LLM buyers (Qwen2.5-3B via Ollama) that write their own messages.</li>
-<li><b>Tuning:</b> random search on training seeds, chosen on held-out seeds (half starter styles, half gym styles).</li>
-<li><b>Tests:</b> 51 pytest checks (guards agree with the evaluator, zero violations on many seeds, fairness, malformed messages, latency) + a browser test of every dashboard button.</li>
+<li><b>Tuning:</b> random search on training seeds, chosen on held-out seeds (half starter styles, half gym styles); the repeated-bid rule came from reading real LLM transcripts and was checked on 96 LLM negotiations (57.3 vs 56.9 baseline, 0 violations).</li>
+<li><b>Tests:</b> 65 pytest checks (guards agree with the evaluator, zero violations on many seeds, fairness, malformed messages, stalled buyers, accounts, latency) + a browser test of the landing page, sign-up/sign-in and every control-room button.</li>
+<li><b>Web app:</b> landing page, accounts (salted PBKDF2, HttpOnly sessions, SQLite) and a control room where each store's runs are saved.</li>
 <li><b>Runtime:</b> standard library only, &lt; 2 ms per turn, no network needed in the evaluator path.</li></ul></div>
 </div>
 </body></html>

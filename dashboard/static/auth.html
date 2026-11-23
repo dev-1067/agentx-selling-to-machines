@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAUDA · Sign in</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fx.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body class="auth">
+<aside class="auth-art">
+  <a class="logo" href="/"><span class="logo-mark">स</span><span>SAUDA</span></a>
+  <h2>Your counter, <em>staffed by an agent</em> that never gives away the margin.</h2>
+  <p>Run live negotiations against buyer bots and LLM buyers, inspect every decision, and keep a history of your runs.</p>
+  <ul>
+    <li><b>✓</b> Prices come from code, never from the chat</li>
+    <li><b>✓</b> Every sentence checked before it is sent</li>
+    <li><b>✓</b> Your runs saved to your own account</li>
+  </ul>
+  <div class="big-mark">स</div>
+</aside>
+<main class="auth-main">
+  <a class="back-home" href="/">← Back to home</a>
+  <div class="auth-card">
+    <div class="auth-tabs" id="tabs" role="tablist">
+      <span class="glider"></span>
+      <button role="tab" data-mode="in" id="tab-in">Sign in</button>
+      <button role="tab" data-mode="up" id="tab-up">Create account</button>
+    </div>
+    <h1 id="title">Welcome back</h1>
+    <p class="sub" id="subtitle">Sign in to open your control room.</p>
+    <div class="form-err" id="form-err" role="alert"></div>
+    <form id="form" novalidate>
+      <div class="field only-up" id="f-name"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" placeholder="Asha Verma"><div class="err"></div></div>
+      <div class="field only-up" id="f-store"><label for="store">Store name</label><input id="store" name="store" autocomplete="organization" placeholder="Verma Fashions"><div class="err"></div></div>
+      <div class="field" id="f-email"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@store.com"><div class="err"></div></div>
+      <div class="field" id="f-password"><label for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" placeholder="At least 8 characters">
+        <button type="button" class="peek" id="peek" aria-label="Show password">Show</button>
+        <div class="meter only-up"><i id="meter"></i></div><div class="meter-l only-up" id="meter-l">Use 8+ characters with a letter and a number.</div><div class="err"></div></div>
+      <button class="cta" id="submit" type="submit" data-magnet>Sign in</button>
+    </form>
+    <div class="or">or</div>
+    <button class="cta ghost" id="demo" style="width:100%" data-magnet>Explore with the demo account</button>
+    <p class="switch" id="switch"></p>
+  </div>
+</main>
+<div id="toast" class="toast"></div>
+<script src="fx.js"></script>
+<script src="auth.js"></script>
+</body>
+</html>

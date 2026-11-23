@@ -14,9 +14,11 @@ FULL = (0, 0, 3840)
 SCENES = [
     ("s01_problem",
      "Shoppers are starting to send AI agents to buy for them. Research keeps finding the same thing: seller bots "
-     "sell below cost, get anchored by fake budgets, obey fake system messages, and deadlock. {fix}This is SAUDA, "
-     "team HackBots' seller agent for AgentX, Challenge 2. It sells to machines profitably, within policy, and honestly.",
-     [(None, ("card", "problem")), ("fix", ("card", "intro"))]),
+     "sell below cost, fall for fake budgets and fake system messages, and deadlock. {fix}This is SAUDA, "
+     "team HackBots' seller agent for AgentX, Challenge 2. {site}It sells to machines profitably, within policy, and honestly, "
+     "and any store can sign up and try it.",
+     [(None, ("card", "problem")), ("fix", ("card", "intro")),
+      ("site", ("shot", "v00_landing.png", FULL, (0, 180, 3000), "Landing page · live replay of a real negotiation"))]),
 
     ("s02_architecture",
      "The idea is simple. The conversation never sets the price. A strategist picks a basket price from numbers only. "
@@ -46,26 +48,27 @@ SCENES = [
      [(None, ("shot", "v05_guard_log.png", (560, 160, 3280), (2200, 900, 1640), "Guard log, every round"))]),
 
     ("s06_classifier",
-     "The tactic classifier is a trained model. On fresh messages written after training was frozen it is {llm_acc} "
+     "The tactic classifier is a trained model. On two hundred fresh messages never used in training, it is {llm_acc} "
      "percent accurate, and {kit_acc} percent on the organisers' own manipulator lines. It only chooses wording, "
      "never price. Type a prompt injection, and it is caught.",
      [(None, ("shot", "v06_classifier.png", FULL, (560, 160, 3280), "Trained tactic classifier"))]),
 
     ("s07_benchmarks",
-     "Because the leaderboard uses hidden LLM buyers, SAUDA was tuned on held-out seeds across eleven buyer styles, "
-     "and tested against real local LLM buyers. Against those, it made {llm_policy} policy violations and "
-     "{llm_truth} untrue claims.",
+     "The leaderboard uses hidden LLM buyers, so SAUDA was tested against real local ones. Their transcripts showed "
+     "they repeat one number, so SAUDA now steps toward a repeated bid, then settles. Over {llm_n} LLM negotiations it "
+     "scores {llm_score} against the baseline's {llm_baseline}, with {llm_policy} policy violations and {llm_truth} untrue claims.",
      [(None, ("shot", "v07_benchmarks.png", FULL, (560, 140, 3280), "Benchmarks vs baseline"))]),
 
     ("s08_negotiations",
-     "Every negotiation can be opened, with the buyer's words, SAUDA's replies, and the reasoning behind each "
-     "round's price.",
-     [(None, ("shot", "v08_drawer.png", FULL, (1680, 60, 2160), "Every decision, explained"))]),
+     "Every negotiation can be opened, with the reasoning behind each round's price. {mine}Each store's own runs and "
+     "checks are saved to its account.",
+     [(None, ("shot", "v08_drawer.png", FULL, (1680, 60, 2160), "Every decision, explained")),
+      ("mine", ("shot", "v10_activity.png", FULL, (560, 120, 3280), "My activity · saved per account"))]),
 
     ("s09_card",
-     "An agent card tells buyer agents exactly what SAUDA can and cannot negotiate, and Rezolve's TraceWare plugs "
-     "into the truth gate to verify every price and stock claim.",
-     [(None, ("shot", "v09_agent_card.png", FULL, (560, 120, 3280), "Agent card · Rezolve Labs"))]),
+     "An agent card tells buyer agents exactly what SAUDA can and cannot negotiate. SAUDA needs no outside service: "
+     "it answers in about a millisecond, with no paid model calls.",
+     [(None, ("shot", "v09_agent_card.png", FULL, (560, 120, 3280), "Agent card"))]),
 
     ("s10_outro",
      "SAUDA. Profitable, within policy, and honest, against machines that are not.",
