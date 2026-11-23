@@ -115,6 +115,7 @@ class Seller:
 
     def start(self, negotiation_id):
         self.nid = negotiation_id
+        self.last_items = None       # our last offer's lines (repeated by the safety net if ever needed)
         self.lines = None            # sku -> quantity we are selling
         self.unavailable = []        # (sku, wanted, stock) we could not fully supply
         self.bids = []               # (x, ratio): buyer willingness after x of our offers
@@ -328,7 +329,27 @@ class Seller:
         return recent > self.p["stall_eps"]
 
     def respond(self, message):
-        msg = message if isinstance(message, dict) else {}
+        """One reply to one buyer message. Never raises: if anything unexpected happens, SAUDA repeats its
+        last (already checked) offer, or walks away politely if it has none, so a turn is never lost."""
+        try:
+            return self._respond(message)
+        except Exception as e:                                # safety net; covered by tests/test_fuzz.py
+            last = getattr(self, "last_items", None)
+            if last:
+                out = {"type": "offer", "items": [dict(i) for i in last], "text": "My previous offer still stands."}
+            else:
+                out = {"type": "walk_away", "text": "Sorry, I can't make an offer on this request."}
+            try:
+                self.trace.append({"round": len(self.offers) + 1, "action": out["type"],
+                                   "why": f"safety net: {type(e).__name__}"})
+            except Exception:
+                pass
+            return out
+
+    def _respond(self, message):
+        msg = dict(message) if isinstance(message, dict) else {}
+        if "items" in msg and not isinstance(msg["items"], list):   # e.g. a number or true instead of a list
+            msg["items"] = []                                        # (stricter: nothing extra becomes quotable)
         r = msg.get("round") if is_int(msg.get("round")) else len(self.offers) + 1
         mtype = msg.get("type")
         items = msg.get("items")
@@ -428,6 +449,7 @@ class Seller:
                       "unit_price": self.guard.clamp(i["sku"], self.store[i["sku"]]["price"])} for i in items]
         self.offers.append(self._total(items) / self._listed(self.lines))
         self.last_total = self._total(items)
+        self.last_items = [dict(i) for i in items]
         self.ledger.add_items(items)                       # the evaluator adds our items before checking text
         out = {"type": "offer", "items": items, "text": self._say_offer(items, r, msg)}
         return self._finish(out, r, why, plan, model)
