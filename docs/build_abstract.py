@@ -62,7 +62,7 @@ calls per message: about ₹0 marginal cost per negotiation, and one small serve
 
 <h2>Build summary</h2>
 <p>Code: agent/ (seller, guards, classifier inference), gym/ (eight scripted and four local-LLM buyers, tuner),
-model/ (data and training), dashboard/ (web app with accounts and control room), 65 tests.
+model/ (data and training), dashboard/ (web app with accounts and control room), 67 tests.
 An optional adapter can send each claim to an external verifier (such as Rezolve TraceWare) and fails closed.</p>
 """
 

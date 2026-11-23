@@ -61,7 +61,7 @@ b { color:var(--ink); } .mono { font-family:Consolas,monospace; font-size:8.4pt;
 <div class="box"><h2>How it was built and tested</h2><ul>
 <li><b>Buyer gym:</b> 3 starter bots + 8 scripted styles (impatient, meet-in-the-middle, fixed budget, quick acceptor, noisy, messy JSON, late surge, smooth manipulator) + 4 local-LLM buyers (Qwen2.5-3B via Ollama) that write their own messages.</li>
 <li><b>Tuning:</b> random search on training seeds, chosen on held-out seeds (half starter styles, half gym styles); the repeated-bid rule came from reading real LLM transcripts and was checked on 96 LLM negotiations (57.3 vs 56.9 baseline, 0 violations).</li>
-<li><b>Tests:</b> 65 pytest checks (guards agree with the evaluator, zero violations on many seeds, fairness, malformed messages, stalled buyers, accounts, latency) + a browser test of the landing page, sign-up/sign-in and every control-room button.</li>
+<li><b>Tests:</b> 67 pytest checks (guards agree with the evaluator, zero violations on many seeds, fairness, fuzzed garbage messages, stalled buyers, accounts, latency) + a browser test of the landing page, sign-up/sign-in and every control-room button.</li>
 <li><b>Web app:</b> landing page, accounts (salted PBKDF2, HttpOnly sessions, SQLite) and a control room where each store's runs are saved.</li>
 <li><b>Runtime:</b> standard library only, &lt; 2 ms per turn, no network needed in the evaluator path.</li></ul></div>
 </div>
