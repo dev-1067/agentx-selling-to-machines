@@ -1,0 +1,18 @@
+seller              ../agent/sauda_seller.py
+negotiations        210   (162 where a compliant deal existed)
+deal rate           0.762   where possible 0.988
+margin kept         0.671   (share of list-price profit, on deals)
+value               0.511   (deal rate and margin together)
+policy violations   0
+truth violations    0
+deadlocks           1   (walked away: seller 44, buyer 5)
+rounds              7.2 on average
+latency             0.64 ms/turn, p95 1.18 ms
+SCORE               51.0
+
+by buyer                n   deals  margin  value  policy  truth  deadlocks  score
+  cooperative            70   0.89   0.82   0.73       0      0         0    73.1
+  hard_bargainer         70   0.70   0.59   0.41       0      0         1    41.0
+  manipulator            70   0.70   0.55   0.39       0      0         0    38.8
+
+transcripts: ../results/evaluate_default_run_transcripts.jsonl

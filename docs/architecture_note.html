@@ -60,7 +60,7 @@ b { color:var(--ink); } .mono { font-family:Consolas,monospace; font-size:8.4pt;
 <li>Status: credentials (credit coupon) not yet issued at submission. The adapter runs the local verifier, which re-implements the official rules, and switches to TraceWare when <span class="mono">REZOLVE_API_KEY</span> and <span class="mono">REZOLVE_TRACEWARE_URL</span> are set.</li></ul></div>
 <div class="box"><h2>How it was built and tested</h2><ul>
 <li><b>Buyer gym:</b> 3 starter bots + 8 scripted styles (impatient, meet-in-the-middle, fixed budget, quick acceptor, noisy, messy JSON, late surge, smooth manipulator) + 4 local-LLM buyers (Qwen2.5-3B via Ollama) that write their own messages.</li>
-<li><b>Tuning:</b> random search on training seeds, chosen on held-out seeds (65% starter styles, 35% gym).</li>
+<li><b>Tuning:</b> random search on training seeds, chosen on held-out seeds (half starter styles, half gym styles).</li>
 <li><b>Tests:</b> 51 pytest checks (guards agree with the evaluator, zero violations on many seeds, fairness, malformed messages, latency) + a browser test of every dashboard button.</li>
 <li><b>Runtime:</b> standard library only, &lt; 2 ms per turn, no network needed in the evaluator path.</li></ul></div>
 </div>

@@ -313,11 +313,7 @@ def main():
     enc.stdin.close()
     enc.wait()
     print("wrote", OUT4K)
-    subprocess.run([FF, "-y", "-loglevel", "error", "-i", str(OUT4K), "-vf", "scale=1920:1080:flags=lanczos",
-                    "-c:v", "libx264", "-preset", "slow", "-crf", "16", "-pix_fmt", "yuv420p",
-                    "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
-                    "-c:a", "copy", "-movflags", "+faststart", str(OUT1080)], check=True)
-    print("wrote", OUT1080)
+
 
 
 if __name__ == "__main__":

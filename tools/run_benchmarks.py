@@ -81,7 +81,7 @@ def play_all(seller_cls, scenarios, buyer_classes, keep=False):
 
 def report(name, scenarios, buyer_classes, n, seed, keep=False):
     rows, times, extra = play_all(Seller, scenarios, buyer_classes, keep)
-    base = play_all(baseline_cls(), scenarios, buyer_classes)[0] if not name.startswith("llm") else None
+    base = play_all(baseline_cls(), scenarios, buyer_classes)[0]
     s = summarise(rows)
     b = summarise(base) if base else None
     per = []
@@ -112,8 +112,13 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--llm", type=int, default=0, help="negotiations against local LLM buyers (needs Ollama)")
     ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--only-llm", action="store_true", help="skip the official and gym suites")
     args = ap.parse_args()
     RES.mkdir(exist_ok=True)
+    if args.only_llm:
+        from llm_buyers import BUYERS as LLM
+        report("llm", starter.make_scenarios(STORE, POLICY, args.llm, 4242, LLM), LLM, args.llm, 4242)
+        return
     sc = starter.make_scenarios(STORE, POLICY, 210, args.seed, starter.BUYERS)
     rows = report("official", sc, starter.BUYERS, 210, args.seed, keep=True)
     with open(RES / "official_transcripts.jsonl", "w", encoding="utf-8") as fh:

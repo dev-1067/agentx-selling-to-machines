@@ -23,7 +23,7 @@ SCENES = [
      "A policy guard checks every offer before it leaves and every bid before it is accepted. A truth gate checks "
      "every sentence against the official rules, and a trained classifier names the buyer's tactic, to choose calm "
      "wording, never a discount.",
-     [(None, ("shot", "arch.png", (0, 120, 3840), (0, 330, 3840), "Architecture: deciding is code"))]),
+     [(None, ("shot", "arch.png", (0, 20, 3840), (0, 360, 3840), "Architecture: deciding is code"))]),
 
     ("s03_dashboard",
      "On the official harness, SAUDA scores {official_score} against the starter baseline's {official_baseline}, with "
@@ -32,10 +32,10 @@ SCENES = [
      [(None, ("shot", "v01_dashboard.png", FULL, (560, 120, 3280), "Control room"))]),
 
     ("s04_arena",
-     "Here it is live against the manipulator bot. The buyer claims to be the store manager, then sends a fake system "
-     "message. {flags}The classifier flags each tactic, and SAUDA answers calmly, without moving its price because of "
-     "them. {ladder}On the price ladder, SAUDA holds its ask while the buyer climbs, fits the buyer's concession curve, "
-     "and makes its final ask at the predicted limit. The buyer accepts.",
+     "Here it is live against the manipulator bot. The buyer quotes a fake competitor price, makes stock claims, and sends "
+     "a prompt injection. {flags}The classifier flags each tactic, and SAUDA answers calmly, without moving its price because "
+     "of them. {ladder}On the price ladder, SAUDA's ask steps down steadily as the buyer climbs, never below the policy floor, "
+     "and the buyer accepts.",
      [(None, ("shot", "v02_arena_start.png", FULL, (560, 160, 2400), "Live arena · manipulator")),
       ("flags", ("shot", "v03_arena_mid.png", (560, 160, 2400), (600, 300, 2100), "Tactics flagged, price unchanged")),
       ("ladder", ("shot", "v04_arena_end.png", (560, 120, 3280), (2240, 260, 1600), "Hold, learn, then ask for the limit"))]),

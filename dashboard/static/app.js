@@ -364,6 +364,7 @@ const PAGES = { dashboard: ["Dashboard", pageDashboard], arena: ["Live arena", p
 async function route() {
   const key = (location.hash.replace(/^#\//, "") || "dashboard").split("?")[0];
   const [title, fn] = PAGES[key] || PAGES.dashboard;
+  $("#drawer").classList.toggle("open", false);        // a drawer belongs to the page that opened it
   $$("nav a").forEach(a => a.classList.toggle("on", a.dataset.page === key));
   $("#crumb-page").textContent = title;
   view.innerHTML = `<div class="empty"><span class="spin"></span></div>`;

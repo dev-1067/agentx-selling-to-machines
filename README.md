@@ -8,7 +8,20 @@ buyer agents over the AgentX JSON message format. It closes as many profitable d
 **never breaks store policy, never says anything the store data does not support, and never
 deadlocks**. Prices come from code; the conversation can never talk the price down.
 
-<!-- RESULTS -->
+## Results
+
+| Suite | Negotiations | SAUDA | Starter baseline | Policy violations | Untrue claims | Deadlocks |
+|---|---|---|---|---|---|---|
+| Official harness (`starter_kit/evaluate.py`, seed 0) | 210 | **51.0** | 48.5 | 0 | 0 | 1 |
+| Extra buyer gym (8 styles, held-out seed) | 240 | **50.9** | 48.5 | 0 | 0 | 2 |
+| Local LLM buyers (qwen2.5:3b, 4 styles) | 24 | **42.6** | 53.8 | 0 | 0 | 0 |
+
+Honest reading: SAUDA beats the baseline on the scripted buyers and stays at zero violations everywhere,
+including against LLM buyers. Against the local LLM buyers it is safe but still earns less than the baseline
+(small, noisy sample), because those buyers anchor near their limit and leave early. The tactic classifier
+scores 85.7% on fresh hand-written messages and 100.0% on the organisers' own manipulator lines.
+Reproduce: `python tools/run_benchmarks.py` (add `--llm 24` with Ollama running).
+
 
 ## Why it is built this way
 

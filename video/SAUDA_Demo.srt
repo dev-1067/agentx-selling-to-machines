@@ -1,0 +1,307 @@
+1
+00:00:00,346 --> 00:00:02,474
+Shoppers are starting to send AI agents to
+
+2
+00:00:02,474 --> 00:00:03,197
+buy for them.
+
+3
+00:00:03,447 --> 00:00:05,502
+Research keeps finding the same thing:
+
+4
+00:00:05,671 --> 00:00:07,401
+seller bots sell below cost,
+
+5
+00:00:07,510 --> 00:00:09,012
+get anchored by fake budgets,
+
+6
+00:00:09,252 --> 00:00:10,899
+obey fake system messages,
+
+7
+00:00:10,935 --> 00:00:11,743
+and deadlock.
+
+8
+00:00:11,993 --> 00:00:12,930
+This is SAUDA,
+
+9
+00:00:13,087 --> 00:00:15,478
+team HackBots' seller agent for AgentX,
+
+10
+00:00:15,574 --> 00:00:16,382
+Challenge 2.
+
+11
+00:00:16,632 --> 00:00:18,447
+It sells to machines profitably,
+
+12
+00:00:18,579 --> 00:00:19,517
+within policy,
+
+13
+00:00:19,589 --> 00:00:20,370
+and honestly.
+
+14
+00:00:21,446 --> 00:00:22,614
+The idea is simple.
+
+15
+00:00:22,864 --> 00:00:25,138
+The conversation never sets the price.
+
+16
+00:00:25,388 --> 00:00:27,816
+A strategist picks a basket price from numbers
+
+17
+00:00:27,816 --> 00:00:28,288
+only.
+
+18
+00:00:28,538 --> 00:00:30,797
+A policy guard checks every offer before it
+
+19
+00:00:30,797 --> 00:00:33,336
+leaves and every bid before it is accepted.
+
+20
+00:00:33,586 --> 00:00:35,809
+A truth gate checks every sentence against the
+
+21
+00:00:35,809 --> 00:00:36,855
+official rules,
+
+22
+00:00:36,963 --> 00:00:39,607
+and a trained classifier names the buyer's tactic,
+
+23
+00:00:39,739 --> 00:00:40,845
+to choose calm wording,
+
+24
+00:00:41,001 --> 00:00:41,951
+never a discount.
+
+25
+00:00:43,026 --> 00:00:44,336
+On the official harness,
+
+26
+00:00:44,420 --> 00:00:47,281
+SAUDA scores 51 point 0 against the starter
+
+27
+00:00:47,281 --> 00:00:49,420
+baseline's 48 point 5,
+
+28
+00:00:49,577 --> 00:00:51,355
+with zero policy violations,
+
+29
+00:00:51,500 --> 00:00:53,146
+zero untrue claims,
+
+30
+00:00:53,303 --> 00:00:55,875
+and a deal in 99 percent of negotiations
+
+31
+00:00:55,875 --> 00:00:57,040
+where a deal was
+
+32
+00:00:58,138 --> 00:01:00,328
+Here it is live against the manipulator bot.
+
+33
+00:01:00,578 --> 00:01:02,753
+The buyer quotes a fake competitor price,
+
+34
+00:01:02,826 --> 00:01:03,919
+makes stock claims,
+
+35
+00:01:04,016 --> 00:01:05,532
+and sends a prompt injection.
+
+36
+00:01:05,782 --> 00:01:07,958
+The classifier flags each tactic,
+
+37
+00:01:08,102 --> 00:01:09,580
+and SAUDA answers calmly,
+
+38
+00:01:09,737 --> 00:01:11,698
+without moving its price because of them.
+
+39
+00:01:11,948 --> 00:01:12,946
+On the price ladder,
+
+40
+00:01:13,066 --> 00:01:15,470
+SAUDA's ask steps down steadily as the buyer
+
+41
+00:01:15,470 --> 00:01:16,167
+climbs,
+
+42
+00:01:16,311 --> 00:01:18,066
+never below the policy floor,
+
+43
+00:01:18,222 --> 00:01:19,436
+and the buyer accepts.
+
+44
+00:01:20,526 --> 00:01:21,872
+Every round is audited:
+
+45
+00:01:22,041 --> 00:01:23,098
+the policy check,
+
+46
+00:01:23,182 --> 00:01:25,336
+the truth gate and the detected tactic.
+
+47
+00:01:25,586 --> 00:01:27,858
+Bids with slipped-in out-of-stock items,
+
+48
+00:01:27,954 --> 00:01:31,379
+over-stock quantities or one-rupee add-ons are never accepted.
+
+49
+00:01:32,468 --> 00:01:34,706
+The tactic classifier is a trained model.
+
+50
+00:01:34,956 --> 00:01:37,756
+On fresh messages written after training was frozen
+
+51
+00:01:37,757 --> 00:01:39,944
+it is 86 percent accurate,
+
+52
+00:01:39,944 --> 00:01:43,586
+and 100 percent on the organisers' own manipulator
+
+53
+00:01:43,586 --> 00:01:43,862
+lines.
+
+54
+00:01:43,862 --> 00:01:45,812
+It only chooses wording,
+
+55
+00:01:46,062 --> 00:01:46,302
+never price.
+
+56
+00:01:46,302 --> 00:01:47,624
+Type a prompt injection,
+
+57
+00:01:47,624 --> 00:01:48,261
+and it
+
+58
+00:01:49,336 --> 00:01:52,389
+Because the leaderboard uses hidden LLM buyers,
+
+59
+00:01:52,473 --> 00:01:54,961
+SAUDA was tuned on held-out seeds across eleven
+
+60
+00:01:54,961 --> 00:01:55,874
+buyer styles,
+
+61
+00:01:55,995 --> 00:01:58,834
+and tested against real local LLM buyers.
+
+62
+00:01:59,084 --> 00:01:59,913
+Against those,
+
+63
+00:02:00,009 --> 00:02:03,146
+it made 0 policy violations and 0 untrue
+
+64
+00:02:03,146 --> 00:02:03,843
+claims.
+
+65
+00:02:04,916 --> 00:02:06,779
+Every negotiation can be opened,
+
+66
+00:02:06,996 --> 00:02:08,197
+with the buyer's words,
+
+67
+00:02:08,246 --> 00:02:09,339
+SAUDA's replies,
+
+68
+00:02:09,459 --> 00:02:11,923
+and the reasoning behind each round's price.
+
+69
+00:02:12,994 --> 00:02:15,614
+An agent card tells buyer agents exactly what
+
+70
+00:02:15,614 --> 00:02:17,742
+SAUDA can and cannot negotiate,
+
+71
+00:02:17,970 --> 00:02:20,458
+and Rezolve's TraceWare plugs into the truth gate
+
+72
+00:02:20,506 --> 00:02:23,102
+to verify every price and stock claim.
+
+73
+00:02:24,208 --> 00:02:24,691
+SAUDA.
+
+74
+00:02:24,941 --> 00:02:25,614
+Profitable,
+
+75
+00:02:25,711 --> 00:02:26,636
+within policy,
+
+76
+00:02:26,696 --> 00:02:27,441
+and honest,
+
+77
+00:02:27,550 --> 00:02:29,076
+against machines that are not.

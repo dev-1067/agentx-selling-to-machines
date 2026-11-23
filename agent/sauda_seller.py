@@ -32,7 +32,7 @@ except Exception:                       # missing model file: fall back to keywo
     _TACTIC_MODEL = None
 
 DEFAULTS = {
-    "start": 1.0,          # opening ask in a long haggle, as a share of list price
+    "start": 0.95,         # opening ask in a long haggle, as a share of list price
     "give_min": 0.15,      # share of the gap to the buyer's bid we give up in round 2
     "give_max": 0.7,      # ... and by the last round
     "gamma": 1.0,          # how late the giving speeds up (> 1 = later)
@@ -49,6 +49,8 @@ DEFAULTS = {
     "hold_drop": 0.8,      # long haggle: how far the held ask may fall by the last round (share of list-floor)
     "hold_shape": 5.0,     # long haggle: how late the held ask falls
     "stall_eps": 0.004,    # a buyer that moved less than this over two rounds has stalled
+    "glide_end": 8,        # a time-based glide to the floor: reaches it at this round (99 = off)
+    "glide_pow": 1.0,      # shape of the glide (1 = straight line)
     "d_safety": 1,         # finish conceding this many rounds before a fitted early buyer deadline
 }
 
@@ -269,6 +271,9 @@ class Seller:
             w = model["pred"](r) - self.p["pred_margin"]
             if w > plan:
                 plan, closing = w, True
+        if self.p["glide_end"] < 99 and self.offers:
+            g = 1.0 - (1.0 - F) * min(1.0, (r - 1) / max(1, self.p["glide_end"] - 1)) ** self.p["glide_pow"]
+            plan = min(plan, g)                               # patient floor: we never sit above the glide
         if self.offers:
             plan = min(plan, self.offers[-1])                 # never raise our own price
         if self.bids:
