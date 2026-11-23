@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>SAUDA · Architecture note</title>
+<style>
+@page { size: A4; margin: 11mm 12mm; }
+:root { --ink:#13201d; --body:#25302d; --mute:#5d6966; --brand:#1f6f5c; --tint:#e8f2ee; --line:#d6ddd9; --accent:#c9861f; }
+* { box-sizing: border-box; } body { margin:0; font-family:"Segoe UI",Calibri,Arial,sans-serif; color:var(--body); font-size:9.4pt; line-height:1.38; }
+.head { display:flex; justify-content:space-between; align-items:flex-end; border-bottom:1.3pt solid var(--ink); padding-bottom:5pt; margin-bottom:7pt; }
+h1 { font-family:Georgia,serif; font-size:17pt; margin:0; color:var(--ink); } h1 span { color:var(--brand); }
+.k { font-size:7.6pt; letter-spacing:.08em; text-transform:uppercase; color:var(--brand); font-weight:700; }
+.meta { font-size:8.2pt; color:var(--mute); text-align:right; }
+svg { width:100%; height:auto; display:block; }
+.cols { display:grid; grid-template-columns:1fr 1fr; gap:9pt; margin-top:7pt; }
+h2 { font-size:10pt; color:var(--ink); margin:0 0 3pt; }
+.box { border:.7pt solid var(--line); border-radius:6pt; padding:6pt 8pt; }
+.box.tint { background:var(--tint); border-color:#b9d6cb; }
+ul { margin:2pt 0 0 0; padding-left:12pt; } li { margin:0 0 2pt; }
+b { color:var(--ink); } .mono { font-family:Consolas,monospace; font-size:8.4pt; }
+</style></head><body>
+<div class="head"><div><div class="k">AgentX · Challenge 2 · Selling to Machines · Architecture note</div><h1>SAUDA <span>·</span> deciding is code, talking is checked</h1></div>
+<div class="meta">Team HackBots · Devaansh Sharma<br>Repository: agent/ · gym/ · model/ · dashboard/</div></div>
+
+<svg viewBox="0 0 1000 455" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0L10,5L0,10z" fill="#13201d"/></marker></defs>
+<style>.t{font-size:17px;font-weight:700;fill:#13201d}.s{font-size:13.5px;fill:#3a4643}.l{stroke:#13201d;stroke-width:1.6;fill:none}.b{fill:#fff;stroke:#c5cec9;stroke-width:1.4}.c{fill:#e8f2ee;stroke:#1f6f5c;stroke-width:1.7}.r{fill:#fdf4e6;stroke:#c9861f;stroke-width:1.7}</style>
+<rect x="0" y="10" width="200" height="140" rx="12" class="b"/><text x="16" y="40" class="t">Buyer agent</text>
+<text x="16" y="66" class="s">LLM or scripted bot</text><text x="16" y="88" class="s">request · counter</text><text x="16" y="110" class="s">accept · walk_away</text><text x="16" y="132" class="s">free text + JSON lines</text>
+<path d="M200 60 H252" class="l" marker-end="url(#a)"/><path d="M252 112 H200" class="l" marker-end="url(#a)"/>
+<rect x="255" y="10" width="745" height="140" rx="12" class="b"/>
+<text x="275" y="38" class="t">Message intake (mirrors the official harness)</text>
+<text x="275" y="64" class="s">• ClaimLedger records every amount and percentage now "in play" (prices, bids, offers, savings)</text>
+<text x="275" y="86" class="s">• The buyer's priced lines become the bid exactly as the evaluator keeps it; tricks are kept apart</text>
+<text x="275" y="108" class="s">• Tactic classifier (trained, pure Python) labels the text: injection, fake authority, competitor quote,</text>
+<text x="275" y="128" class="s">   false agreement, stock claim, threat, budget claim, normal. Wording and audit only, never price.</text>
+<path d="M627 150 V178" class="l" marker-end="url(#a)"/>
+<rect x="0" y="182" width="490" height="150" rx="12" class="c"/><text x="18" y="210" class="t">Strategist (numbers only)</text>
+<text x="18" y="236" class="s">• Near-limit opener: ask a little above its bid, close fast</text>
+<text x="18" y="258" class="s">• Long haggle: hold the ask while the buyer keeps conceding</text>
+<text x="18" y="280" class="s">• Fit w(r) = a + (limit − a)(r/D)^e to the buyer's real bids</text>
+<text x="18" y="302" class="s">• Last round: ask the predicted limit (never above last ask),</text>
+<text x="18" y="322" class="s">   else take a compliant bid, offer the floor, or walk: no deadlock</text>
+<rect x="510" y="182" width="490" height="150" rx="12" class="c"/><text x="528" y="210" class="t">PolicyGuard (cannot be overridden)</text>
+<text x="528" y="236" class="s">• floor = max(cost ÷ (1 − min margin), list × (1 − max discount))</text>
+<text x="528" y="258" class="s">• every offer clamped to [floor, list] and to stock</text>
+<text x="528" y="280" class="s">• a bid is accepted only if it is exactly our lines and compliant:</text>
+<text x="528" y="302" class="s">   out-of-stock, over-stock, unknown SKU, ₹1 add-ons → refused</text>
+<text x="528" y="322" class="s">• same check as the evaluator (tested on random lines)</text>
+<path d="M490 257 H508" class="l" marker-end="url(#a)"/><path d="M755 332 V360" class="l" marker-end="url(#a)"/>
+<rect x="0" y="364" width="610" height="88" rx="12" class="r"/><text x="18" y="392" class="t">Truth gate · Rezolve TraceWare claim verification</text>
+<text x="18" y="416" class="s">Every sentence + the catalogue lookups and quote behind it is verified before sending;</text>
+<text x="18" y="438" class="s">a failing sentence is replaced by a plain one. Local rules first, fail closed.</text>
+<path d="M610 408 H628" class="l" marker-end="url(#a)"/>
+<rect x="632" y="364" width="368" height="88" rx="12" class="b"/><text x="650" y="392" class="t">Seller message out</text>
+<text x="650" y="416" class="s">offer · accept · walk_away</text><text x="650" y="438" class="s">+ audit trace (why, guard results)</text>
+</svg>
+
+<div class="cols">
+<div class="box tint"><h2>Rezolve Labs capabilities</h2><ul>
+<li><b>TraceWare commerce claim verification</b>: verifies every outgoing price and stock claim against the recorded tool actions (catalogue lookups, the quote) before the message is sent. Directly targets the <i>truthfulness</i> metric. <span class="mono">agent/rezolve_adapter.py</span></li>
+<li><b>Managed knowledge retrieval</b>: holds the catalogue and policy the seller quotes from, so every number the seller can say comes from one source.</li>
+<li>Status: credentials (credit coupon) not yet issued at submission. The adapter runs the local verifier, which re-implements the official rules, and switches to TraceWare when <span class="mono">REZOLVE_API_KEY</span> and <span class="mono">REZOLVE_TRACEWARE_URL</span> are set.</li></ul></div>
+<div class="box"><h2>How it was built and tested</h2><ul>
+<li><b>Buyer gym:</b> 3 starter bots + 8 scripted styles (impatient, meet-in-the-middle, fixed budget, quick acceptor, noisy, messy JSON, late surge, smooth manipulator) + 4 local-LLM buyers (Qwen2.5-3B via Ollama) that write their own messages.</li>
+<li><b>Tuning:</b> random search on training seeds, chosen on held-out seeds (65% starter styles, 35% gym).</li>
+<li><b>Tests:</b> 51 pytest checks (guards agree with the evaluator, zero violations on many seeds, fairness, malformed messages, latency) + a browser test of every dashboard button.</li>
+<li><b>Runtime:</b> standard library only, &lt; 2 ms per turn, no network needed in the evaluator path.</li></ul></div>
+</div>
+</body></html>

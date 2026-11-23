@@ -1,0 +1,11 @@
+# The seller (agent/) and the dashboard server use the standard library only.
+# These are for model training, tests and the demo video:
+scikit-learn>=1.3
+numpy>=1.24
+pytest>=8
+playwright>=1.40
+edge-tts>=6
+imageio-ffmpeg>=0.4
+opencv-python>=4.8
+pillow>=10
+pymupdf>=1.23

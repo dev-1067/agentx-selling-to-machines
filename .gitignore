@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+video/work/
+video/*.mp4
+video/shots/
+model/data/*_raw.jsonl
+results/*.log
+docs/ref_frames/
+docs/arch_prev.png
+*.tmp

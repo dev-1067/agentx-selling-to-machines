@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAUDA · Seller control room</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side">
+    <div class="brand">
+      <div class="mark">S</div>
+      <div><div class="brand-name">SAUDA</div><div class="brand-sub">Seller agent</div></div>
+    </div>
+    <nav>
+      <div class="group">Overview</div>
+      <a href="#/dashboard" data-page="dashboard"><span class="ico" data-i="grid"></span>Dashboard</a>
+      <div class="group">Negotiate</div>
+      <a href="#/arena" data-page="arena"><span class="ico" data-i="spark"></span>Live arena</a>
+      <a href="#/negotiations" data-page="negotiations"><span class="ico" data-i="list"></span>Negotiations</a>
+      <a href="#/benchmarks" data-page="benchmarks"><span class="ico" data-i="chart"></span>Benchmarks</a>
+      <div class="group">Intelligence</div>
+      <a href="#/classifier" data-page="classifier"><span class="ico" data-i="brain"></span>Tactic classifier</a>
+      <div class="group">Governance</div>
+      <a href="#/catalogue" data-page="catalogue"><span class="ico" data-i="box"></span>Catalogue &amp; policy</a>
+      <a href="#/agent-card" data-page="agent-card"><span class="ico" data-i="card"></span>Agent card</a>
+      <a href="#/rezolve" data-page="rezolve"><span class="ico" data-i="link"></span>Rezolve Labs</a>
+    </nav>
+    <div class="side-tip">
+      <div class="tip-k">How SAUDA stays honest</div>
+      <div>Prices come from code, not from the conversation. Every sentence is checked before it is sent.</div>
+    </div>
+    <div class="side-foot">SAUDA v1.0 · AgentX 2026</div>
+  </aside>
+
+  <main>
+    <header class="top">
+      <div class="crumb"><span id="crumb-store">Demo Store</span> <span class="sep">/</span> <span id="crumb-page">Dashboard</span></div>
+      <div class="top-right">
+        <span class="live" id="llm-pill" title="Local LLM buyers via Ollama"><i></i><span>LLM buyers</span></span>
+        <div class="theme" role="group" aria-label="Theme">
+          <button data-theme="light" title="Light">☀</button><button data-theme="system" title="System">◐</button><button data-theme="dark" title="Dark">☾</button>
+        </div>
+        <div class="who"><div class="av">DS</div><div><div class="who-n">Devaansh Sharma</div><div class="who-r">Team HackBots</div></div></div>
+      </div>
+    </header>
+    <div id="view" class="view"></div>
+  </main>
+</div>
+<div id="drawer" class="drawer" aria-hidden="true"><div class="drawer-panel"><button class="x" id="drawer-x" aria-label="Close">×</button><div id="drawer-body"></div></div></div>
+<div id="toast" class="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>

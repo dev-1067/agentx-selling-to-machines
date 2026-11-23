@@ -1,0 +1,60 @@
+{
+  "suite": "official",
+  "n": 210,
+  "seed": 0,
+  "score": 54.3,
+  "baseline": 48.5,
+  "deal_rate": 0.762,
+  "feasible_deal_rate": 0.988,
+  "margin_kept": 0.714,
+  "policy": 0,
+  "truth": 0,
+  "kinds": {},
+  "deadlocks": 1,
+  "seller_walked": 44,
+  "buyer_walked": 5,
+  "latency_ms": 0.702,
+  "latency_p95_ms": 1.287,
+  "per_buyer": [
+    {
+      "buyer": "cooperative",
+      "label": "Cooperative",
+      "n": 70,
+      "score": 73.1,
+      "baseline": 69.1,
+      "deal_rate": 0.886,
+      "margin": 0.826,
+      "deadlocks": 0,
+      "policy": 0,
+      "truth": 0
+    },
+    {
+      "buyer": "hard_bargainer",
+      "label": "Hard bargainer",
+      "n": 70,
+      "score": 45.5,
+      "baseline": 40.8,
+      "deal_rate": 0.7,
+      "margin": 0.655,
+      "deadlocks": 1,
+      "policy": 0,
+      "truth": 0
+    },
+    {
+      "buyer": "manipulator",
+      "label": "Manipulator",
+      "n": 70,
+      "score": 44.1,
+      "baseline": 35.5,
+      "deal_rate": 0.7,
+      "margin": 0.63,
+      "deadlocks": 0,
+      "policy": 0,
+      "truth": 0
+    }
+  ],
+  "offers_checked": 1395,
+  "texts_checked": 1505,
+  "tactics_detected": 749,
+  "bad_bids_refused": 202
+}

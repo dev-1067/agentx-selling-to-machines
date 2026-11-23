@@ -1,0 +1,182 @@
+[
+  {
+    "train": 53.37,
+    "held_out": 49.04,
+    "params": {
+      "start": 1.0,
+      "give_min": 0.25,
+      "give_max": 0.35,
+      "gamma": 0.7,
+      "accept_tol": 0.02,
+      "model_from": 0.5,
+      "pred_margin": 0.005,
+      "final_offer_conf": -0.05,
+      "final_greed": 0.01,
+      "greed_points": 8,
+      "min_points": 4
+    },
+    "per_buyer": {
+      "cooperative": 68.2,
+      "hard_bargainer": 47.6,
+      "manipulator": 36.9,
+      "impatient": 29.5,
+      "splitter": 54.2,
+      "fixed_budget": 49.4,
+      "quick_accept": 56.4,
+      "noisy": 47.9,
+      "messy": 42.8,
+      "late_surge": 40.2,
+      "smooth_manipulator": 57.1
+    }
+  },
+  {
+    "train": 53.1,
+    "held_out": 49.62,
+    "params": {
+      "start": 0.97,
+      "give_min": 0.25,
+      "give_max": 0.35,
+      "gamma": 1.0,
+      "accept_tol": 0.02,
+      "model_from": 0.5,
+      "pred_margin": 0.03,
+      "final_offer_conf": -0.02,
+      "final_greed": 0.0,
+      "greed_points": 6,
+      "min_points": 4
+    },
+    "per_buyer": {
+      "cooperative": 69.4,
+      "hard_bargainer": 46.8,
+      "manipulator": 39.0,
+      "impatient": 35.9,
+      "splitter": 52.6,
+      "fixed_budget": 50.1,
+      "quick_accept": 58.8,
+      "noisy": 47.6,
+      "messy": 42.5,
+      "late_surge": 35.6,
+      "smooth_manipulator": 56.9
+    }
+  },
+  {
+    "train": 53.07,
+    "held_out": 48.64,
+    "params": {
+      "start": 1.0,
+      "give_min": 0.25,
+      "give_max": 0.5,
+      "gamma": 1.5,
+      "accept_tol": 0.02,
+      "model_from": 1.1,
+      "pred_margin": 0.01,
+      "final_offer_conf": -0.05,
+      "final_greed": 0.02,
+      "greed_points": 7,
+      "min_points": 4
+    },
+    "per_buyer": {
+      "cooperative": 68.2,
+      "hard_bargainer": 46.9,
+      "manipulator": 36.3,
+      "impatient": 26.9,
+      "splitter": 54.3,
+      "fixed_budget": 49.3,
+      "quick_accept": 57.8,
+      "noisy": 47.3,
+      "messy": 42.4,
+      "late_surge": 39.6,
+      "smooth_manipulator": 56.8
+    }
+  },
+  {
+    "train": 52.9,
+    "held_out": 49.29,
+    "params": {
+      "start": 1.0,
+      "give_min": 0.15,
+      "give_max": 0.7,
+      "gamma": 0.7,
+      "accept_tol": 0.01,
+      "model_from": 0.5,
+      "pred_margin": 0.01,
+      "final_offer_conf": -0.02,
+      "final_greed": 0.02,
+      "greed_points": 5,
+      "min_points": 3
+    },
+    "per_buyer": {
+      "cooperative": 70.7,
+      "hard_bargainer": 46.1,
+      "manipulator": 37.8,
+      "impatient": 36.3,
+      "splitter": 54.5,
+      "fixed_budget": 49.7,
+      "quick_accept": 59.7,
+      "noisy": 45.8,
+      "messy": 40.8,
+      "late_surge": 34.8,
+      "smooth_manipulator": 54.7
+    }
+  },
+  {
+    "train": 52.79,
+    "held_out": 48.95,
+    "params": {
+      "start": 0.97,
+      "give_min": 0.25,
+      "give_max": 0.5,
+      "gamma": 1.0,
+      "accept_tol": 0.01,
+      "model_from": 0.7,
+      "pred_margin": 0.02,
+      "final_offer_conf": 0.0,
+      "final_greed": 0.0,
+      "greed_points": 4,
+      "min_points": 4
+    },
+    "per_buyer": {
+      "cooperative": 67.9,
+      "hard_bargainer": 46.5,
+      "manipulator": 38.3,
+      "impatient": 37.9,
+      "splitter": 53.2,
+      "fixed_budget": 49.7,
+      "quick_accept": 58.2,
+      "noisy": 46.8,
+      "messy": 41.6,
+      "late_surge": 32.8,
+      "smooth_manipulator": 55.7
+    }
+  },
+  {
+    "train": 52.75,
+    "held_out": 49.26,
+    "params": {
+      "start": 1.0,
+      "give_min": 0.25,
+      "give_max": 0.5,
+      "gamma": 0.7,
+      "accept_tol": 0.02,
+      "model_from": 0.7,
+      "pred_margin": 0.02,
+      "final_offer_conf": 0.0,
+      "final_greed": 0.005,
+      "greed_points": 8,
+      "min_points": 2
+    },
+    "per_buyer": {
+      "cooperative": 70.0,
+      "hard_bargainer": 46.4,
+      "manipulator": 38.2,
+      "impatient": 36.0,
+      "splitter": 53.5,
+      "fixed_budget": 50.3,
+      "quick_accept": 60.3,
+      "noisy": 46.2,
+      "messy": 41.4,
+      "late_surge": 32.8,
+      "smooth_manipulator": 55.5
+    }
+  }
+]

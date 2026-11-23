@@ -1,0 +1,176 @@
+[
+  {
+    "train": 52.85,
+    "held_out": 49.17,
+    "params": {
+      "start": 0.98,
+      "give_min": 0.35,
+      "give_max": 0.35,
+      "gamma": 1.5,
+      "accept_tol": 0.02,
+      "model_from": 0.85,
+      "pred_margin": 0.0,
+      "final_offer_conf": -0.03,
+      "final_premium": 0.0,
+      "min_points": 2
+    },
+    "per_buyer": {
+      "cooperative": 69.1,
+      "hard_bargainer": 46.2,
+      "manipulator": 37.5,
+      "impatient": 39.7,
+      "splitter": 52.1,
+      "fixed_budget": 48.7,
+      "quick_accept": 60.3,
+      "noisy": 46.4,
+      "messy": 41.4,
+      "late_surge": 35.1,
+      "smooth_manipulator": 55.7
+    }
+  },
+  {
+    "train": 52.84,
+    "held_out": 49.1,
+    "params": {
+      "start": 0.98,
+      "give_min": 0.1,
+      "give_max": 0.75,
+      "gamma": 0.7,
+      "accept_tol": 0.01,
+      "model_from": 0.85,
+      "pred_margin": 0.0,
+      "final_offer_conf": -0.03,
+      "final_premium": 0.2,
+      "min_points": 3
+    },
+    "per_buyer": {
+      "cooperative": 70.4,
+      "hard_bargainer": 46.0,
+      "manipulator": 37.3,
+      "impatient": 35.9,
+      "splitter": 53.8,
+      "fixed_budget": 49.4,
+      "quick_accept": 60.9,
+      "noisy": 45.7,
+      "messy": 40.7,
+      "late_surge": 34.7,
+      "smooth_manipulator": 54.6
+    }
+  },
+  {
+    "train": 52.76,
+    "held_out": 48.92,
+    "params": {
+      "start": 1.0,
+      "give_min": 0.25,
+      "give_max": 0.75,
+      "gamma": 1.5,
+      "accept_tol": 0.02,
+      "model_from": 1.1,
+      "pred_margin": 0.0,
+      "final_offer_conf": 0.0,
+      "final_premium": 0.0,
+      "min_points": 2
+    },
+    "per_buyer": {
+      "cooperative": 70.3,
+      "hard_bargainer": 45.9,
+      "manipulator": 37.2,
+      "impatient": 33.9,
+      "splitter": 53.6,
+      "fixed_budget": 50.3,
+      "quick_accept": 60.5,
+      "noisy": 46.1,
+      "messy": 41.2,
+      "late_surge": 32.5,
+      "smooth_manipulator": 55.4
+    }
+  },
+  {
+    "train": 52.72,
+    "held_out": 49.24,
+    "params": {
+      "start": 1.0,
+      "give_min": 0.35,
+      "give_max": 1.0,
+      "gamma": 2.0,
+      "accept_tol": 0.005,
+      "model_from": 0.85,
+      "pred_margin": 0.0,
+      "final_offer_conf": -0.03,
+      "final_premium": 0.4,
+      "min_points": 2
+    },
+    "per_buyer": {
+      "cooperative": 70.9,
+      "hard_bargainer": 45.9,
+      "manipulator": 37.4,
+      "impatient": 40.2,
+      "splitter": 53.6,
+      "fixed_budget": 48.4,
+      "quick_accept": 59.3,
+      "noisy": 45.5,
+      "messy": 40.7,
+      "late_surge": 34.7,
+      "smooth_manipulator": 54.2
+    }
+  },
+  {
+    "train": 52.7,
+    "held_out": 49.0,
+    "params": {
+      "start": 0.98,
+      "give_min": 0.25,
+      "give_max": 1.0,
+      "gamma": 0.7,
+      "accept_tol": 0.005,
+      "model_from": 0.5,
+      "pred_margin": 0.02,
+      "final_offer_conf": -0.03,
+      "final_premium": 0.0,
+      "min_points": 3
+    },
+    "per_buyer": {
+      "cooperative": 69.7,
+      "hard_bargainer": 45.8,
+      "manipulator": 37.1,
+      "impatient": 44.9,
+      "splitter": 53.9,
+      "fixed_budget": 46.9,
+      "quick_accept": 59.1,
+      "noisy": 44.8,
+      "messy": 39.7,
+      "late_surge": 34.6,
+      "smooth_manipulator": 53.0
+    }
+  },
+  {
+    "train": 52.69,
+    "held_out": 49.11,
+    "params": {
+      "start": 1.0,
+      "give_min": 0.1,
+      "give_max": 1.0,
+      "gamma": 0.7,
+      "accept_tol": 0.01,
+      "model_from": 1.1,
+      "pred_margin": 0.01,
+      "final_offer_conf": -0.03,
+      "final_premium": 0.0,
+      "min_points": 4
+    },
+    "per_buyer": {
+      "cooperative": 70.1,
+      "hard_bargainer": 45.8,
+      "manipulator": 37.1,
+      "impatient": 42.2,
+      "splitter": 53.5,
+      "fixed_budget": 49.0,
+      "quick_accept": 59.8,
+      "noisy": 45.0,
+      "messy": 40.1,
+      "late_surge": 34.6,
+      "smooth_manipulator": 53.3
+    }
+  }
+]
